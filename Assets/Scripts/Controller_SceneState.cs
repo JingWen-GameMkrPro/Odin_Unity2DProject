@@ -5,17 +5,14 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Script_SceneStateController
+//Controller: Controll all scenes.
+public class Controller_SceneState
 {
-    ISceneState currentSceneState;
-    bool isCurrentSceneStateInitial = false;
+    private ISceneState currentSceneState;
+    private bool isCurrentSceneStateInitial = false;
 
-    public Script_SceneStateController()
-    {
-
-    }
-
-    public void SetSceneState(ISceneState inputSceneState)
+    //Change scene
+    public void ChangeSceneState(ISceneState inputSceneState)
     {
         LoadScene(inputSceneState.sceneStateName);
 
@@ -27,12 +24,14 @@ public class Script_SceneStateController
         isCurrentSceneStateInitial = false;
     }
 
+    //Load scene
     public void LoadScene(string inputSceneName)
     {
         Debug.Log($"Loading \"{inputSceneName}\"");
         SceneManager.LoadScene(inputSceneName);
     }
 
+    //Update scene
     public void SceneStateUpdate()
     {
         if(!SceneManager.GetSceneByName(currentSceneState.sceneStateName).isLoaded)
@@ -55,13 +54,14 @@ public class Script_SceneStateController
     }
 }
 
+//Mother of scene state
 public class ISceneState
 {
     public string sceneStateName = "NoneStateName";
 
-    protected Script_SceneStateController currentSceneStateController = null;
+    protected Controller_SceneState currentSceneStateController = null;
 
-    public ISceneState(Script_SceneStateController inputSceneStateController)
+    public ISceneState(Controller_SceneState inputSceneStateController)
     {
         currentSceneStateController = inputSceneStateController;
     }
@@ -84,13 +84,13 @@ public class ISceneState
 
 }
 
-
+//Child scnene state
 public class SceneState_MainMenu: ISceneState
 {
     //Sample
     int processValue = 1000;
 
-    public SceneState_MainMenu(Script_SceneStateController inputSceneStateController): base(inputSceneStateController) 
+    public SceneState_MainMenu(Controller_SceneState inputSceneStateController): base(inputSceneStateController) 
     {
         sceneStateName = "Scene_MainMenu";
     }
@@ -106,7 +106,7 @@ public class SceneState_MainMenu: ISceneState
         }
         else
         {
-            currentSceneStateController.SetSceneState(new SceneState_Endless0(currentSceneStateController));
+            currentSceneStateController.ChangeSceneState(new SceneState_Endless0(currentSceneStateController));
         }
 
 
@@ -116,9 +116,10 @@ public class SceneState_MainMenu: ISceneState
 
 }
 
+//Child scene state
 public class SceneState_Endless0: ISceneState
 {
-    public SceneState_Endless0(Script_SceneStateController inputSceneStateController) : base(inputSceneStateController) 
+    public SceneState_Endless0(Controller_SceneState inputSceneStateController) : base(inputSceneStateController) 
     {
         sceneStateName = "Scene_Endless0";
     }
