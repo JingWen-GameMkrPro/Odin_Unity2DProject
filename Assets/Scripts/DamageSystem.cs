@@ -7,10 +7,10 @@ using UnityEngine;
 public class DamageSystem : MonoBehaviour
 {
     [SerializeField]
-    public  AttributeSystem currentAttributeSystem;
+    public  AttributeManager currentAttributeSystem;
     public DamageTypes currentDamageTypes;
     public ColliderManager currentColliderManager;
-
+    /*
     public void CauseDamage(string damageName, DamageSystem targetDamageSystem)
     {
         var damageType = currentDamageTypes.DamageDictionary.FirstOrDefault(x => x.DamageName == damageName);
@@ -32,5 +32,5 @@ public class DamageSystem : MonoBehaviour
     {
         //CauseDamage()
     }
-
+    */
 }

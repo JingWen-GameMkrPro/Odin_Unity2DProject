@@ -2,6 +2,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Security;
+using Unity.Burst.CompilerServices;
+using Unity.VisualScripting;
 using UnityEditor.Animations;
 using UnityEditor.Experimental.GraphView;
 using UnityEngine;
@@ -16,13 +18,15 @@ public class PlayerController : MonoBehaviour
     public float Acceleration;
     public LayerMask groundLayer; // 地面的圖層
     public Rigidbody2D rb;
+    [InspectorLabel("Jump")]
     public float jumpHeight;
-    public float gravity;
+    public float jumpUpTime;
     public Animator animator;
 
     //System
-    public DamageSystem currentDamageSystem;
-    public AttributeSystem currentAttributeSystem;
+    //public DamageSystem currentDamageSystem;
+    //public AttributeManager currentAttributeSystem;
+    public InteractManager currentInteractManager;
 
     //Collider
     public Collider2D currentHitBox;
@@ -39,8 +43,9 @@ public class PlayerController : MonoBehaviour
         CanMove = 1<<0,
         CanJump = 1<<1,
         CanAttack = 1<<2,
+        CanDefense = 1<<3,
     }
-    private CharacterPermission currentPermission = CharacterPermission.CanMove | CharacterPermission.CanJump | CharacterPermission.CanAttack;
+    private CharacterPermission currentPermission = CharacterPermission.CanMove | CharacterPermission.CanJump | CharacterPermission.CanAttack | CharacterPermission.CanDefense;
     private Dictionary<CharacterPermission, Coroutine> lastSetTimer = new (); //用於管理目前權限封鎖倒數狀態
 
     //Chracter State
@@ -51,12 +56,13 @@ public class PlayerController : MonoBehaviour
         Moving = 1<<1,
         Grounding = 1<<2,
         Attacking = 1<<3,
+        Defensing = 1<<4,
     }
     private CharacterState currentState;
     
     void DebugMessage()
     {
-        //Debug.Log("Current State: " + currentState.ToString());
+        Debug.Log("Current State: " + currentState.ToString());
         //Debug.Log(rb.velocity);
     }
 
@@ -91,6 +97,13 @@ public class PlayerController : MonoBehaviour
             Attack();
         }
 
+        //防禦輸入
+        if (Input.GetKeyDown(KeyCode.K) && !isInState(CharacterState.Defensing) && hasPermission(CharacterPermission.CanDefense))
+        {
+            Defense();
+        }
+
+        //Animation
         setAnimationState();
     }
 
@@ -99,20 +112,21 @@ public class PlayerController : MonoBehaviour
         //確認是否在地板
         if (!isInState(CharacterState.Grounding))
         {
-            rb.AddForce(Vector2.down * gravity);
-        }
-
-        //當下墜後踩到地板的瞬間，必須盡快煞車，避免穿透地板
-        if (isInState(CharacterState.Grounding) && rb.velocity.y < 0)
-        {
-            rb.velocity = new Vector2(rb.velocity.x, 0f);
+            var reduceVelocityPerSecond = (2 * jumpHeight) / (jumpUpTime * jumpUpTime)*Time.deltaTime;
+            //rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y- reduceVelocityPerSecond);
         }
     }
 
     private void Attack()
     {
         setState(CharacterState.Attacking, true, 0.2f);
-        currentDamageSystem.CauseDamage("NormalAttack", currentDamageSystem);
+        currentInteractManager.Damage(10, "AttackRange");
+        //currentDamageSystem.CauseDamage("NormalAttack", currentDamageSystem);
+    }
+
+    private void Defense()
+    {
+        setState(CharacterState.Defensing, true, 0.5f);
     }
 
     private void setAnimationState()
@@ -120,6 +134,7 @@ public class PlayerController : MonoBehaviour
         animator.SetBool("isJumping", !isInState(CharacterState.Grounding));
         animator.SetFloat("xSpeed", Math.Abs(rb.velocity.x));
         animator.SetBool("isAttacking", isInState(CharacterState.Attacking));
+        animator.SetBool("isDefensing", isInState(CharacterState.Defensing));
     }
 
     //Horizon Move
@@ -156,6 +171,17 @@ public class PlayerController : MonoBehaviour
     private void checkGrounded()
     {
         RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down, 0.1f, groundLayer);
+        /*這種方法會誤判跳躍最高點為地面
+        if(Math.Abs(rb.velocity.y)<0.01f)
+        {
+            setState(CharacterState.Grounding, true);
+        }
+        else
+        {
+            setState(CharacterState.Grounding, false);
+
+        }
+        */
         //State
         setState(CharacterState.Grounding, hit.collider != null);
     }
@@ -164,7 +190,16 @@ public class PlayerController : MonoBehaviour
     {
         //按下按鈕
         //可以控制 "跳躍高度" & "重力加速度"
-        rb.velocity = new Vector2(rb.velocity.x, Mathf.Sqrt(2 * jumpHeight * gravity));
+        //v = v0 + gt
+        //s = v0t + 1/2(a(t^2)) 
+        //v^2 = v0^2 + 2gs
+        //v、s、t
+        //g、v0
+        //s = 0+1/2(g(t^2))
+        //2s = gt^2
+        //(2s)/(t^2) = g
+        //v0 = v-gt = (2s)/(t)
+        rb.velocity = new Vector2(rb.velocity.x, 2*jumpHeight/jumpUpTime);
     }
 
     //用於角色被封鎖權限之類的Debuff，像是移動、跳躍、攻擊

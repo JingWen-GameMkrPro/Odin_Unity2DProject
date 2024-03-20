@@ -9,11 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 02b3abe1426bba04db5e8409d6979f90, type: 3}
-  m_Name: AttributeTypes_Player
+  m_Script: {fileID: 11500000, guid: a3f8b081daaa2af45b7c09d4d931f0fe, type: 3}
+  m_Name: Sample_Monster
   m_EditorClassIdentifier: 
   data:
-    maxHP: 100
-    HP: 100
+    maxHP: 1000
+    HP: 1000
     originSpeedWeight: 1
     speedWeight: 1

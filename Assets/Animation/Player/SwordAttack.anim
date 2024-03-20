@@ -50,7 +50,7 @@ AnimationClip:
     - time: 0.35000002
       value: {fileID: 0}
     attribute: m_Sprite
-    path: Effect_Attack/Effect_Attack
+    path: Effect_Attack/Effect1
     classID: 212
     script: {fileID: 0}
     flags: 2
@@ -71,7 +71,7 @@ AnimationClip:
       isIntCurve: 0
       isSerializeReferenceCurve: 0
     - serializedVersion: 2
-      path: 3351635315
+      path: 3253491542
       attribute: 0
       script: {fileID: 0}
       typeID: 212

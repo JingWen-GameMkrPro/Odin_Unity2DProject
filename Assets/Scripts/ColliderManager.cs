@@ -5,27 +5,18 @@ using UnityEngine;
 
 public class ColliderManager : MonoBehaviour
 {
-    public List<Collider2D> hitMonsters = new();    
+    [SerializeField]
+    public List<ColliderDetecter> ColliderDetecterList = new List<ColliderDetecter>();
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    public Dictionary<string, List<GameObject>> ColliderDetecterDictionary = new Dictionary<string, List<GameObject>>();
+
+    private void Start()
     {
-        //Debug.Log(collision);
-        if (collision.CompareTag("HitBox_Monster"))
+        foreach(var detecterItem in ColliderDetecterList)
         {
-            hitMonsters.Add(collision);
-            //currentDamageSystem.CauseDamage()
+            ColliderDetecterDictionary.Add(detecterItem.DetecterName, detecterItem.rangeObjects);
         }
     }
-
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        if (collision.CompareTag("HitBox_Monster"))
-        {
-            hitMonsters.Remove(collision);
-            //currentDamageSystem.CauseDamage()
-        }
-    }
-
 
 
 }

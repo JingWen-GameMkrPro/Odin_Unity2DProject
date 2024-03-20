@@ -3,8 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "NewAttributeTypes", menuName = "ScriptableObjects/AttributeTypes", order = 1)]
-public class AttributeTypes : ScriptableObject
+[CreateAssetMenu(fileName = "NewAttributeData", menuName = "ScriptableObjects/AttributeData", order = 1)]
+public class AttributeData : ScriptableObject
 {
     [Serializable]
     public struct Data

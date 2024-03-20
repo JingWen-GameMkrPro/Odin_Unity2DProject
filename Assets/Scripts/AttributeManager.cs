@@ -3,12 +3,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AttributeSystem : MonoBehaviour
+public class AttributeManager : MonoBehaviour
 {
     [SerializeField]
-    public AttributeTypes sourceAttributeData;
+    public AttributeData sourceAttributeData;
 
-    private AttributeTypes.Data currentAttributeData;
+    private AttributeData.Data currentAttributeData;
     private void Start()
     {
         currentAttributeData = sourceAttributeData.data;
