@@ -868,6 +868,7 @@ GameObject:
   - component: {fileID: 1921938517}
   - component: {fileID: 1921938519}
   - component: {fileID: 1921938518}
+  - component: {fileID: 1921938520}
   m_Layer: 0
   m_Name: Collider_HitBox
   m_TagString: HitBox_Monster
@@ -987,6 +988,24 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1921938520
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1921938516}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58c6f9b140a52a14881ec09eaebb66eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  behaviourTree: {fileID: 11400000, guid: 129599c58ff06ad4cb508eefd73c2b94, type: 2}
+  validate: 1
+  blackboardOverrides: []
+  references:
+    version: 2
+    RefIds: []
 --- !u!1 &2025893572
 GameObject:
   m_ObjectHideFlags: 0
@@ -2259,6 +2278,14 @@ PrefabInstance:
       propertyPath: animator
       value: 
       objectReference: {fileID: 1698611041}
+    - target: {fileID: 1242468710729009455, guid: 526a851a10cc99d4db22f83ad58e1293, type: 3}
+      propertyPath: jumpHeight
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1242468710729009455, guid: 526a851a10cc99d4db22f83ad58e1293, type: 3}
+      propertyPath: jumpUpTime
+      value: 0.3
+      objectReference: {fileID: 0}
     - target: {fileID: 1242468710729009455, guid: 526a851a10cc99d4db22f83ad58e1293, type: 3}
       propertyPath: currentHitBox
       value: 

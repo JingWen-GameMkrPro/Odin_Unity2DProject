@@ -168,7 +168,7 @@ public class PlayerController : MonoBehaviour
     private void checkGrounded()
     {
         RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down, 0.1f, groundLayer);
-        //State
+        //一踩到地板就要緊急煞車，避免穿透
         if(!isInState(CharacterState.Grounding) && hit.collider != null)
         {
             rb.velocity = new Vector2(rb.velocity.x, 0);
