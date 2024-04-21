@@ -8,10 +8,13 @@ public class Action_EasyMonsterInitial : ActionNode
 {
     public NodeProperty<GameObject> RefPlayer;
 
-    protected override void OnStart() {
+    protected override void OnStart() 
+    {
+        
     }
 
-    protected override void OnStop() {
+    protected override void OnStop() 
+    {
     }
 
     protected override State OnUpdate() 

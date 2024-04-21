@@ -23,30 +23,36 @@ MonoBehaviour:
   - rid: 8135256992640925702
   - rid: 8135256992640925703
   - rid: 8135256992640925707
+  - rid: 8135257308270428160
+  - rid: 8135257308270428161
+  - rid: 8135257311591792640
   treeState: 0
   blackboard:
     keys:
     - rid: 8135256992640925699
     - rid: 8135256992640925704
     - rid: 8135256992640925705
-  viewPosition: {x: 229.33333, y: 63.333332, z: 0}
+    - rid: 8135257311591792641
+  viewPosition: {x: 676.6667, y: 280, z: 0}
   viewScale: {x: 0.8695652, y: 0.8695652, z: 1}
   references:
     version: 2
     RefIds:
+    - rid: -2
+      type: {class: , ns: , asm: }
     - rid: 2000752154015956993
       type: {class: RootNode, ns: TheKiwiCoder, asm: thekiwicoder.behaviourtreeeditor}
       data:
         state: 0
         started: 0
         guid: 9964c421-9d6a-481f-b399-d357b6ff8e6f
-        position: {x: 0, y: -225}
+        position: {x: -420, y: -390}
         blackboard:
           keys: []
         description: 
         drawGizmos: 0
         child:
-          rid: 8135256992640925701
+          rid: 8135257308270428160
     - rid: 8135256991382896642
       type: {class: Sequencer, ns: TheKiwiCoder, asm: thekiwicoder.behaviourtreeeditor}
       data:
@@ -160,7 +166,7 @@ MonoBehaviour:
         state: 0
         started: 0
         guid: 834cec53a00994b428c6405b0d46033c
-        position: {x: -360, y: 315}
+        position: {x: -375, y: 300}
         blackboard:
           keys: []
         description: 
@@ -173,3 +179,55 @@ MonoBehaviour:
           reference:
             rid: 8135256992640925699
           defaultValue: {fileID: 0}
+    - rid: 8135257308270428160
+      type: {class: MoveHorizonal, ns: , asm: Assembly-CSharp}
+      data:
+        state: 0
+        started: 0
+        guid: d3812db5a90c1e14db199d8c2522865b
+        position: {x: -450, y: -255}
+        blackboard:
+          keys: []
+        description: 
+        drawGizmos: 0
+        MoveDirection:
+          reference:
+            rid: -2
+          defaultValue: 0
+        MoveSpeed:
+          reference:
+            rid: -2
+          defaultValue: 5
+        MoveDuration:
+          reference:
+            rid: -2
+          defaultValue: 5
+    - rid: 8135257308270428161
+      type: {class: Initial, ns: , asm: Assembly-CSharp}
+      data:
+        state: 0
+        started: 0
+        guid: c7f629edafac3874fa7015aa1bbb8f09
+        position: {x: -585, y: 15}
+        blackboard:
+          keys: []
+        description: 
+        drawGizmos: 0
+    - rid: 8135257311591792640
+      type: {class: Detect, ns: , asm: Assembly-CSharp}
+      data:
+        state: 0
+        started: 0
+        guid: c87510d874b9f2a44ba48a4395af90ec
+        position: {x: -761.9333, y: -79.8}
+        blackboard:
+          keys: []
+        description: 
+        drawGizmos: 0
+    - rid: 8135257311591792641
+      type: {class: GameObjectKey, ns: TheKiwiCoder, asm: thekiwicoder.behaviourtreeeditor}
+      data:
+        name: Target
+        typeName: UnityEngine.GameObject, UnityEngine.CoreModule, Version=0.0.0.0,
+          Culture=neutral, PublicKeyToken=null
+        value: {fileID: 0}
