@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "NewAttributeData", menuName = "ScriptableObjects/AttributeData", order = 1)]
+[CreateAssetMenu(fileName = "NewAttributeData", menuName = "ScriptableObjects/AttributeData", order = 2)]
 public class AttributeData : ScriptableObject
 {
     [Serializable]

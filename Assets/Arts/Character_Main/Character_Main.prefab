@@ -180,10 +180,11 @@ GameObject:
   - component: {fileID: 3293803314041940857}
   - component: {fileID: 3884177038109677892}
   - component: {fileID: 1702625750256117960}
-  - component: {fileID: 1242468710729009455}
   - component: {fileID: 162182985703146182}
-  - component: {fileID: 1267807897845992958}
-  - component: {fileID: 2593695772338038124}
+  - component: {fileID: 4277199531647069428}
+  - component: {fileID: 1918128821892106945}
+  - component: {fileID: 5818254441228102841}
+  - component: {fileID: 1174856687173413476}
   m_Layer: 0
   m_Name: Character_Main
   m_TagString: Untagged
@@ -287,30 +288,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &1242468710729009455
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1077168037508049692}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 68e0ca112653d484993b91ab0e7b1a11, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  horizontalMoveSpeed: 8
-  Acceleration: 2
-  groundLayer:
-    serializedVersion: 2
-    m_Bits: 8
-  rb: {fileID: 1702625750256117960}
-  jumpHeight: 4
-  gravity: 100
-  animator: {fileID: 0}
-  currentInteractManager: {fileID: 0}
-  currentHitBox: {fileID: 3152048830079166380}
-  currentAttackBox: {fileID: 5651413396238792918}
 --- !u!95 &162182985703146182
 Animator:
   serializedVersion: 5
@@ -332,7 +309,7 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &1267807897845992958
+--- !u!114 &4277199531647069428
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -341,11 +318,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1077168037508049692}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5801bf9ea009f004c8637b9ef5729123, type: 3}
+  m_Script: {fileID: 11500000, guid: c039cdba3284e5c489b791fd7d5341e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sourceAttributeData: {fileID: 0}
---- !u!114 &2593695772338038124
+  PlayerBehavior: {fileID: 0}
+--- !u!114 &1918128821892106945
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -354,12 +331,47 @@ MonoBehaviour:
   m_GameObject: {fileID: 1077168037508049692}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c9b3dca98f3d8f7418630f187b4a1ad4, type: 3}
+  m_Script: {fileID: 11500000, guid: 7715f74cc28a0294c8ef4e8398ffe4c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentAttributeSystem: {fileID: 1267807897845992958}
-  currentDamageTypes: {fileID: 11400000, guid: 2c31a9d072be83e4e8faf922556dfed9, type: 2}
-  currentColliderManager: {fileID: 0}
+  PlayerBehavior: {fileID: 0}
+--- !u!114 &5818254441228102841
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1077168037508049692}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67eddd4d1e2146b45836b673884a83a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PlayerDatabase: {fileID: 0}
+--- !u!114 &1174856687173413476
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1077168037508049692}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b178d51480e6257499a3e8dc72bfefaf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerAtt:
+    HP: 0
+    MaxHP: 0
+    HorizontalSpeed: 0
+    HorizontalAcceleration: 0
+    SpeedWeight: 0
+    MaxSpeedWeight: 0
+    JumpHeight: 0
+    JumpToPeakTime: 0
+  SD_PlayerAtt: {fileID: 11400000, guid: 333c5158f9e9db547affb7b8f15ed58f, type: 2}
+  rb: {fileID: 1702625750256117960}
+  animator: {fileID: 162182985703146182}
 --- !u!1 &2076907829341171655
 GameObject:
   m_ObjectHideFlags: 0

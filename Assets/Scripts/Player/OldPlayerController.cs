@@ -10,7 +10,7 @@ using UnityEngine;
 using UnityEngine.Android;
 //using UnityEngine.Windows;
 
-public class PlayerController : MonoBehaviour
+public class OldPlayerController : MonoBehaviour
 {
     // Start is called before the first frame update
     [SerializeField]
@@ -138,7 +138,7 @@ public class PlayerController : MonoBehaviour
     private void horizontalMove()
     {
         //Transformation
-        horizontalInput = Input.GetAxis("Horizontal");
+        //horizontalInput = Input.GetAxis("Horizontal");
         horizontalInput = Math.Clamp(horizontalInput * Acceleration, -1, 1);
         rb.velocity = new Vector2(horizontalInput * horizontalMoveSpeed, rb.velocity.y);
 
