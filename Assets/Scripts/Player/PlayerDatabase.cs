@@ -16,8 +16,6 @@ public class PlayerDatabase: MonoBehaviour
     public Rigidbody2D rb;
     public Animator animator;
 
-
-
     #region [角色行為權限] 受到外在Debuff可能會用到
     [Flags]
     public enum PlayerPermission
@@ -139,16 +137,19 @@ public class PlayerDatabase: MonoBehaviour
     }
     #endregion
 
-    void Start()
+    private void Start()
     {
         checkSerializeField();
 
         //取得類別中的資料結構副本
         playerAtt = SD_PlayerAtt.playerAtt;
+
+        //計算跳躍相關參數
+        UpdateJumpCoefficient();
     }
 
     //確認SerializeField空值
-    void checkSerializeField()
+    private void checkSerializeField()
     {
         if (SD_PlayerAtt == null)
         {
@@ -166,5 +167,12 @@ public class PlayerDatabase: MonoBehaviour
         }
     }
 
+    //更新跳躍相關參數
+    public void UpdateJumpCoefficient()
+    {
+        var gravity = (-2 * playerAtt.JumpHeight) / (playerAtt.JumpToPeakTime * playerAtt.JumpToPeakTime);
+        rb.gravityScale = Math.Abs(gravity / Physics2D.gravity.y);
+        playerAtt.JumpStartVelocity = -gravity * (playerAtt.JumpToPeakTime);
+    }
 
 }

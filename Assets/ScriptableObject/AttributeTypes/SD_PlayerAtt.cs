@@ -24,8 +24,9 @@ public class SD_PlayerAtt : ScriptableObject
         public float JumpHeight;
         public float JumpToPeakTime;
 
-        
-        
+        [HideInInspector]
+        public float JumpStartVelocity;
+
     }
 
     [SerializeField]
