@@ -9,9 +9,14 @@ public class InnerInteracterPlayer : MonoBehaviour
     [SerializeField]
     PlayerDatabase PlayerDatabase;
 
+    [HideInInspector]
+    public GameObject Causer;
+
     private void Start()
     {
         checkSerializeField();
+
+        Causer = transform.root.gameObject;
     }
 
     //確認SerializeField空值
@@ -67,14 +72,14 @@ public class InnerInteracterPlayer : MonoBehaviour
         //控制位移
         var horizontalInput = Input.GetAxis("Horizontal");
         horizontalInput = Math.Clamp(horizontalInput * PlayerDatabase.playerAtt.HorizontalAcceleration, -1, 1);
-        PlayerDatabase.rb.velocity = new Vector2(horizontalInput * PlayerDatabase.playerAtt.HorizontalSpeed, PlayerDatabase.rb.velocity.y);
+        PlayerDatabase.RB.velocity = new Vector2(horizontalInput * PlayerDatabase.playerAtt.HorizontalSpeed, PlayerDatabase.RB.velocity.y);
 
         //控制方向
-        if (PlayerDatabase.rb.velocity.x > 0)
+        if (PlayerDatabase.RB.velocity.x > 0)
         {
             transform.localScale = new Vector3(1, 1, 1);
         }
-        else if (PlayerDatabase.rb.velocity.x < 0)
+        else if (PlayerDatabase.RB.velocity.x < 0)
         {
             transform.localScale = new Vector3(-1, 1, 1);
         }
@@ -99,7 +104,7 @@ public class InnerInteracterPlayer : MonoBehaviour
             return;
         }
 
-        PlayerDatabase.rb.velocity = new Vector2(PlayerDatabase.rb.velocity.x, PlayerDatabase.playerAtt.JumpStartVelocity);
+        PlayerDatabase.RB.velocity = new Vector2(PlayerDatabase.RB.velocity.x, PlayerDatabase.playerAtt.JumpStartVelocity);
     }
 
     private void tryAttack()
@@ -110,6 +115,15 @@ public class InnerInteracterPlayer : MonoBehaviour
         }
 
         PlayerDatabase.SetState(PlayerDatabase.PlayerState.Attacking, true, 0.2f);
+
+        if(PlayerDatabase.DetecterManager.DetecterRecorderList.ContainsKey("AttackDetecter"))
+        {
+            Debug.Log("Success Attacking!");
+            foreach(var target in PlayerDatabase.DetecterManager.DetecterRecorderList["AttackDetecter"])
+            {
+                target.ReduceHP(Causer, 10);
+            }
+        }
     }
 
     private void tryDefense()
@@ -129,17 +143,17 @@ public class InnerInteracterPlayer : MonoBehaviour
         //一踩到地板就要緊急煞車，避免穿透
         if (!PlayerDatabase.IsInState(PlayerDatabase.PlayerState.Grounding) && hit.collider != null)
         {
-            PlayerDatabase.rb.velocity = new Vector2(PlayerDatabase.rb.velocity.x, 0);
+            PlayerDatabase.RB.velocity = new Vector2(PlayerDatabase.RB.velocity.x, 0);
         }
         PlayerDatabase.SetState(PlayerDatabase.PlayerState.Grounding, hit.collider != null);
     }
 
     private void updateaAnimatorState()
     {
-        PlayerDatabase.animator.SetBool("isJumping", !PlayerDatabase.IsInState(PlayerDatabase.PlayerState.Grounding));
-        PlayerDatabase.animator.SetFloat("xSpeed", Math.Abs(PlayerDatabase.rb.velocity.x));
-        PlayerDatabase.animator.SetBool("isAttacking", PlayerDatabase.IsInState(PlayerDatabase.PlayerState.Attacking));
-        PlayerDatabase.animator.SetBool("isDefensing", PlayerDatabase.IsInState(PlayerDatabase.PlayerState.Defensing));
+        PlayerDatabase.Animator.SetBool("isJumping", !PlayerDatabase.IsInState(PlayerDatabase.PlayerState.Grounding));
+        PlayerDatabase.Animator.SetFloat("xSpeed", Math.Abs(PlayerDatabase.RB.velocity.x));
+        PlayerDatabase.Animator.SetBool("isAttacking", PlayerDatabase.IsInState(PlayerDatabase.PlayerState.Attacking));
+        PlayerDatabase.Animator.SetBool("isDefensing", PlayerDatabase.IsInState(PlayerDatabase.PlayerState.Defensing));
     }
 
 

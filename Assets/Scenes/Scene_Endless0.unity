@@ -201,25 +201,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2845413552166181219, guid: 2d92c73cb1dab7f49b4b8db0f97e2fe8, type: 3}
   m_PrefabInstance: {fileID: 439670410}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &358637903 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 9172869824909019990, guid: 526a851a10cc99d4db22f83ad58e1293, type: 3}
+--- !u!114 &358637909 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8564094952054738438, guid: 526a851a10cc99d4db22f83ad58e1293, type: 3}
   m_PrefabInstance: {fileID: 1222817144914141732}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &358637906
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 358637903}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 801ea232635137c408c463064572863f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DetecterName: AttackRange
-  DetectTag: HitBox_Monster
 --- !u!1 &360084082
 GameObject:
   m_ObjectHideFlags: 0
@@ -230,10 +222,10 @@ GameObject:
   m_Component:
   - component: {fileID: 360084083}
   - component: {fileID: 360084084}
-  - component: {fileID: 360084088}
   - component: {fileID: 360084087}
   - component: {fileID: 360084086}
   - component: {fileID: 360084089}
+  - component: {fileID: 360084091}
   - component: {fileID: 360084090}
   m_Layer: 0
   m_Name: Monster
@@ -336,19 +328,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d056d67d9f7f51845a362d57e333412e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ColliderDetecterList: []
---- !u!114 &360084088
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 360084082}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9059d6efe2b40364b82d5f8f12ee52db, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  DetecterRecorderOriginList: []
 --- !u!50 &360084089
 Rigidbody2D:
   serializedVersion: 4
@@ -412,6 +392,18 @@ MonoBehaviour:
         typeName: UnityEngine.GameObject, UnityEngine.CoreModule, Version=0.0.0.0,
           Culture=neutral, PublicKeyToken=null
         value: {fileID: 360084082}
+--- !u!114 &360084091
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 360084082}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69c8545ee3c4fa14a89e94024b1cd4ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &439670410
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -993,17 +985,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b178d51480e6257499a3e8dc72bfefaf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1698611056 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5818254441228102841, guid: 526a851a10cc99d4db22f83ad58e1293, type: 3}
-  m_PrefabInstance: {fileID: 1222817144914141732}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 67eddd4d1e2146b45836b673884a83a7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &1832129135 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2845413552166181219, guid: 2d92c73cb1dab7f49b4b8db0f97e2fe8, type: 3}
@@ -1061,7 +1042,7 @@ GameObject:
   - component: {fileID: 1921938518}
   m_Layer: 0
   m_Name: Collider_HitBox
-  m_TagString: HitBox_Monster
+  m_TagString: HitBoxMonster
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2401,46 +2382,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2845413552166181219, guid: 2d92c73cb1dab7f49b4b8db0f97e2fe8, type: 3}
   m_PrefabInstance: {fileID: 1159817852}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &2053669167 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 150393900396767370, guid: 526a851a10cc99d4db22f83ad58e1293, type: 3}
-  m_PrefabInstance: {fileID: 1222817144914141732}
-  m_PrefabAsset: {fileID: 0}
---- !u!58 &2053669169
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2053669167}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.6
 --- !u!4 &2111948203 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2845413552166181219, guid: 2d92c73cb1dab7f49b4b8db0f97e2fe8, type: 3}
@@ -2538,7 +2479,11 @@ PrefabInstance:
     - target: {fileID: 1918128821892106945, guid: 526a851a10cc99d4db22f83ad58e1293, type: 3}
       propertyPath: PlayerBehavior
       value: 
-      objectReference: {fileID: 1698611056}
+      objectReference: {fileID: 0}
+    - target: {fileID: 1918128821892106945, guid: 526a851a10cc99d4db22f83ad58e1293, type: 3}
+      propertyPath: PlayerDatabase
+      value: 
+      objectReference: {fileID: 1698611055}
     - target: {fileID: 2076907829341171655, guid: 526a851a10cc99d4db22f83ad58e1293, type: 3}
       propertyPath: m_Name
       value: Effect1
@@ -2614,7 +2559,11 @@ PrefabInstance:
     - target: {fileID: 4277199531647069428, guid: 526a851a10cc99d4db22f83ad58e1293, type: 3}
       propertyPath: PlayerBehavior
       value: 
-      objectReference: {fileID: 1698611056}
+      objectReference: {fileID: 0}
+    - target: {fileID: 4277199531647069428, guid: 526a851a10cc99d4db22f83ad58e1293, type: 3}
+      propertyPath: PlayerDatabase
+      value: 
+      objectReference: {fileID: 1698611055}
     - target: {fileID: 5084714527975347981, guid: 526a851a10cc99d4db22f83ad58e1293, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.07
@@ -2639,6 +2588,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Effect2
       objectReference: {fileID: 0}
+    - target: {fileID: 7652014874788167601, guid: 526a851a10cc99d4db22f83ad58e1293, type: 3}
+      propertyPath: DetecterRecorderOriginList.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7652014874788167601, guid: 526a851a10cc99d4db22f83ad58e1293, type: 3}
+      propertyPath: DetecterRecorderOriginList.Array.data[0]
+      value: 
+      objectReference: {fileID: 358637909}
     - target: {fileID: 7953745526658255757, guid: 526a851a10cc99d4db22f83ad58e1293, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.82
@@ -2661,7 +2618,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9172869824909019990, guid: 526a851a10cc99d4db22f83ad58e1293, type: 3}
       propertyPath: m_Name
-      value: Detecter_Attack
+      value: AttackDetecter
       objectReference: {fileID: 0}
     - target: {fileID: 9172869824909019990, guid: 526a851a10cc99d4db22f83ad58e1293, type: 3}
       propertyPath: m_Layer
@@ -2678,13 +2635,7 @@ PrefabInstance:
     m_RemovedGameObjects:
     - {fileID: 176406982717216440, guid: 526a851a10cc99d4db22f83ad58e1293, type: 3}
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 9172869824909019990, guid: 526a851a10cc99d4db22f83ad58e1293, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 358637906}
-    - targetCorrespondingSourceObject: {fileID: 150393900396767370, guid: 526a851a10cc99d4db22f83ad58e1293, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 2053669169}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 526a851a10cc99d4db22f83ad58e1293, type: 3}
 --- !u!1001 &6994443880640431003
 PrefabInstance:

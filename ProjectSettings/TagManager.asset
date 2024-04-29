@@ -6,8 +6,8 @@ TagManager:
   tags:
   - Monster
   - HitBox_Monster
-  - HitBox_Player
   - Damager_Monster
+  - HitBoxMonster
   layers:
   - Default
   - TransparentFX

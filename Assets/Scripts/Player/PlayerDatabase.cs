@@ -10,11 +10,13 @@ public class PlayerDatabase: MonoBehaviour
     //角色屬性
     public SD_PlayerAtt.PlayerAtt playerAtt;
 
+
     //互動元件，需要調動的私人內部元件
     [SerializeField]
     public SD_PlayerAtt SD_PlayerAtt; //警告：不要修改此變數，這會導致原始資料被更動
-    public Rigidbody2D rb;
-    public Animator animator;
+    public Rigidbody2D RB;
+    public Animator Animator;
+    public DetecterManager DetecterManager;
 
     #region [角色行為權限] 受到外在Debuff可能會用到
     [Flags]
@@ -156,14 +158,19 @@ public class PlayerDatabase: MonoBehaviour
             Debug.LogError("SD_PlayerAtt == null");
         }
 
-        if(rb == null)
+        if(RB == null)
         {
             Debug.LogError("rb == null");
         }
 
-        if (animator == null)
+        if (Animator == null)
         {
             Debug.LogError("animator == null");
+        }
+
+        if (DetecterManager == null)
+        {
+            Debug.LogError("DetecterManager == null");
         }
     }
 
@@ -171,7 +178,7 @@ public class PlayerDatabase: MonoBehaviour
     public void UpdateJumpCoefficient()
     {
         var gravity = (-2 * playerAtt.JumpHeight) / (playerAtt.JumpToPeakTime * playerAtt.JumpToPeakTime);
-        rb.gravityScale = Math.Abs(gravity / Physics2D.gravity.y);
+        RB.gravityScale = Math.Abs(gravity / Physics2D.gravity.y);
         playerAtt.JumpStartVelocity = -gravity * (playerAtt.JumpToPeakTime);
     }
 

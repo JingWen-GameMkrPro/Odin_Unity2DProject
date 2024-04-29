@@ -9,7 +9,7 @@ public class DamageSystem : MonoBehaviour
     [SerializeField]
     public  AttributeManager currentAttributeSystem;
     public DamageTypes currentDamageTypes;
-    public ColliderManager currentColliderManager;
+    public DetecterManager currentColliderManager;
     /*
     public void CauseDamage(string damageName, DamageSystem targetDamageSystem)
     {

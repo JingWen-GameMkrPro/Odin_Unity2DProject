@@ -28,7 +28,7 @@ public class OldPlayerController : MonoBehaviour
     public Animator animator;
 
     //System
-    public InteractManager currentInteractManager;
+    //public InteractManager currentInteractManager;
 
     //Collider
     public Collider2D currentHitBox;
@@ -118,7 +118,7 @@ public class OldPlayerController : MonoBehaviour
     private void Attack()
     {
         setState(CharacterState.Attacking, true, 0.2f);
-        currentInteractManager.Damage(10, "AttackRange");
+        //currentInteractManager.Damage(10, "AttackRange");
     }
 
     private void Defense()
