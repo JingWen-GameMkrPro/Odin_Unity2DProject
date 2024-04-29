@@ -71,8 +71,8 @@ public class InnerInteracterPlayer : MonoBehaviour
 
         //控制位移
         var horizontalInput = Input.GetAxis("Horizontal");
-        horizontalInput = Math.Clamp(horizontalInput * PlayerDatabase.playerAtt.HorizontalAcceleration, -1, 1);
-        PlayerDatabase.RB.velocity = new Vector2(horizontalInput * PlayerDatabase.playerAtt.HorizontalSpeed, PlayerDatabase.RB.velocity.y);
+        horizontalInput = Math.Clamp(horizontalInput * PlayerDatabase.PlayerAtt.HorizontalAcceleration, -1, 1);
+        PlayerDatabase.RB.velocity = new Vector2(horizontalInput * PlayerDatabase.PlayerAtt.HorizontalSpeed, PlayerDatabase.RB.velocity.y);
 
         //控制方向
         if (PlayerDatabase.RB.velocity.x > 0)
@@ -104,7 +104,7 @@ public class InnerInteracterPlayer : MonoBehaviour
             return;
         }
 
-        PlayerDatabase.RB.velocity = new Vector2(PlayerDatabase.RB.velocity.x, PlayerDatabase.playerAtt.JumpStartVelocity);
+        PlayerDatabase.RB.velocity = new Vector2(PlayerDatabase.RB.velocity.x, PlayerDatabase.PlayerAtt.JumpStartVelocity);
     }
 
     private void tryAttack()
@@ -118,7 +118,6 @@ public class InnerInteracterPlayer : MonoBehaviour
 
         if(PlayerDatabase.DetecterManager.DetecterRecorderList.ContainsKey("AttackDetecter"))
         {
-            Debug.Log("Success Attacking!");
             foreach(var target in PlayerDatabase.DetecterManager.DetecterRecorderList["AttackDetecter"])
             {
                 target.ReduceHP(Causer, 10);

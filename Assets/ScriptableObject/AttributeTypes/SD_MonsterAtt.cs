@@ -1,9 +1,11 @@
 using System;
-using System.ComponentModel;
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "SD_PlayerAtt", menuName = "ScriptableObjects/PlayerAtt", order = 1)]
-public class SD_PlayerAtt : ScriptableObject
+[CreateAssetMenu(fileName = "SD_MonsterAtt", menuName = "ScriptableObjects/MonsterAtt", order = 2)]
+
+public class SD_MonsterAtt : ScriptableObject
 {
     [Serializable]
     public struct Data

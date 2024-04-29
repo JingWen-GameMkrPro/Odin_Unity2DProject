@@ -8,8 +8,7 @@ public class PlayerDatabase: MonoBehaviour
 {
     [HideInInspector]
     //角色屬性
-    public SD_PlayerAtt.PlayerAtt playerAtt;
-
+    public SD_PlayerAtt.Data PlayerAtt;
 
     //互動元件，需要調動的私人內部元件
     [SerializeField]
@@ -144,7 +143,7 @@ public class PlayerDatabase: MonoBehaviour
         checkSerializeField();
 
         //取得類別中的資料結構副本
-        playerAtt = SD_PlayerAtt.playerAtt;
+        PlayerAtt = SD_PlayerAtt.data;
 
         //計算跳躍相關參數
         UpdateJumpCoefficient();
@@ -177,9 +176,9 @@ public class PlayerDatabase: MonoBehaviour
     //更新跳躍相關參數
     public void UpdateJumpCoefficient()
     {
-        var gravity = (-2 * playerAtt.JumpHeight) / (playerAtt.JumpToPeakTime * playerAtt.JumpToPeakTime);
+        var gravity = (-2 * PlayerAtt.JumpHeight) / (PlayerAtt.JumpToPeakTime * PlayerAtt.JumpToPeakTime);
         RB.gravityScale = Math.Abs(gravity / Physics2D.gravity.y);
-        playerAtt.JumpStartVelocity = -gravity * (playerAtt.JumpToPeakTime);
+        PlayerAtt.JumpStartVelocity = -gravity * (PlayerAtt.JumpToPeakTime);
     }
 
 }

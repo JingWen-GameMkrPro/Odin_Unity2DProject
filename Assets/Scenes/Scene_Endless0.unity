@@ -221,12 +221,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 360084083}
-  - component: {fileID: 360084084}
-  - component: {fileID: 360084087}
   - component: {fileID: 360084086}
   - component: {fileID: 360084089}
-  - component: {fileID: 360084091}
   - component: {fileID: 360084090}
+  - component: {fileID: 360084091}
+  - component: {fileID: 360084092}
+  - component: {fileID: 360084087}
   m_Layer: 0
   m_Name: Monster
   m_TagString: Monster
@@ -251,19 +251,6 @@ Transform:
   - {fileID: 1443882240}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &360084084
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 360084082}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5801bf9ea009f004c8637b9ef5729123, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sourceAttributeData: {fileID: 11400000, guid: ebf54832d5e6caf42aa58128f09dc1cb, type: 2}
 --- !u!212 &360084086
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -404,6 +391,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 69c8545ee3c4fa14a89e94024b1cd4ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MonsterDatabase: {fileID: 360084092}
+--- !u!114 &360084092
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 360084082}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51bf7ccd6e4557b4480654eaa9eef4ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MonsterAtt:
+    HP: 0
+    MaxHP: 0
+    HorizontalSpeed: 0
+    HorizontalAcceleration: 0
+    SpeedWeight: 0
+    MaxSpeedWeight: 0
+    JumpHeight: 0
+    JumpToPeakTime: 0
+    JumpStartVelocity: 0
+  SD_MonsterAtt: {fileID: 11400000, guid: 252818305976c2a4eb2ffbfc8fe69c8d, type: 2}
+  RB: {fileID: 360084089}
+  DetecterManager: {fileID: 360084087}
 --- !u!1001 &439670410
 PrefabInstance:
   m_ObjectHideFlags: 0

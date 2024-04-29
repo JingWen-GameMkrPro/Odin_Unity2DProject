@@ -14,10 +14,7 @@ public abstract class OuterInteracterBase : MonoBehaviour
     }
 
     //¦©¦å
-    public virtual void ReduceHP(GameObject causer, float value) 
-    {
-        Debug.Log("Reduce HP");
-    }
+    public virtual void ReduceHP(GameObject causer, float value) { }
 
 
 }

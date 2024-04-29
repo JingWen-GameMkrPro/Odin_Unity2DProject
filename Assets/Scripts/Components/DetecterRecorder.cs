@@ -31,7 +31,6 @@ public class DetecterRecorder : MonoBehaviour
     {
         if (collision.CompareTag(DetectTargetTag))
         {
-            Debug.Log("Yes");
             RangeObjects.Add(getParentObjectOuterInteracter(collision));
         }
     }
@@ -40,7 +39,6 @@ public class DetecterRecorder : MonoBehaviour
     {
         if (collision.CompareTag(DetectTargetTag))
         {
-            Debug.Log("No");
             RangeObjects.Remove(getParentObjectOuterInteracter(collision));
         }
     }

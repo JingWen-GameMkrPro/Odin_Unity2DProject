@@ -9,16 +9,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3b4a92c7ed54e414cbfb9ecefb9f12ac, type: 3}
-  m_Name: SD_PlayerAtt
+  m_Script: {fileID: 11500000, guid: cd9f9286f4b57444fbac426206e421eb, type: 3}
+  m_Name: SD_MonsterAtt
   m_EditorClassIdentifier: 
   data:
     HP: 100
     MaxHP: 100
-    HorizontalSpeed: 10
-    HorizontalAcceleration: -19.66
+    HorizontalSpeed: 1
+    HorizontalAcceleration: 1
     SpeedWeight: 1
     MaxSpeedWeight: 1
-    JumpHeight: 5
-    JumpToPeakTime: 0.3
+    JumpHeight: 1
+    JumpToPeakTime: 1
     JumpStartVelocity: 0

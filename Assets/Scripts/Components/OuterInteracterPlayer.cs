@@ -24,7 +24,7 @@ public class OuterInteracterPlayer : OuterInteracterBase
 
     public override void ReduceHP(GameObject causer, float value)
     {
-        PlayerDatabase.playerAtt.HP = Mathf.Clamp(PlayerDatabase.playerAtt.HP - value, 0, PlayerDatabase.playerAtt.MaxHP);
+        PlayerDatabase.PlayerAtt.HP = Mathf.Clamp(PlayerDatabase.PlayerAtt.HP - value, 0, PlayerDatabase.PlayerAtt.MaxHP);
     }
 
 
