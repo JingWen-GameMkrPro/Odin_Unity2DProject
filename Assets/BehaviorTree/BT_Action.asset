@@ -16,10 +16,13 @@ MonoBehaviour:
     rid: 8135257327700279297
   nodes:
   - rid: 8135257327700279297
+  - rid: 8135257531756052489
+  - rid: 8135257531756052500
+  - rid: 8135257531756052501
   treeState: 0
   blackboard:
     keys: []
-  viewPosition: {x: 600, y: 300, z: 0}
+  viewPosition: {x: 337.33334, y: 66.666664, z: 0}
   viewScale: {x: 1, y: 1, z: 1}
   references:
     version: 2
@@ -39,3 +42,36 @@ MonoBehaviour:
         drawGizmos: 0
         child:
           rid: -2
+    - rid: 8135257531756052489
+      type: {class: BTA_DebugLog, ns: , asm: Assembly-CSharp}
+      data:
+        state: 0
+        started: 0
+        guid: a60ac941b9d8e8345b6e6e0b84f33c9b
+        position: {x: -270, y: 75}
+        blackboard:
+          keys: []
+        description: "\u7528\u9014: \u8F38\u51FA\u6307\u5B9A\u8A0A\u606F\u800C\u5DF2~"
+        drawGizmos: 0
+    - rid: 8135257531756052500
+      type: {class: BTA_DetectEnemy, ns: , asm: Assembly-CSharp}
+      data:
+        state: 0
+        started: 0
+        guid: b5dea4b4c2f43794ea35a91cd049604d
+        position: {x: -285, y: 180}
+        blackboard:
+          keys: []
+        description: 
+        drawGizmos: 0
+    - rid: 8135257531756052501
+      type: {class: BTA_MoveToEnemy, ns: , asm: Assembly-CSharp}
+      data:
+        state: 0
+        started: 0
+        guid: 6d4529f0e6589f14193c91fb3c2b7009
+        position: {x: -285, y: 300}
+        blackboard:
+          keys: []
+        description: 
+        drawGizmos: 0

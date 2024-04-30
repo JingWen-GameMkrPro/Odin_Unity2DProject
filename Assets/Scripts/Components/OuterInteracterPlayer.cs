@@ -10,6 +10,8 @@ public class OuterInteracterPlayer : OuterInteracterBase
 
     private void Start()
     {
+        GameMaster.Instance.OuterInteracterPlayer = this;
+
         checkSerializeField();
     }
 

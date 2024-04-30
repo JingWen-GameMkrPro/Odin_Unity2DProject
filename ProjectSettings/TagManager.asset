@@ -5,9 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - Monster
-  - HitBox_Monster
-  - Damager_Monster
   - HitBoxMonster
+  - HitBoxPlayer
   layers:
   - Default
   - TransparentFX

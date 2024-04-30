@@ -1,0 +1,138 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d285eb63c2cdd74180de7cfceaa96ad, type: 3}
+  m_Name: BT_Monster
+  m_EditorClassIdentifier: 
+  rootNode:
+    rid: 8135257531756052485
+  nodes:
+  - rid: 8135257531756052485
+  - rid: 8135257531756052490
+  - rid: 8135257531756052497
+  - rid: 8135257531756052498
+  - rid: 8135257531756052499
+  - rid: 8135257531756052502
+  - rid: 8135257531756052503
+  treeState: 0
+  blackboard:
+    keys:
+    - rid: 8135257531756052486
+    - rid: 8135257531756052494
+  viewPosition: {x: 283.33334, y: 44.666668, z: 0}
+  viewScale: {x: 1, y: 1, z: 1}
+  references:
+    version: 2
+    RefIds:
+    - rid: -2
+      type: {class: , ns: , asm: }
+    - rid: 8135257531756052485
+      type: {class: RootNode, ns: TheKiwiCoder, asm: thekiwicoder.behaviourtreeeditor}
+      data:
+        state: 0
+        started: 0
+        guid: 72800eac-11c7-40e9-a42a-2efdd14bcd65
+        position: {x: -15, y: -105}
+        blackboard:
+          keys: []
+        description: 
+        drawGizmos: 0
+        child:
+          rid: 8135257531756052499
+    - rid: 8135257531756052486
+      type: {class: GameObjectKey, ns: TheKiwiCoder, asm: thekiwicoder.behaviourtreeeditor}
+      data:
+        name: Owner
+        typeName: UnityEngine.GameObject, UnityEngine.CoreModule, Version=0.0.0.0,
+          Culture=neutral, PublicKeyToken=null
+        value: {fileID: 0}
+    - rid: 8135257531756052490
+      type: {class: BTA_DebugLog, ns: , asm: Assembly-CSharp}
+      data:
+        state: 0
+        started: 0
+        guid: 39b125fffb30b544b8bc41005e7b2a1c
+        position: {x: -300, y: 285}
+        blackboard:
+          keys: []
+        description: 
+        drawGizmos: 0
+    - rid: 8135257531756052494
+      type: {class: BK_MonsterDataBase, ns: , asm: Assembly-CSharp}
+      data:
+        name: Database
+        typeName: MonsterDatabase, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+          PublicKeyToken=null
+        value: {fileID: 0}
+    - rid: 8135257531756052497
+      type: {class: Repeat, ns: TheKiwiCoder, asm: thekiwicoder.behaviourtreeeditor}
+      data:
+        state: 0
+        started: 0
+        guid: d4572718a26f6f24a864a11c38eaa29b
+        position: {x: -240, y: 15}
+        blackboard:
+          keys: []
+        description: 
+        drawGizmos: 0
+        child:
+          rid: -2
+        restartOnSuccess: 1
+        restartOnFailure: 0
+        maxRepeats: 0
+    - rid: 8135257531756052498
+      type: {class: Wait, ns: TheKiwiCoder, asm: thekiwicoder.behaviourtreeeditor}
+      data:
+        state: 0
+        started: 0
+        guid: 1fdec36b0840397419836666dd0ad9d4
+        position: {x: -300, y: 165}
+        blackboard:
+          keys: []
+        description: 
+        drawGizmos: 0
+        duration: 1
+    - rid: 8135257531756052499
+      type: {class: Sequencer, ns: TheKiwiCoder, asm: thekiwicoder.behaviourtreeeditor}
+      data:
+        state: 0
+        started: 0
+        guid: c20c0d75b4ed3ab498179ba756a24935
+        position: {x: -15, y: 75}
+        blackboard:
+          keys: []
+        description: 
+        drawGizmos: 0
+        children:
+        - rid: 8135257531756052503
+        - rid: 8135257531756052502
+    - rid: 8135257531756052502
+      type: {class: BTA_MoveToEnemy, ns: , asm: Assembly-CSharp}
+      data:
+        state: 0
+        started: 0
+        guid: 98d79b45375ab3d4786eb3de735d3ba7
+        position: {x: 105, y: 300}
+        blackboard:
+          keys: []
+        description: 
+        drawGizmos: 0
+    - rid: 8135257531756052503
+      type: {class: BTA_DetectEnemy, ns: , asm: Assembly-CSharp}
+      data:
+        state: 0
+        started: 0
+        guid: 60c415604221f3b43b30ccad8475e112
+        position: {x: -105, y: 300}
+        blackboard:
+          keys: []
+        description: 
+        drawGizmos: 0

@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3152048830079166380}
   m_Layer: 0
   m_Name: Collider_HitBox
-  m_TagString: HitBox_Monster
+  m_TagString: HitBoxPlayer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -95,7 +95,7 @@ GameObject:
   - component: {fileID: 7652014874788167601}
   m_Layer: 0
   m_Name: Character_Main
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -230,6 +230,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerDatabase: {fileID: 0}
+  Causer: {fileID: 0}
 --- !u!114 &1918128821892106945
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -255,7 +256,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b178d51480e6257499a3e8dc72bfefaf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerAtt:
+  PlayerAtt:
     HP: 0
     MaxHP: 0
     HorizontalSpeed: 0
@@ -265,7 +266,7 @@ MonoBehaviour:
     JumpHeight: 0
     JumpToPeakTime: 0
     JumpStartVelocity: 0
-  SD_PlayerAtt: {fileID: 11400000, guid: 333c5158f9e9db547affb7b8f15ed58f, type: 2}
+  SDPlayerAtt: {fileID: 0}
   RB: {fileID: 1702625750256117960}
   Animator: {fileID: 162182985703146182}
   DetecterManager: {fileID: 7652014874788167601}

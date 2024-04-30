@@ -29,6 +29,5 @@ public class SD_PlayerAtt : ScriptableObject
 
     }
 
-    [SerializeField]
     public Data data = new();
 }

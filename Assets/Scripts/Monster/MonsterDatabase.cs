@@ -9,7 +9,7 @@ public class MonsterDatabase : MonoBehaviour
 
     //互動元件，需要調動的私人內部元件
     [SerializeField]
-    public SD_MonsterAtt SD_MonsterAtt; //警告：不要修改此變數，這會導致原始資料被更動
+    public SD_MonsterAtt SDMonsterAtt; //警告：不要修改此變數，這會導致原始資料被更動
     public Rigidbody2D RB;
     public DetecterManager DetecterManager;
 
@@ -18,13 +18,13 @@ public class MonsterDatabase : MonoBehaviour
         checkSerializeField();
 
         //取得類別中的資料結構副本
-        MonsterAtt = SD_MonsterAtt.data;
+        MonsterAtt = SDMonsterAtt.data;
     }
 
     //確認SerializeField空值
     private void checkSerializeField()
     {
-        if (SD_MonsterAtt == null)
+        if (SDMonsterAtt == null)
         {
             Debug.LogError("SD_MonsterAtt == null");
         }

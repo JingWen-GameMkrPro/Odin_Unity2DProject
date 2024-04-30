@@ -12,7 +12,7 @@ public class PlayerDatabase: MonoBehaviour
 
     //互動元件，需要調動的私人內部元件
     [SerializeField]
-    public SD_PlayerAtt SD_PlayerAtt; //警告：不要修改此變數，這會導致原始資料被更動
+    public SD_PlayerAtt SDPlayerAtt; //警告：不要修改此變數，這會導致原始資料被更動
     public Rigidbody2D RB;
     public Animator Animator;
     public DetecterManager DetecterManager;
@@ -140,10 +140,18 @@ public class PlayerDatabase: MonoBehaviour
 
     private void Start()
     {
+        //不會因為因為轉換地圖而消除
+        GameObject.DontDestroyOnLoad(this);
+
+        //將自身昭告給世界
+        GameMaster.Instance.Player = this.gameObject;
+
         checkSerializeField();
 
         //取得類別中的資料結構副本
-        PlayerAtt = SD_PlayerAtt.data;
+        PlayerAtt = SDPlayerAtt.data;
+
+        PlayerAtt.HorizontalAcceleration = 3;
 
         //計算跳躍相關參數
         UpdateJumpCoefficient();
@@ -152,7 +160,7 @@ public class PlayerDatabase: MonoBehaviour
     //確認SerializeField空值
     private void checkSerializeField()
     {
-        if (SD_PlayerAtt == null)
+        if (SDPlayerAtt == null)
         {
             Debug.LogError("SD_PlayerAtt == null");
         }

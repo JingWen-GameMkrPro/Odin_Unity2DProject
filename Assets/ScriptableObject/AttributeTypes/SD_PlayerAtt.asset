@@ -16,7 +16,7 @@ MonoBehaviour:
     HP: 100
     MaxHP: 100
     HorizontalSpeed: 10
-    HorizontalAcceleration: -19.66
+    HorizontalAcceleration: 2
     SpeedWeight: 1
     MaxSpeedWeight: 1
     JumpHeight: 5
