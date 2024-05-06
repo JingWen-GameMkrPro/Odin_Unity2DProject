@@ -19,16 +19,36 @@ MonoBehaviour:
   - rid: 8135257531756052489
   - rid: 8135257531756052500
   - rid: 8135257531756052501
+  - rid: 6247956206388510720
   treeState: 0
   blackboard:
     keys: []
-  viewPosition: {x: 337.33334, y: 66.666664, z: 0}
+  viewPosition: {x: 325.33334, y: -55.333332, z: 0}
   viewScale: {x: 1, y: 1, z: 1}
   references:
     version: 2
     RefIds:
     - rid: -2
       type: {class: , ns: , asm: }
+    - rid: 6247956206388510720
+      type: {class: BTA_PatrolInOnePlatform, ns: , asm: Assembly-CSharp}
+      data:
+        state: 0
+        started: 0
+        guid: 41cce409fc4ac7743a53e3559cc29834
+        position: {x: -270, y: 360}
+        blackboard:
+          keys: []
+        description: 
+        drawGizmos: 0
+        InitialDirection:
+          reference:
+            rid: -2
+          defaultValue: 0
+        HorizontalSpeed:
+          reference:
+            rid: -2
+          defaultValue: 0
     - rid: 8135257327700279297
       type: {class: RootNode, ns: TheKiwiCoder, asm: thekiwicoder.behaviourtreeeditor}
       data:
@@ -51,7 +71,7 @@ MonoBehaviour:
         position: {x: -270, y: 75}
         blackboard:
           keys: []
-        description: "\u7528\u9014: \u8F38\u51FA\u6307\u5B9A\u8A0A\u606F\u800C\u5DF2~"
+        description: "\u7528\u9014: \u8F38\u51FA\u6307\u5B9A\u8A0A\u606F\u800C\u5DF2"
         drawGizmos: 0
     - rid: 8135257531756052500
       type: {class: BTA_DetectEnemy, ns: , asm: Assembly-CSharp}
@@ -59,10 +79,10 @@ MonoBehaviour:
         state: 0
         started: 0
         guid: b5dea4b4c2f43794ea35a91cd049604d
-        position: {x: -285, y: 180}
+        position: {x: -270, y: 180}
         blackboard:
           keys: []
-        description: 
+        description: "\u5075\u6E2C\u5713\u5708\u7BC4\u570D\u5167\u6575\u4EBA"
         drawGizmos: 0
     - rid: 8135257531756052501
       type: {class: BTA_MoveToEnemy, ns: , asm: Assembly-CSharp}
@@ -70,8 +90,8 @@ MonoBehaviour:
         state: 0
         started: 0
         guid: 6d4529f0e6589f14193c91fb3c2b7009
-        position: {x: -285, y: 300}
+        position: {x: -270, y: 270}
         blackboard:
           keys: []
-        description: 
+        description: "\u77AC\u79FB\u5230\u6575\u4EBA\u4E0A\u65B9"
         drawGizmos: 0

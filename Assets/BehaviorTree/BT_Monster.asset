@@ -22,18 +22,38 @@ MonoBehaviour:
   - rid: 8135257531756052499
   - rid: 8135257531756052502
   - rid: 8135257531756052503
+  - rid: 6247956206388510721
   treeState: 0
   blackboard:
     keys:
     - rid: 8135257531756052486
     - rid: 8135257531756052494
-  viewPosition: {x: 283.33334, y: 44.666668, z: 0}
-  viewScale: {x: 1, y: 1, z: 1}
+  viewPosition: {x: 270, y: 80.666664, z: 0}
+  viewScale: {x: 0.65751624, y: 0.65751624, z: 1}
   references:
     version: 2
     RefIds:
     - rid: -2
       type: {class: , ns: , asm: }
+    - rid: 6247956206388510721
+      type: {class: BTA_PatrolInOnePlatform, ns: , asm: Assembly-CSharp}
+      data:
+        state: 0
+        started: 0
+        guid: 47eec37aab752114b97397eddd99cf62
+        position: {x: -60, y: 240}
+        blackboard:
+          keys: []
+        description: 
+        drawGizmos: 0
+        InitialDirection:
+          reference:
+            rid: -2
+          defaultValue: 0
+        HorizontalSpeed:
+          reference:
+            rid: -2
+          defaultValue: 2
     - rid: 8135257531756052485
       type: {class: RootNode, ns: TheKiwiCoder, asm: thekiwicoder.behaviourtreeeditor}
       data:
@@ -112,15 +132,14 @@ MonoBehaviour:
         description: 
         drawGizmos: 0
         children:
-        - rid: 8135257531756052503
-        - rid: 8135257531756052502
+        - rid: 6247956206388510721
     - rid: 8135257531756052502
       type: {class: BTA_MoveToEnemy, ns: , asm: Assembly-CSharp}
       data:
         state: 0
         started: 0
         guid: 98d79b45375ab3d4786eb3de735d3ba7
-        position: {x: 105, y: 300}
+        position: {x: 105, y: 405}
         blackboard:
           keys: []
         description: 
@@ -131,7 +150,7 @@ MonoBehaviour:
         state: 0
         started: 0
         guid: 60c415604221f3b43b30ccad8475e112
-        position: {x: -105, y: 300}
+        position: {x: -120, y: 390}
         blackboard:
           keys: []
         description: 
