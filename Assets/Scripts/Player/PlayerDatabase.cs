@@ -138,6 +138,7 @@ public class PlayerDatabase: MonoBehaviour
     }
     #endregion
 
+
     private void Start()
     {
         //不會因為因為轉換地圖而消除
