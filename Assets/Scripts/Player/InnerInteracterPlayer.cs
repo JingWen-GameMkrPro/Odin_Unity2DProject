@@ -30,6 +30,8 @@ public class InnerInteracterPlayer : MonoBehaviour
 
     private void Update()
     {
+        Debug.Log(PlayerDatabase.PlayerAtt.HP);
+
         checkGrounded();
 
         updateaAnimatorState();

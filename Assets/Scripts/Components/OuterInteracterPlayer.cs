@@ -29,5 +29,10 @@ public class OuterInteracterPlayer : OuterInteracterBase
         PlayerDatabase.PlayerAtt.HP = Mathf.Clamp(PlayerDatabase.PlayerAtt.HP - value, 0, PlayerDatabase.PlayerAtt.MaxHP);
     }
 
+    public void AddHP(GameObject causer, float value)
+    {
+        PlayerDatabase.PlayerAtt.HP += value;
+    }
+
 
 }
