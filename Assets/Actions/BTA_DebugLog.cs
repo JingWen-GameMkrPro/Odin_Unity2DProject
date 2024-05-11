@@ -14,16 +14,7 @@ public class BTA_DebugLog : ActionNode
 
     protected override State OnUpdate() 
     {
-        var t = blackboard.Find<MonsterDatabase>("Database");
-        if(t.value.DetecterManager.DetecterRecorderList.ContainsKey("PatrolDetecter"))
-        {
-            Debug.Log(t.value.DetecterManager.DetecterRecorderList["PatrolDetecter"].Count);
-           
-        }
-        else
-        {
-            Debug.Log("wait...");
-        }
+        Debug.Log("真的偵測到敵人了！");
         
         return State.Success;
     }

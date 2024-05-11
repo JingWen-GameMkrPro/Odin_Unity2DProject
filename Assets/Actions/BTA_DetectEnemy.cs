@@ -27,7 +27,7 @@ public class BTA_DetectEnemy : ActionNode
             }
             else
             {
-                Debug.Log("Waitning");
+                Debug.Log("Waitning for Enemy");
                 return State.Running;
             }
         }
