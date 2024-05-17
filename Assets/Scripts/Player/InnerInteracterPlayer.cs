@@ -9,6 +9,11 @@ public class InnerInteracterPlayer : MonoBehaviour
     [SerializeField]
     PlayerDatabase PlayerDatabase;
 
+    
+    [SerializeField]
+    GameObject HPobject;
+     
+
     [HideInInspector]
     public GameObject Causer;
 
@@ -35,6 +40,8 @@ public class InnerInteracterPlayer : MonoBehaviour
         updateaAnimatorState();
 
         receiveInput();
+
+        updateHUDValue();
     }
 
     private void receiveInput()
@@ -155,5 +162,9 @@ public class InnerInteracterPlayer : MonoBehaviour
         PlayerDatabase.Animator.SetBool("isDefensing", PlayerDatabase.IsInState(PlayerDatabase.PlayerState.Defensing));
     }
 
-
+    private void updateHUDValue()
+    {
+        //=PlayerDatabase.PlayerAtt.HP
+        //=PlayerDatabase.PlayerAtt.MaxHP
+    }
 }
