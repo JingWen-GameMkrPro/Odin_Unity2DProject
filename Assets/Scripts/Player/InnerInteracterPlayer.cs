@@ -60,6 +60,7 @@ public class InnerInteracterPlayer : MonoBehaviour
             tryDefense();
         }
 
+       
     }
 
     private void tryHorizontalMove()
