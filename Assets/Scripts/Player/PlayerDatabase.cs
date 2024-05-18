@@ -7,17 +7,17 @@ using static OldPlayerController;
 public class PlayerDatabase: MonoBehaviour
 {
     [HideInInspector]
-    //¨¤¦âÄÝ©Ê
+    //ï¿½ï¿½ï¿½ï¿½ï¿½Ý©ï¿½
     public SD_PlayerAtt.Data PlayerAtt;
 
-    //¤¬°Ê¤¸¥ó¡A»Ý­n½Õ°Êªº¨p¤H¤º³¡¤¸¥ó
+    //ï¿½ï¿½ï¿½Ê¤ï¿½ï¿½ï¿½Aï¿½Ý­nï¿½Õ°Êªï¿½ï¿½pï¿½Hï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
     [SerializeField]
-    public SD_PlayerAtt SDPlayerAtt; //Äµ§i¡G¤£­n­×§ï¦¹ÅÜ¼Æ¡A³o·|¾É­P­ì©l¸ê®Æ³Q§ó°Ê
+    public SD_PlayerAtt SDPlayerAtt; //Äµï¿½iï¿½Gï¿½ï¿½ï¿½nï¿½×§ï¦¹ï¿½Ü¼Æ¡Aï¿½oï¿½|ï¿½É­Pï¿½ï¿½lï¿½ï¿½Æ³Qï¿½ï¿½ï¿½
     public Rigidbody2D RB;
     public Animator Animator;
     public DetecterManager DetecterManager;
 
-    #region [¨¤¦â¦æ¬°Åv­­] ¨ü¨ì¥~¦bDebuff¥i¯à·|¥Î¨ì
+    #region [ï¿½ï¿½ï¿½ï¿½æ¬°ï¿½vï¿½ï¿½] ï¿½ï¿½ï¿½ï¿½~ï¿½bDebuffï¿½iï¿½ï¿½|ï¿½Î¨ï¿½
     [Flags]
     public enum PlayerPermission
     {
@@ -28,7 +28,7 @@ public class PlayerDatabase: MonoBehaviour
         CanDefense = 1 << 3,
     }
     private PlayerPermission playerPermission = PlayerPermission.CanMove | PlayerPermission.CanJump | PlayerPermission.CanAttack | PlayerPermission.CanDefense;
-    private Dictionary<PlayerPermission, Coroutine> lastSetTimer = new(); //¥Î©óºÞ²z¥Ø«eÅv­­«ÊÂê­Ë¼Æª¬ºA
+    private Dictionary<PlayerPermission, Coroutine> lastSetTimer = new(); //ï¿½Î©ï¿½Þ²zï¿½Ø«eï¿½vï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ë¼Æªï¿½ï¿½A
 
     public bool HasPermission(PlayerPermission targetPermission)
     {
@@ -37,9 +37,9 @@ public class PlayerDatabase: MonoBehaviour
 
     public void SetPermisssion(PlayerPermission inputPermission, bool isOpen)
     {
-        // ¨Ï¥Î«ö¦ì OR ³]©w¯S©w¦ì¤¸
+        // ï¿½Ï¥Î«ï¿½ï¿½ï¿½ OR ï¿½]ï¿½wï¿½Sï¿½wï¿½ì¤¸
         if (isOpen) playerPermission |= inputPermission;
-        // ¨Ï¥Î«ö¦ì AND ²M°£¯S©w¦ì¤¸
+        // ï¿½Ï¥Î«ï¿½ï¿½ï¿½ AND ï¿½Mï¿½ï¿½ï¿½Sï¿½wï¿½ì¤¸
         else playerPermission &= ~inputPermission;
     }
 
@@ -47,16 +47,16 @@ public class PlayerDatabase: MonoBehaviour
     {
         SetPermisssion(inputPermission, false);
 
-        //¦pªGÁÙ¨S³Q«ÊÂê
+        //ï¿½pï¿½Gï¿½Ù¨Sï¿½Qï¿½ï¿½ï¿½ï¿½
         if (!lastSetTimer.ContainsKey(inputPermission))
         {
-            //·s¼W­Ë¼Æ
+            //ï¿½sï¿½Wï¿½Ë¼ï¿½
             lastSetTimer.Add(inputPermission, StartCoroutine(countdownPermission(inputPermission, inputSeconds)));
         }
-        //¦pªG¥¿¦b³Q«ÊÂê
+        //ï¿½pï¿½Gï¿½ï¿½ï¿½bï¿½Qï¿½ï¿½ï¿½ï¿½
         else
         {
-            //¨ê·s­Ë¼Æ
+            //ï¿½ï¿½sï¿½Ë¼ï¿½
             StopCoroutine(lastSetTimer[inputPermission]);
             lastSetTimer[inputPermission] = StartCoroutine(countdownPermission(inputPermission, inputSeconds));
         }
@@ -71,14 +71,14 @@ public class PlayerDatabase: MonoBehaviour
             currentSeconds--;
         }
 
-        //¨óµ{µ²§ô¡A§R°£KEY­È
+        //ï¿½ï¿½{ï¿½ï¿½ï¿½ï¿½ï¿½Aï¿½Rï¿½ï¿½KEYï¿½ï¿½
         if (lastSetTimer.ContainsKey(inputPermission)) lastSetTimer.Remove(inputPermission);
         SetPermisssion(inputPermission, true);
         yield return null;
     }
     #endregion
 
-    #region [¨¤¦âª¬ºA]
+    #region [ï¿½ï¿½ï¿½âª¬ï¿½A]
     [Flags]
     public enum PlayerState
     {
@@ -101,7 +101,7 @@ public class PlayerDatabase: MonoBehaviour
             playerState &= ~targetState;
         }
 
-        //>999fµø¦P¥Ã¤[³]©wª¬ºA
+        //>999fï¿½ï¿½ï¿½Pï¿½Ã¤[ï¿½]ï¿½wï¿½ï¿½ï¿½A
         if (duration < 999f)
         {
             StartCoroutine(countdown_State(targetState, duration, isInState));
@@ -117,7 +117,7 @@ public class PlayerDatabase: MonoBehaviour
             currentSeconds = currentSeconds - 0.05f;
         }
 
-        //¨óµ{µ²§ô¡Aªð°jª¬ºA
+        //ï¿½ï¿½{ï¿½ï¿½ï¿½ï¿½ï¿½Aï¿½ï¿½jï¿½ï¿½ï¿½A
         SetState(targetState, !originState);
         yield return null;
     }
@@ -141,24 +141,26 @@ public class PlayerDatabase: MonoBehaviour
 
     private void Start()
     {
-        //¤£·|¦]¬°¦]¬°Âà´«¦a¹Ï¦Ó®ø°£
+        //ï¿½ï¿½ï¿½|ï¿½]ï¿½ï¿½ï¿½]ï¿½ï¿½ï¿½à´«ï¿½aï¿½Ï¦Ó®ï¿½ï¿½ï¿½
         GameObject.DontDestroyOnLoad(this);
 
-        //±N¦Û¨­¬L§iµ¹¥@¬É
+        //ï¿½Nï¿½Û¨ï¿½ï¿½Lï¿½iï¿½ï¿½ï¿½@ï¿½ï¿½
         GameMaster.Instance.Player = this.gameObject;
+
+        GameMaster.Instance.PlayerDatabase=this;
 
         checkSerializeField();
 
-        //¨ú±oÃþ§O¤¤ªº¸ê®Æµ²ºc°Æ¥»
+        //ï¿½ï¿½ï¿½oï¿½ï¿½ï¿½Oï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æµï¿½ï¿½cï¿½Æ¥ï¿½
         PlayerAtt = SDPlayerAtt.data;
 
         PlayerAtt.HorizontalAcceleration = 3;
 
-        //­pºâ¸õÅD¬ÛÃö°Ñ¼Æ
+        //ï¿½pï¿½ï¿½ï¿½ï¿½Dï¿½ï¿½ï¿½ï¿½ï¿½Ñ¼ï¿½
         UpdateJumpCoefficient();
     }
 
-    //½T»{SerializeFieldªÅ­È
+    //ï¿½Tï¿½{SerializeFieldï¿½Å­ï¿½
     private void checkSerializeField()
     {
         if (SDPlayerAtt == null)
@@ -182,7 +184,7 @@ public class PlayerDatabase: MonoBehaviour
         }
     }
 
-    //§ó·s¸õÅD¬ÛÃö°Ñ¼Æ
+    //ï¿½ï¿½sï¿½ï¿½ï¿½Dï¿½ï¿½ï¿½ï¿½ï¿½Ñ¼ï¿½
     public void UpdateJumpCoefficient()
     {
         var gravity = (-2 * PlayerAtt.JumpHeight) / (PlayerAtt.JumpToPeakTime * PlayerAtt.JumpToPeakTime);
