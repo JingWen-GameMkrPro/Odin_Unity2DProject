@@ -9,24 +9,16 @@ using System.Diagnostics.CodeAnalysis;
 [System.Serializable]
 public class BTA_PatrolInOnePlatform : ActionNode
 {
-    public enum PatrolDirection
-    {
-        Random,
-        Right,
-        Left
-    }
-    public NodeProperty<PatrolDirection> InitialDirection;
+
     public NodeProperty<float> HorizontalSpeed;
 
     private GameObject owner;
     private MonsterDatabase database;
-    private PatrolDirection currentPatrolDirection;
 
     protected override void OnStart() 
     {
         owner = blackboard.Find<GameObject>("Owner").value;
         database = blackboard.Find<MonsterDatabase>("Database").value;
-        setDirectionBySetting();
     }
 
     protected override void OnStop() {}
@@ -38,36 +30,9 @@ public class BTA_PatrolInOnePlatform : ActionNode
         {
             doPatrol();
         }
-        return State.Running;
+        return State.Success;
     }
 
-    //初始化移動方向
-    private void setDirectionBySetting()
-    {
-        switch (currentPatrolDirection)
-        {
-            case PatrolDirection.Random:
-                currentPatrolDirection = getRandomDirection();
-                break;
-            default:
-                currentPatrolDirection = InitialDirection.Value;
-                break;
-        }
-    }
-
-    //取得隨機方向
-    private PatrolDirection getRandomDirection()
-    {
-        int randomDirection = UnityEngine.Random.Range(0, 2);
-        if (randomDirection == 0)
-        {
-            return PatrolDirection.Right;
-        }
-        else
-        {
-            return PatrolDirection.Left;
-        }
-    }
 
     //巡邏移動
     private void doPatrol()
@@ -78,7 +43,7 @@ public class BTA_PatrolInOnePlatform : ActionNode
             turnPatrolDirection();
         }
 
-        database.RB.velocity = (currentPatrolDirection == PatrolDirection.Right ? new Vector2(HorizontalSpeed.Value, 0) : new Vector2(-HorizontalSpeed.Value, 0));
+        database.RB.velocity = (owner.transform.localScale.x>0 ? new Vector2(HorizontalSpeed.Value, 0) : new Vector2(-HorizontalSpeed.Value, 0));
         maintainActorDirection();
     }
 
@@ -101,18 +66,7 @@ public class BTA_PatrolInOnePlatform : ActionNode
     //變更巡邏方向
     private void turnPatrolDirection()
     {
-        if(currentPatrolDirection == PatrolDirection.Right)
-        {
-            currentPatrolDirection = PatrolDirection.Left;
-            Debug.Log("Turn right");
-
-        }
-        else
-        {
-            currentPatrolDirection = PatrolDirection.Right;
-            Debug.Log("Turn left");
-
-        }
+        owner.transform.localScale = new Vector3(-owner.transform.localScale.x, owner.transform.localScale.y, owner.transform.localScale.z);
     }
 
     //維護角色移動方向

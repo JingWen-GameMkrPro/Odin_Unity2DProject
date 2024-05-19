@@ -14,7 +14,7 @@ public class BTA_DebugLog : ActionNode
 
     protected override State OnUpdate() 
     {
-        Debug.Log("真的偵測到敵人了！");
+        Debug.Log("結束！");
         
         return State.Success;
     }

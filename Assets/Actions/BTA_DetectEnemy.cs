@@ -28,12 +28,13 @@ public class BTA_DetectEnemy : ActionNode
             else
             {
                 Debug.Log("Waitning for Enemy");
-                return State.Running;
+                return State.Failure;
             }
         }
         else
         {
-            return State.Running;
+            Debug.Log("Waitning for Enemyy");
+            return State.Failure;
         }
         
     }
