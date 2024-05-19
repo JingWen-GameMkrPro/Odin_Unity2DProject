@@ -147,6 +147,7 @@ public class PlayerDatabase: MonoBehaviour
         //將自身昭告給世界
         GameMaster.Instance.Player = this.gameObject;
 
+        GameMaster.Instance.PlayerDatabase=this;
         checkSerializeField();
 
         //取得類別中的資料結構副本

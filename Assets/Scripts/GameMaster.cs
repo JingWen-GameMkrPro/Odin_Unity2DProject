@@ -10,6 +10,7 @@ public class GameMaster
 
     public GameObject Player;
     public OuterInteracterPlayer OuterInteracterPlayer;
+    public PlayerDatabase PlayerDatabase;
     
 
 }

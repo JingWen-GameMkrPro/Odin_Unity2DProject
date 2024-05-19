@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: SD_PlayerAtt
   m_EditorClassIdentifier: 
   data:
-    HP: 100
+    HP: 0
     MaxHP: 100
     HorizontalSpeed: 10
     HorizontalAcceleration: 2
