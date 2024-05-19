@@ -19,7 +19,7 @@ public class BTA_MoveToEnemy : ActionNode
         var owner = blackboard.Find<GameObject>("Owner").value;
         var targetPosition = GameMaster.Instance.Player.transform.position;
         owner.transform.position = new Vector3(targetPosition.x, targetPosition.y + 2, targetPosition.z);
-        Debug.Log("Moveeee");
+        Debug.Log("成功跳到上方");
         return State.Success;
     }
 }
