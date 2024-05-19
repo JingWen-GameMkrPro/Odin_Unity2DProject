@@ -13,11 +13,13 @@ public class GameRule : MonoBehaviour
     // Update is called once per frame
     void Update()
     { 
-   if(GameMaster.Instance.PlayerDatabase.PlayerAtt.HP>0){
-        Debug.Log(GameMaster.Instance.PlayerDatabase.PlayerAtt.HP);
-    }else if(GameMaster.Instance.PlayerDatabase.PlayerAtt.HP==0){
-        Debug.Log("Game Over");
-      }
+        if(GameMaster.Instance.PlayerDatabase.PlayerAtt.HP>0)
+        {
+            Debug.Log(GameMaster.Instance.PlayerDatabase.PlayerAtt.HP);
+        }else if(GameMaster.Instance.PlayerDatabase.PlayerAtt.HP==0)
+        {
+            Debug.Log("Game Over");
+        }
     }
 }
 
