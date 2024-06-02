@@ -15,7 +15,7 @@ public class GameRule : MonoBehaviour
     { 
         if(GameMaster.Instance.PlayerDatabase.PlayerAtt.HP>0)
         {
-            Debug.Log(GameMaster.Instance.PlayerDatabase.PlayerAtt.HP);
+            // Debug.Log(GameMaster.Instance.PlayerDatabase.PlayerAtt.HP);
         }else if(GameMaster.Instance.PlayerDatabase.PlayerAtt.HP==0)
         {
             Debug.Log("Game Over");

@@ -16,44 +16,19 @@ MonoBehaviour:
     rid: 8135257531756052485
   nodes:
   - rid: 8135257531756052485
-  - rid: 8135257531756052490
   - rid: 8135257531756052497
   - rid: 8135257531756052498
   - rid: 8135257531756052499
-  - rid: 8135257531756052502
-  - rid: 8135257531756052503
-  - rid: 6247956206388510721
   treeState: 0
   blackboard:
     keys:
     - rid: 8135257531756052486
     - rid: 8135257531756052494
-  viewPosition: {x: 270, y: 80.666664, z: 0}
-  viewScale: {x: 0.65751624, y: 0.65751624, z: 1}
+  viewPosition: {x: 271, y: 116, z: 0}
+  viewScale: {x: 0.57175326, y: 0.57175326, z: 1}
   references:
     version: 2
     RefIds:
-    - rid: -2
-      type: {class: , ns: , asm: }
-    - rid: 6247956206388510721
-      type: {class: BTA_PatrolInOnePlatform, ns: , asm: Assembly-CSharp}
-      data:
-        state: 0
-        started: 0
-        guid: 47eec37aab752114b97397eddd99cf62
-        position: {x: -60, y: 240}
-        blackboard:
-          keys: []
-        description: 
-        drawGizmos: 0
-        InitialDirection:
-          reference:
-            rid: -2
-          defaultValue: 0
-        HorizontalSpeed:
-          reference:
-            rid: -2
-          defaultValue: 2
     - rid: 8135257531756052485
       type: {class: RootNode, ns: TheKiwiCoder, asm: thekiwicoder.behaviourtreeeditor}
       data:
@@ -66,7 +41,7 @@ MonoBehaviour:
         description: 
         drawGizmos: 0
         child:
-          rid: 8135257531756052499
+          rid: 8135257531756052497
     - rid: 8135257531756052486
       type: {class: GameObjectKey, ns: TheKiwiCoder, asm: thekiwicoder.behaviourtreeeditor}
       data:
@@ -74,17 +49,6 @@ MonoBehaviour:
         typeName: UnityEngine.GameObject, UnityEngine.CoreModule, Version=0.0.0.0,
           Culture=neutral, PublicKeyToken=null
         value: {fileID: 0}
-    - rid: 8135257531756052490
-      type: {class: BTA_DebugLog, ns: , asm: Assembly-CSharp}
-      data:
-        state: 0
-        started: 0
-        guid: 39b125fffb30b544b8bc41005e7b2a1c
-        position: {x: -300, y: 285}
-        blackboard:
-          keys: []
-        description: 
-        drawGizmos: 0
     - rid: 8135257531756052494
       type: {class: BK_MonsterDataBase, ns: , asm: Assembly-CSharp}
       data:
@@ -98,13 +62,13 @@ MonoBehaviour:
         state: 0
         started: 0
         guid: d4572718a26f6f24a864a11c38eaa29b
-        position: {x: -240, y: 15}
+        position: {x: -15, y: 15}
         blackboard:
           keys: []
         description: 
         drawGizmos: 0
         child:
-          rid: -2
+          rid: 8135257531756052499
         restartOnSuccess: 1
         restartOnFailure: 0
         maxRepeats: 0
@@ -126,32 +90,9 @@ MonoBehaviour:
         state: 0
         started: 0
         guid: c20c0d75b4ed3ab498179ba756a24935
-        position: {x: -15, y: 75}
+        position: {x: -15, y: 150}
         blackboard:
           keys: []
         description: 
         drawGizmos: 0
-        children:
-        - rid: 6247956206388510721
-    - rid: 8135257531756052502
-      type: {class: BTA_MoveToEnemy, ns: , asm: Assembly-CSharp}
-      data:
-        state: 0
-        started: 0
-        guid: 98d79b45375ab3d4786eb3de735d3ba7
-        position: {x: 105, y: 405}
-        blackboard:
-          keys: []
-        description: 
-        drawGizmos: 0
-    - rid: 8135257531756052503
-      type: {class: BTA_DetectEnemy, ns: , asm: Assembly-CSharp}
-      data:
-        state: 0
-        started: 0
-        guid: 60c415604221f3b43b30ccad8475e112
-        position: {x: -120, y: 390}
-        blackboard:
-          keys: []
-        description: 
-        drawGizmos: 0
+        children: []
