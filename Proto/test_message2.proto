@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+
+
+message TetsMessage2 {
+    int32 ii = 1;
+    float ff = 2;
+    string strstr = 3;
+}
