@@ -9,7 +9,6 @@ public class MoveTowardsPlayer : MonoBehaviour
     [SerializeField] float moveSpeed = 5f; // 移动速度
     [SerializeField] float attackDuration = 1f;
     [SerializeField] float damage = 10f;
-    public float HP = GameMaster.Instance.PlayerDatabase.PlayerAtt.HP;
     bool isPlayAroundYou;
 
     // 每帧都调用
@@ -48,8 +47,8 @@ public class MoveTowardsPlayer : MonoBehaviour
     void Attack()
     {
         GetComponent<Animator>().SetBool("BossAttack", true);
-        HP -= damage;
-        GameMaster.Instance.PlayerDatabase.PlayerAtt.HP = HP; // 能夠造成傷害，但碰撞一次觸發過多次的扣血
+        GameMaster.Instance.PlayerDatabase.PlayerAtt.HP -= damage;
+        // 能夠造成傷害，但碰撞一次觸發過多次的扣血
         Debug.Log("Attacking");
     }
 
