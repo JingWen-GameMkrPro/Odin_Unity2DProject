@@ -2,27 +2,28 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class timer : MonoBehaviour
+public class Timer : MonoBehaviour
 {
-     public float currentTime;
-     bool time = true;
-    // Start is called before the first frame update
-    void Start()
-    {
-        bool time = true;
-    }
+    public int time;
+    public bool StopTimer = false;
 
-    // Update is called once per frame
-    void FixedUpdate()
-    {
-        if(GameMaster.Instance.PlayerDatabase.PlayerAtt.HP>0)
-        {
-            currentTime +=Time.fixedDeltaTime;
-        }
-        else if(GameMaster.Instance.PlayerDatabase.PlayerAtt.HP==0)
-        {
-            bool time = false;
-            Debug.Log(currentTime);
-        }
-    }
+     void Start()
+     {
+       StartCoroutine(GameTimer());
+     }
+    
+    IEnumerator GameTimer()
+     {
+      while (StopTimer ==false)
+       {
+        time+=1;
+        yield return new WaitForSeconds(1f);
+        if(GameMaster.Instance.PlayerDatabase.PlayerAtt.HP==0)
+          {
+            StopTimer = true;
+            Debug.Log("目前時間"+time);
+          }
+       }
+ 
+     }
 }
