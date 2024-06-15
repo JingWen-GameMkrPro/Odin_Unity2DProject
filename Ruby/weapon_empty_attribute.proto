@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+option csharp_namespace = "TestMessages";
+
+message WeaponAttribute {
+    string name = 1;
+    float attack_value = 2;
+    float defense_value = 3;
+    int32 price = 4;
+}
+
+message  WeaponAttributeDictionary {
+    map<string, WeaponAttribute> weapons = 1;
+}

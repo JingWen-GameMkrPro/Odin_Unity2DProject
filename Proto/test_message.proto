@@ -1,9 +1,0 @@
-syntax = "proto3";
-
-option csharp_namespace = "TestMessages";
-
-message TetsMessage {
-    int32 i1 = 1;
-    float f = 2;
-    string str = 3;
-}

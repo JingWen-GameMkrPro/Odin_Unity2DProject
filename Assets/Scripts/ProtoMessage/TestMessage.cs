@@ -24,24 +24,29 @@ namespace TestMessages {
     static TestMessageReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChJ0ZXN0X21lc3NhZ2UucHJvdG8iMQoLVGV0c01lc3NhZ2USCgoCaTEYASAB",
-            "KAUSCQoBZhgCIAEoAhILCgNzdHIYAyABKAlCD6oCDFRlc3RNZXNzYWdlc2IG",
-            "cHJvdG8z"));
+            "ChJ0ZXN0X21lc3NhZ2UucHJvdG8iWwoPV2VhcG9uQXR0cmlidXRlEgwKBG5h",
+            "bWUYASABKAkSFAoMYXR0YWNrX3ZhbHVlGAIgASgCEhUKDWRlZmVuc2VfdmFs",
+            "dWUYAyABKAISDQoFcHJpY2UYBCABKAUilwEKGVdlYXBvbkF0dHJpYnV0ZURp",
+            "Y3Rpb25hcnkSOAoHd2VhcG9ucxgBIAMoCzInLldlYXBvbkF0dHJpYnV0ZURp",
+            "Y3Rpb25hcnkuV2VhcG9uc0VudHJ5GkAKDFdlYXBvbnNFbnRyeRILCgNrZXkY",
+            "ASABKAkSHwoFdmFsdWUYAiABKAsyEC5XZWFwb25BdHRyaWJ1dGU6AjgBQg+q",
+            "AgxUZXN0TWVzc2FnZXNiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::TestMessages.TetsMessage), global::TestMessages.TetsMessage.Parser, new[]{ "I1", "F", "Str" }, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::TestMessages.WeaponAttribute), global::TestMessages.WeaponAttribute.Parser, new[]{ "Name", "AttackValue", "DefenseValue", "Price" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::TestMessages.WeaponAttributeDictionary), global::TestMessages.WeaponAttributeDictionary.Parser, new[]{ "Weapons" }, null, null, new pbr::GeneratedClrTypeInfo[] { null, })
           }));
     }
     #endregion
 
   }
   #region Messages
-  public sealed partial class TetsMessage : pb::IMessage<TetsMessage> {
-    private static readonly pb::MessageParser<TetsMessage> _parser = new pb::MessageParser<TetsMessage>(() => new TetsMessage());
+  public sealed partial class WeaponAttribute : pb::IMessage<WeaponAttribute> {
+    private static readonly pb::MessageParser<WeaponAttribute> _parser = new pb::MessageParser<WeaponAttribute>(() => new WeaponAttribute());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pb::MessageParser<TetsMessage> Parser { get { return _parser; } }
+    public static pb::MessageParser<WeaponAttribute> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
@@ -54,83 +59,97 @@ namespace TestMessages {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public TetsMessage() {
+    public WeaponAttribute() {
       OnConstruction();
     }
 
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public TetsMessage(TetsMessage other) : this() {
-      i1_ = other.i1_;
-      f_ = other.f_;
-      str_ = other.str_;
+    public WeaponAttribute(WeaponAttribute other) : this() {
+      name_ = other.name_;
+      attackValue_ = other.attackValue_;
+      defenseValue_ = other.defenseValue_;
+      price_ = other.price_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public TetsMessage Clone() {
-      return new TetsMessage(this);
+    public WeaponAttribute Clone() {
+      return new WeaponAttribute(this);
     }
 
-    /// <summary>Field number for the "i1" field.</summary>
-    public const int I1FieldNumber = 1;
-    private int i1_;
+    /// <summary>Field number for the "name" field.</summary>
+    public const int NameFieldNumber = 1;
+    private string name_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int I1 {
-      get { return i1_; }
+    public string Name {
+      get { return name_; }
       set {
-        i1_ = value;
+        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
-    /// <summary>Field number for the "f" field.</summary>
-    public const int FFieldNumber = 2;
-    private float f_;
+    /// <summary>Field number for the "attack_value" field.</summary>
+    public const int AttackValueFieldNumber = 2;
+    private float attackValue_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public float F {
-      get { return f_; }
+    public float AttackValue {
+      get { return attackValue_; }
       set {
-        f_ = value;
+        attackValue_ = value;
       }
     }
 
-    /// <summary>Field number for the "str" field.</summary>
-    public const int StrFieldNumber = 3;
-    private string str_ = "";
+    /// <summary>Field number for the "defense_value" field.</summary>
+    public const int DefenseValueFieldNumber = 3;
+    private float defenseValue_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public string Str {
-      get { return str_; }
+    public float DefenseValue {
+      get { return defenseValue_; }
       set {
-        str_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        defenseValue_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "price" field.</summary>
+    public const int PriceFieldNumber = 4;
+    private int price_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int Price {
+      get { return price_; }
+      set {
+        price_ = value;
       }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
-      return Equals(other as TetsMessage);
+      return Equals(other as WeaponAttribute);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Equals(TetsMessage other) {
+    public bool Equals(WeaponAttribute other) {
       if (ReferenceEquals(other, null)) {
         return false;
       }
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (I1 != other.I1) return false;
-      if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(F, other.F)) return false;
-      if (Str != other.Str) return false;
+      if (Name != other.Name) return false;
+      if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(AttackValue, other.AttackValue)) return false;
+      if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(DefenseValue, other.DefenseValue)) return false;
+      if (Price != other.Price) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
-      if (I1 != 0) hash ^= I1.GetHashCode();
-      if (F != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(F);
-      if (Str.Length != 0) hash ^= Str.GetHashCode();
+      if (Name.Length != 0) hash ^= Name.GetHashCode();
+      if (AttackValue != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(AttackValue);
+      if (DefenseValue != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(DefenseValue);
+      if (Price != 0) hash ^= Price.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -144,17 +163,21 @@ namespace TestMessages {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
-      if (I1 != 0) {
-        output.WriteRawTag(8);
-        output.WriteInt32(I1);
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
       }
-      if (F != 0F) {
+      if (AttackValue != 0F) {
         output.WriteRawTag(21);
-        output.WriteFloat(F);
+        output.WriteFloat(AttackValue);
       }
-      if (Str.Length != 0) {
-        output.WriteRawTag(26);
-        output.WriteString(Str);
+      if (DefenseValue != 0F) {
+        output.WriteRawTag(29);
+        output.WriteFloat(DefenseValue);
+      }
+      if (Price != 0) {
+        output.WriteRawTag(32);
+        output.WriteInt32(Price);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -164,14 +187,17 @@ namespace TestMessages {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
-      if (I1 != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeInt32Size(I1);
+      if (Name.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
       }
-      if (F != 0F) {
+      if (AttackValue != 0F) {
         size += 1 + 4;
       }
-      if (Str.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(Str);
+      if (DefenseValue != 0F) {
+        size += 1 + 4;
+      }
+      if (Price != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(Price);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -180,18 +206,21 @@ namespace TestMessages {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(TetsMessage other) {
+    public void MergeFrom(WeaponAttribute other) {
       if (other == null) {
         return;
       }
-      if (other.I1 != 0) {
-        I1 = other.I1;
+      if (other.Name.Length != 0) {
+        Name = other.Name;
       }
-      if (other.F != 0F) {
-        F = other.F;
+      if (other.AttackValue != 0F) {
+        AttackValue = other.AttackValue;
       }
-      if (other.Str.Length != 0) {
-        Str = other.Str;
+      if (other.DefenseValue != 0F) {
+        DefenseValue = other.DefenseValue;
+      }
+      if (other.Price != 0) {
+        Price = other.Price;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -204,16 +233,141 @@ namespace TestMessages {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 8: {
-            I1 = input.ReadInt32();
+          case 10: {
+            Name = input.ReadString();
             break;
           }
           case 21: {
-            F = input.ReadFloat();
+            AttackValue = input.ReadFloat();
             break;
           }
-          case 26: {
-            Str = input.ReadString();
+          case 29: {
+            DefenseValue = input.ReadFloat();
+            break;
+          }
+          case 32: {
+            Price = input.ReadInt32();
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  public sealed partial class WeaponAttributeDictionary : pb::IMessage<WeaponAttributeDictionary> {
+    private static readonly pb::MessageParser<WeaponAttributeDictionary> _parser = new pb::MessageParser<WeaponAttributeDictionary>(() => new WeaponAttributeDictionary());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<WeaponAttributeDictionary> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::TestMessages.TestMessageReflection.Descriptor.MessageTypes[1]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public WeaponAttributeDictionary() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public WeaponAttributeDictionary(WeaponAttributeDictionary other) : this() {
+      weapons_ = other.weapons_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public WeaponAttributeDictionary Clone() {
+      return new WeaponAttributeDictionary(this);
+    }
+
+    /// <summary>Field number for the "weapons" field.</summary>
+    public const int WeaponsFieldNumber = 1;
+    private static readonly pbc::MapField<string, global::TestMessages.WeaponAttribute>.Codec _map_weapons_codec
+        = new pbc::MapField<string, global::TestMessages.WeaponAttribute>.Codec(pb::FieldCodec.ForString(10), pb::FieldCodec.ForMessage(18, global::TestMessages.WeaponAttribute.Parser), 10);
+    private readonly pbc::MapField<string, global::TestMessages.WeaponAttribute> weapons_ = new pbc::MapField<string, global::TestMessages.WeaponAttribute>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::MapField<string, global::TestMessages.WeaponAttribute> Weapons {
+      get { return weapons_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as WeaponAttributeDictionary);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(WeaponAttributeDictionary other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!Weapons.Equals(other.Weapons)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      hash ^= Weapons.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      weapons_.WriteTo(output, _map_weapons_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      size += weapons_.CalculateSize(_map_weapons_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(WeaponAttributeDictionary other) {
+      if (other == null) {
+        return;
+      }
+      weapons_.Add(other.weapons_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            weapons_.AddEntriesFrom(input, _map_weapons_codec);
             break;
           }
         }

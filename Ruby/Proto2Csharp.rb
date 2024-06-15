@@ -16,8 +16,8 @@ class Proto2Csharp
     # [Custom Setting]：root path
     root_path = File.expand_path('..', Dir.pwd) 
 
-    # [Custom Setting]：proto files' folder path
-    proto_folder_path = File.join(root_path, 'ProtoCsharp')
+    # [Custom Setting]：proto folder path
+    proto_folder_path = File.join(root_path, 'Proto')
 
     # [Custom Setting]：protobuf compiler path
     protoc_path = if Gem.win_platform?
@@ -26,17 +26,21 @@ class Proto2Csharp
                     File.join(proto_folder_path, 'protoc')
                   end
 
+    # [Custom Setting]：proto files' folder path
+    proto_target_path = File.join(proto_folder_path, 'ProtoCsharp')
+
     # [Custom Setting]：output files path
     output_path = File.join(root_path, 'Assets', 'Scripts', 'ProtoMessage')
 
     # Collect all proto files from "proto_folder_path"
-    all_protos = Dir.glob(File.join(proto_folder_path, '*.proto'))
+    all_protos = Dir.glob(File.join(proto_target_path, '*.proto'))
 
     # Return：Construct important setting values to execute cmd
     setting = {
       root_path: root_path,
       proto_folder_path: proto_folder_path,
-      protoc_path: protoc_path,           
+      protoc_path: protoc_path,
+      proto_target_path: proto_target_path,           
       output_path: output_path,
       all_protos: all_protos
     }
@@ -48,7 +52,7 @@ class Proto2Csharp
     #Foreach All Protos and Translate to Csharp
     setting[:all_protos].each do |proto|
       input_filename = File.basename(proto)
-      argument = "--csharp_out=#{setting[:output_path]} --proto_path=#{setting[:proto_folder_path]} #{proto}"
+      argument = "--csharp_out=#{setting[:output_path]} --proto_path=#{setting[:proto_target_path]} #{proto}"
       cmd = "#{setting[:protoc_path]} #{argument}"
       is_sucess = system(cmd);
     
