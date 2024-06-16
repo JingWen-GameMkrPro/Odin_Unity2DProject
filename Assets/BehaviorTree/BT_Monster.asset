@@ -1,0 +1,98 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d285eb63c2cdd74180de7cfceaa96ad, type: 3}
+  m_Name: BT_Monster
+  m_EditorClassIdentifier: 
+  rootNode:
+    rid: 8135257531756052485
+  nodes:
+  - rid: 8135257531756052485
+  - rid: 8135257531756052497
+  - rid: 8135257531756052498
+  - rid: 8135257531756052499
+  treeState: 0
+  blackboard:
+    keys:
+    - rid: 8135257531756052486
+    - rid: 8135257531756052494
+  viewPosition: {x: 271, y: 116, z: 0}
+  viewScale: {x: 0.57175326, y: 0.57175326, z: 1}
+  references:
+    version: 2
+    RefIds:
+    - rid: 8135257531756052485
+      type: {class: RootNode, ns: TheKiwiCoder, asm: thekiwicoder.behaviourtreeeditor}
+      data:
+        state: 0
+        started: 0
+        guid: 72800eac-11c7-40e9-a42a-2efdd14bcd65
+        position: {x: -15, y: -105}
+        blackboard:
+          keys: []
+        description: 
+        drawGizmos: 0
+        child:
+          rid: 8135257531756052497
+    - rid: 8135257531756052486
+      type: {class: GameObjectKey, ns: TheKiwiCoder, asm: thekiwicoder.behaviourtreeeditor}
+      data:
+        name: Owner
+        typeName: UnityEngine.GameObject, UnityEngine.CoreModule, Version=0.0.0.0,
+          Culture=neutral, PublicKeyToken=null
+        value: {fileID: 0}
+    - rid: 8135257531756052494
+      type: {class: BK_MonsterDataBase, ns: , asm: Assembly-CSharp}
+      data:
+        name: Database
+        typeName: MonsterDatabase, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+          PublicKeyToken=null
+        value: {fileID: 0}
+    - rid: 8135257531756052497
+      type: {class: Repeat, ns: TheKiwiCoder, asm: thekiwicoder.behaviourtreeeditor}
+      data:
+        state: 0
+        started: 0
+        guid: d4572718a26f6f24a864a11c38eaa29b
+        position: {x: -15, y: 15}
+        blackboard:
+          keys: []
+        description: 
+        drawGizmos: 0
+        child:
+          rid: 8135257531756052499
+        restartOnSuccess: 1
+        restartOnFailure: 0
+        maxRepeats: 0
+    - rid: 8135257531756052498
+      type: {class: Wait, ns: TheKiwiCoder, asm: thekiwicoder.behaviourtreeeditor}
+      data:
+        state: 0
+        started: 0
+        guid: 1fdec36b0840397419836666dd0ad9d4
+        position: {x: -300, y: 165}
+        blackboard:
+          keys: []
+        description: 
+        drawGizmos: 0
+        duration: 1
+    - rid: 8135257531756052499
+      type: {class: Sequencer, ns: TheKiwiCoder, asm: thekiwicoder.behaviourtreeeditor}
+      data:
+        state: 0
+        started: 0
+        guid: c20c0d75b4ed3ab498179ba756a24935
+        position: {x: -15, y: 150}
+        blackboard:
+          keys: []
+        description: 
+        drawGizmos: 0
+        children: []

@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b4a92c7ed54e414cbfb9ecefb9f12ac, type: 3}
+  m_Name: SD_PlayerAtt
+  m_EditorClassIdentifier: 
+  data:
+    HP: 100
+    MaxHP: 100
+    HorizontalSpeed: 10
+    HorizontalAcceleration: 2
+    SpeedWeight: 1
+    MaxSpeedWeight: 1
+    JumpHeight: 5
+    JumpToPeakTime: 0.3
+    JumpStartVelocity: 0
