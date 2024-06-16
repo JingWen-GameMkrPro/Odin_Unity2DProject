@@ -105,7 +105,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -126,7 +126,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -147,7 +147,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -168,7 +168,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -189,7 +189,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -210,7 +210,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -231,7 +231,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -252,7 +252,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -273,7 +273,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -294,7 +294,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -315,7 +315,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -336,7 +336,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -357,7 +357,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -378,7 +378,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -399,7 +399,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -420,7 +420,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -441,7 +441,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -458,11 +458,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 64
-        y: 448
+        y: 449
         width: 32
-        height: 32
+        height: 31
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -479,11 +479,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 96
-        y: 448
+        y: 449
         width: 32
-        height: 32
+        height: 31
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -500,11 +500,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 128
-        y: 448
+        y: 449
         width: 32
-        height: 32
+        height: 31
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -525,7 +525,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -546,7 +546,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -567,7 +567,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -588,7 +588,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -609,7 +609,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -630,7 +630,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -651,7 +651,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -672,7 +672,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -693,7 +693,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -714,7 +714,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -735,7 +735,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -756,7 +756,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -777,7 +777,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -794,11 +794,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 64
-        y: 416
+        y: 402
         width: 32
-        height: 32
+        height: 47
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -815,11 +815,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 96
-        y: 416
+        y: 402
         width: 32
-        height: 32
+        height: 47
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -836,11 +836,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 128
-        y: 416
+        y: 402
         width: 32
-        height: 32
+        height: 47
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -861,7 +861,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -882,7 +882,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -903,7 +903,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -924,7 +924,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -945,7 +945,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -966,7 +966,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -987,7 +987,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1008,7 +1008,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1029,7 +1029,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1050,7 +1050,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1071,7 +1071,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1092,7 +1092,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1113,7 +1113,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1130,11 +1130,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 64
-        y: 384
+        y: 365
         width: 32
-        height: 32
+        height: 37
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1151,11 +1151,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 96
-        y: 384
+        y: 365
         width: 32
-        height: 32
+        height: 37
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1172,11 +1172,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 128
-        y: 384
+        y: 365
         width: 32
-        height: 32
+        height: 37
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1197,7 +1197,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1218,7 +1218,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1239,7 +1239,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1260,7 +1260,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1281,7 +1281,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1302,7 +1302,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1323,7 +1323,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1344,7 +1344,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1365,7 +1365,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1386,7 +1386,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1407,7 +1407,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1428,7 +1428,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1449,7 +1449,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1466,11 +1466,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 64
-        y: 352
+        y: 340
         width: 32
-        height: 32
+        height: 25
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1487,11 +1487,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 96
-        y: 352
+        y: 365
         width: 32
-        height: 32
+        height: 37
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1499,27 +1499,6 @@ TextureImporter:
       bones: []
       spriteID: 6898865c56d28ad4ca8dd29677ffdc02
       internalID: -379394480
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Yellow Effect Bullet Impact Explosion 32x32_67
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 352
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: cf1f263f190441a4e9d17b5d7347cf35
-      internalID: 1784893644
       vertices: []
       indices: 
       edges: []
@@ -1533,7 +1512,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1554,7 +1533,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1575,7 +1554,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1596,7 +1575,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1617,7 +1596,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1638,7 +1617,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1659,7 +1638,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1680,7 +1659,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1701,7 +1680,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1722,7 +1701,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1743,7 +1722,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1764,7 +1743,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1785,7 +1764,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1793,48 +1772,6 @@ TextureImporter:
       bones: []
       spriteID: af18a5d8740a23e4fa6435e8bda48ff5
       internalID: -258240483
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Yellow Effect Bullet Impact Explosion 32x32_81
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 320
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0e642f5c27c2215489bda5dd65c21328
-      internalID: -1993873508
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Yellow Effect Bullet Impact Explosion 32x32_82
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 320
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 25542ad89c1034a468d1ebd65cba7036
-      internalID: 895800264
       vertices: []
       indices: 
       edges: []
@@ -1848,7 +1785,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1869,7 +1806,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1890,7 +1827,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1911,7 +1848,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1932,7 +1869,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1953,7 +1890,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1974,7 +1911,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1995,7 +1932,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2016,7 +1953,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2037,7 +1974,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2058,7 +1995,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2079,7 +2016,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2100,7 +2037,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2118,10 +2055,10 @@ TextureImporter:
         serializedVersion: 2
         x: 96
         y: 288
-        width: 32
-        height: 32
+        width: 33
+        height: 77
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2137,12 +2074,12 @@ TextureImporter:
       name: Yellow Effect Bullet Impact Explosion 32x32_97
       rect:
         serializedVersion: 2
-        x: 128
+        x: 129
         y: 288
-        width: 32
-        height: 32
+        width: 31
+        height: 30
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2163,7 +2100,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2184,7 +2121,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2205,7 +2142,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2226,7 +2163,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2247,7 +2184,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2268,7 +2205,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2289,7 +2226,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2310,7 +2247,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2331,7 +2268,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2352,7 +2289,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2373,7 +2310,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2394,7 +2331,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2415,7 +2352,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2436,7 +2373,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2457,7 +2394,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2478,7 +2415,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2499,7 +2436,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2520,7 +2457,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2541,7 +2478,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2562,7 +2499,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2583,7 +2520,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2604,7 +2541,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2625,7 +2562,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2646,7 +2583,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2667,7 +2604,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2688,7 +2625,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2709,7 +2646,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2730,7 +2667,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2751,7 +2688,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2759,69 +2696,6 @@ TextureImporter:
       bones: []
       spriteID: 2426938acc2f5704795d9f668168c804
       internalID: 534245101
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Yellow Effect Bullet Impact Explosion 32x32_127
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 224
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0bc3c43980adad14685b6141a6183ccd
-      internalID: 959851756
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Yellow Effect Bullet Impact Explosion 32x32_128
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 224
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4ee7f4a178fd2074baa74b5f92e527b9
-      internalID: 29779461
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Yellow Effect Bullet Impact Explosion 32x32_129
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 224
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 30679c99fffc96e4e90c19a3aedf3030
-      internalID: 262806596
       vertices: []
       indices: 
       edges: []
@@ -2835,7 +2709,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2856,7 +2730,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2877,7 +2751,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2898,7 +2772,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2919,7 +2793,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2940,7 +2814,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2961,7 +2835,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2982,7 +2856,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3003,7 +2877,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3024,7 +2898,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3045,7 +2919,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3066,7 +2940,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3087,7 +2961,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3106,9 +2980,9 @@ TextureImporter:
         x: 64
         y: 192
         width: 32
-        height: 32
+        height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3127,9 +3001,9 @@ TextureImporter:
         x: 96
         y: 192
         width: 32
-        height: 32
+        height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3148,9 +3022,9 @@ TextureImporter:
         x: 128
         y: 192
         width: 32
-        height: 32
+        height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3171,7 +3045,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3192,7 +3066,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3213,7 +3087,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3234,7 +3108,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3255,7 +3129,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3276,7 +3150,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3297,7 +3171,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3318,7 +3192,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3339,7 +3213,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3360,7 +3234,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3381,7 +3255,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3402,7 +3276,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3423,7 +3297,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3444,7 +3318,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3465,7 +3339,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3486,7 +3360,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3507,7 +3381,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3528,7 +3402,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3549,7 +3423,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3570,7 +3444,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3591,7 +3465,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3612,7 +3486,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3633,7 +3507,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3654,7 +3528,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3675,7 +3549,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3696,7 +3570,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3717,7 +3591,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3738,7 +3612,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3759,7 +3633,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3776,11 +3650,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 64
-        y: 128
+        y: 111
         width: 32
-        height: 32
+        height: 49
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3797,11 +3671,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 96
-        y: 128
+        y: 112
         width: 32
-        height: 32
+        height: 48
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3818,11 +3692,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 128
-        y: 128
+        y: 113
         width: 32
-        height: 32
+        height: 47
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3843,7 +3717,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3864,7 +3738,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3885,7 +3759,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3906,7 +3780,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3927,7 +3801,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3948,7 +3822,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3969,7 +3843,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3990,7 +3864,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -4011,7 +3885,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -4032,7 +3906,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -4053,7 +3927,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -4074,7 +3948,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -4082,69 +3956,6 @@ TextureImporter:
       bones: []
       spriteID: 5ca989a16b4cb7a48a8e095bbf79e800
       internalID: -890564612
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Yellow Effect Bullet Impact Explosion 32x32_190
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 96
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f8a210194ac94dc4983df41590a195d5
-      internalID: 941237379
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Yellow Effect Bullet Impact Explosion 32x32_191
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 96
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0dd35a3977e66f245975913ca01e3374
-      internalID: -285037348
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Yellow Effect Bullet Impact Explosion 32x32_192
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 96
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7c7a5dda3c0fb5c4983b86394f050ba6
-      internalID: -852398775
       vertices: []
       indices: 
       edges: []
@@ -4158,7 +3969,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -4179,7 +3990,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -4200,7 +4011,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -4221,7 +4032,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -4242,7 +4053,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -4263,7 +4074,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -4284,7 +4095,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -4305,7 +4116,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -4326,7 +4137,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -4347,7 +4158,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -4368,7 +4179,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -4389,7 +4200,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -4406,11 +4217,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 64
-        y: 64
+        y: 81
         width: 32
-        height: 32
+        height: 30
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -4427,11 +4238,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 96
-        y: 64
+        y: 79
         width: 32
-        height: 32
+        height: 33
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -4448,11 +4259,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 128
-        y: 64
+        y: 79
         width: 32
-        height: 32
+        height: 34
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -4473,7 +4284,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -4494,7 +4305,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -4515,7 +4326,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -4536,7 +4347,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -4557,7 +4368,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -4578,7 +4389,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -4599,7 +4410,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -4620,7 +4431,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -4641,7 +4452,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -4662,7 +4473,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -4683,7 +4494,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -4704,7 +4515,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -4725,7 +4536,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -4746,7 +4557,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -4767,7 +4578,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -4788,7 +4599,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -4809,7 +4620,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -4830,7 +4641,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -4851,7 +4662,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -4872,7 +4683,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -4893,7 +4704,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -4914,7 +4725,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -4935,7 +4746,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -4956,7 +4767,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -4977,7 +4788,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -4998,7 +4809,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -5019,7 +4830,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -5040,7 +4851,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -5061,7 +4872,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -5082,7 +4893,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -5103,7 +4914,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -5124,7 +4935,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -5145,7 +4956,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -5166,7 +4977,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -5187,7 +4998,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -5208,7 +5019,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -5232,249 +5043,249 @@ TextureImporter:
     secondaryTextures: []
     nameFileIdTable:
       Yellow Effect Bullet Impact Explosion 32x32_0: 488907904
-      Yellow Effect Bullet Impact Explosion 32x32_1: 291977624
-      Yellow Effect Bullet Impact Explosion 32x32_10: 801108189
-      Yellow Effect Bullet Impact Explosion 32x32_100: -702594118
-      Yellow Effect Bullet Impact Explosion 32x32_101: -511845815
-      Yellow Effect Bullet Impact Explosion 32x32_102: -1623487900
-      Yellow Effect Bullet Impact Explosion 32x32_103: 1545544743
-      Yellow Effect Bullet Impact Explosion 32x32_104: -540428485
-      Yellow Effect Bullet Impact Explosion 32x32_105: 1143733729
-      Yellow Effect Bullet Impact Explosion 32x32_106: 1723742388
-      Yellow Effect Bullet Impact Explosion 32x32_107: 1525284785
-      Yellow Effect Bullet Impact Explosion 32x32_108: -1294317457
-      Yellow Effect Bullet Impact Explosion 32x32_109: 1422245332
-      Yellow Effect Bullet Impact Explosion 32x32_11: 1416147790
-      Yellow Effect Bullet Impact Explosion 32x32_110: -464543913
-      Yellow Effect Bullet Impact Explosion 32x32_111: -1479550793
-      Yellow Effect Bullet Impact Explosion 32x32_112: -1122976122
-      Yellow Effect Bullet Impact Explosion 32x32_113: -1595574644
-      Yellow Effect Bullet Impact Explosion 32x32_114: 1047788790
-      Yellow Effect Bullet Impact Explosion 32x32_115: 2143104499
-      Yellow Effect Bullet Impact Explosion 32x32_116: -2127881254
-      Yellow Effect Bullet Impact Explosion 32x32_117: -109923825
-      Yellow Effect Bullet Impact Explosion 32x32_118: -1659652474
-      Yellow Effect Bullet Impact Explosion 32x32_119: -1005081572
-      Yellow Effect Bullet Impact Explosion 32x32_12: 1250273816
-      Yellow Effect Bullet Impact Explosion 32x32_120: -1815649725
-      Yellow Effect Bullet Impact Explosion 32x32_121: -1214154022
-      Yellow Effect Bullet Impact Explosion 32x32_122: -1359126392
-      Yellow Effect Bullet Impact Explosion 32x32_123: -528631011
-      Yellow Effect Bullet Impact Explosion 32x32_124: 1484099344
-      Yellow Effect Bullet Impact Explosion 32x32_125: -1618003791
-      Yellow Effect Bullet Impact Explosion 32x32_126: 534245101
-      Yellow Effect Bullet Impact Explosion 32x32_127: 959851756
-      Yellow Effect Bullet Impact Explosion 32x32_128: 29779461
-      Yellow Effect Bullet Impact Explosion 32x32_129: 262806596
-      Yellow Effect Bullet Impact Explosion 32x32_13: 2038100591
-      Yellow Effect Bullet Impact Explosion 32x32_130: 1478830000
-      Yellow Effect Bullet Impact Explosion 32x32_131: -1922501302
-      Yellow Effect Bullet Impact Explosion 32x32_132: -1716047204
-      Yellow Effect Bullet Impact Explosion 32x32_133: -665179031
-      Yellow Effect Bullet Impact Explosion 32x32_134: -1944102518
-      Yellow Effect Bullet Impact Explosion 32x32_135: 84310920
-      Yellow Effect Bullet Impact Explosion 32x32_136: 1637788892
-      Yellow Effect Bullet Impact Explosion 32x32_137: -1816196314
-      Yellow Effect Bullet Impact Explosion 32x32_138: 1628655362
-      Yellow Effect Bullet Impact Explosion 32x32_139: 547399167
-      Yellow Effect Bullet Impact Explosion 32x32_14: 1616684954
-      Yellow Effect Bullet Impact Explosion 32x32_140: -333843533
-      Yellow Effect Bullet Impact Explosion 32x32_141: -315014507
-      Yellow Effect Bullet Impact Explosion 32x32_142: 459768681
-      Yellow Effect Bullet Impact Explosion 32x32_143: 1352441552
-      Yellow Effect Bullet Impact Explosion 32x32_144: 1913369145
-      Yellow Effect Bullet Impact Explosion 32x32_145: -1368855103
-      Yellow Effect Bullet Impact Explosion 32x32_146: 1089252210
-      Yellow Effect Bullet Impact Explosion 32x32_147: -1778495242
-      Yellow Effect Bullet Impact Explosion 32x32_148: -36954116
-      Yellow Effect Bullet Impact Explosion 32x32_149: 1808933686
-      Yellow Effect Bullet Impact Explosion 32x32_15: -1622038670
-      Yellow Effect Bullet Impact Explosion 32x32_150: 1119307979
-      Yellow Effect Bullet Impact Explosion 32x32_151: -229787978
-      Yellow Effect Bullet Impact Explosion 32x32_152: -1390121855
-      Yellow Effect Bullet Impact Explosion 32x32_153: -444800554
-      Yellow Effect Bullet Impact Explosion 32x32_154: 372020212
-      Yellow Effect Bullet Impact Explosion 32x32_155: -973588550
-      Yellow Effect Bullet Impact Explosion 32x32_156: 1332665122
-      Yellow Effect Bullet Impact Explosion 32x32_157: 1018265733
-      Yellow Effect Bullet Impact Explosion 32x32_158: -90084315
-      Yellow Effect Bullet Impact Explosion 32x32_159: -540009862
-      Yellow Effect Bullet Impact Explosion 32x32_16: 583615741
-      Yellow Effect Bullet Impact Explosion 32x32_160: -1543989052
-      Yellow Effect Bullet Impact Explosion 32x32_161: 1198349691
-      Yellow Effect Bullet Impact Explosion 32x32_162: -1045179061
-      Yellow Effect Bullet Impact Explosion 32x32_163: 655739468
-      Yellow Effect Bullet Impact Explosion 32x32_164: 706132981
-      Yellow Effect Bullet Impact Explosion 32x32_165: -527600651
-      Yellow Effect Bullet Impact Explosion 32x32_166: 453452605
-      Yellow Effect Bullet Impact Explosion 32x32_167: -2006027967
-      Yellow Effect Bullet Impact Explosion 32x32_168: 1775452997
-      Yellow Effect Bullet Impact Explosion 32x32_169: 1767271773
-      Yellow Effect Bullet Impact Explosion 32x32_17: 912199437
-      Yellow Effect Bullet Impact Explosion 32x32_170: -121819414
-      Yellow Effect Bullet Impact Explosion 32x32_171: -311247086
-      Yellow Effect Bullet Impact Explosion 32x32_172: 642672543
-      Yellow Effect Bullet Impact Explosion 32x32_173: -1484034184
-      Yellow Effect Bullet Impact Explosion 32x32_174: -225774394
-      Yellow Effect Bullet Impact Explosion 32x32_175: 1428210839
-      Yellow Effect Bullet Impact Explosion 32x32_176: 1053445784
-      Yellow Effect Bullet Impact Explosion 32x32_177: -1271174968
-      Yellow Effect Bullet Impact Explosion 32x32_178: 1532764797
-      Yellow Effect Bullet Impact Explosion 32x32_179: 286604075
-      Yellow Effect Bullet Impact Explosion 32x32_18: 1662114657
-      Yellow Effect Bullet Impact Explosion 32x32_180: -18891718
-      Yellow Effect Bullet Impact Explosion 32x32_181: -2111636157
-      Yellow Effect Bullet Impact Explosion 32x32_182: 658038688
-      Yellow Effect Bullet Impact Explosion 32x32_183: 12284841
-      Yellow Effect Bullet Impact Explosion 32x32_184: 237517975
-      Yellow Effect Bullet Impact Explosion 32x32_185: -656911770
-      Yellow Effect Bullet Impact Explosion 32x32_186: -342702074
-      Yellow Effect Bullet Impact Explosion 32x32_187: 894024759
-      Yellow Effect Bullet Impact Explosion 32x32_188: -2024265594
-      Yellow Effect Bullet Impact Explosion 32x32_189: -890564612
-      Yellow Effect Bullet Impact Explosion 32x32_19: -404605601
-      Yellow Effect Bullet Impact Explosion 32x32_190: 941237379
-      Yellow Effect Bullet Impact Explosion 32x32_191: -285037348
-      Yellow Effect Bullet Impact Explosion 32x32_192: -852398775
-      Yellow Effect Bullet Impact Explosion 32x32_193: 750428143
-      Yellow Effect Bullet Impact Explosion 32x32_194: 1971393346
-      Yellow Effect Bullet Impact Explosion 32x32_195: 811194552
-      Yellow Effect Bullet Impact Explosion 32x32_196: 135422502
-      Yellow Effect Bullet Impact Explosion 32x32_197: 1816997583
-      Yellow Effect Bullet Impact Explosion 32x32_198: 798133283
-      Yellow Effect Bullet Impact Explosion 32x32_199: 490489226
-      Yellow Effect Bullet Impact Explosion 32x32_2: -1744521423
-      Yellow Effect Bullet Impact Explosion 32x32_20: 827102234
-      Yellow Effect Bullet Impact Explosion 32x32_200: 1548163179
-      Yellow Effect Bullet Impact Explosion 32x32_201: 1412545895
-      Yellow Effect Bullet Impact Explosion 32x32_202: 1046018259
-      Yellow Effect Bullet Impact Explosion 32x32_203: -168601983
-      Yellow Effect Bullet Impact Explosion 32x32_204: -2053752301
-      Yellow Effect Bullet Impact Explosion 32x32_205: 636990001
-      Yellow Effect Bullet Impact Explosion 32x32_206: -1382735792
-      Yellow Effect Bullet Impact Explosion 32x32_207: -1784452481
-      Yellow Effect Bullet Impact Explosion 32x32_208: 105787448
-      Yellow Effect Bullet Impact Explosion 32x32_209: -509234039
-      Yellow Effect Bullet Impact Explosion 32x32_21: 977451340
-      Yellow Effect Bullet Impact Explosion 32x32_210: -394462712
-      Yellow Effect Bullet Impact Explosion 32x32_211: -62524609
-      Yellow Effect Bullet Impact Explosion 32x32_212: 1583319344
-      Yellow Effect Bullet Impact Explosion 32x32_213: 1030624052
-      Yellow Effect Bullet Impact Explosion 32x32_214: 505434865
-      Yellow Effect Bullet Impact Explosion 32x32_215: -1817225908
-      Yellow Effect Bullet Impact Explosion 32x32_216: 559955816
-      Yellow Effect Bullet Impact Explosion 32x32_217: -807351901
-      Yellow Effect Bullet Impact Explosion 32x32_218: 1705406397
-      Yellow Effect Bullet Impact Explosion 32x32_219: 181244486
-      Yellow Effect Bullet Impact Explosion 32x32_22: 836046160
-      Yellow Effect Bullet Impact Explosion 32x32_220: -1333680176
-      Yellow Effect Bullet Impact Explosion 32x32_221: -300813296
-      Yellow Effect Bullet Impact Explosion 32x32_222: -991279505
-      Yellow Effect Bullet Impact Explosion 32x32_223: -186007408
-      Yellow Effect Bullet Impact Explosion 32x32_224: -1331839927
-      Yellow Effect Bullet Impact Explosion 32x32_225: -1287990093
-      Yellow Effect Bullet Impact Explosion 32x32_226: 1297569488
-      Yellow Effect Bullet Impact Explosion 32x32_227: 600407015
-      Yellow Effect Bullet Impact Explosion 32x32_228: -783995847
-      Yellow Effect Bullet Impact Explosion 32x32_229: -1935527602
-      Yellow Effect Bullet Impact Explosion 32x32_23: -1164942356
-      Yellow Effect Bullet Impact Explosion 32x32_230: 1603860759
-      Yellow Effect Bullet Impact Explosion 32x32_231: 635683080
-      Yellow Effect Bullet Impact Explosion 32x32_232: 1062753664
-      Yellow Effect Bullet Impact Explosion 32x32_233: -1704894556
-      Yellow Effect Bullet Impact Explosion 32x32_234: -854306035
-      Yellow Effect Bullet Impact Explosion 32x32_235: 1485582510
-      Yellow Effect Bullet Impact Explosion 32x32_236: 650999249
-      Yellow Effect Bullet Impact Explosion 32x32_237: 441285067
-      Yellow Effect Bullet Impact Explosion 32x32_238: 343953755
-      Yellow Effect Bullet Impact Explosion 32x32_239: -911118616
-      Yellow Effect Bullet Impact Explosion 32x32_24: -53448571
-      Yellow Effect Bullet Impact Explosion 32x32_240: 1764684039
-      Yellow Effect Bullet Impact Explosion 32x32_241: 1673194783
-      Yellow Effect Bullet Impact Explosion 32x32_242: 248407078
-      Yellow Effect Bullet Impact Explosion 32x32_243: -34868640
-      Yellow Effect Bullet Impact Explosion 32x32_25: 895234959
-      Yellow Effect Bullet Impact Explosion 32x32_26: -1172413265
-      Yellow Effect Bullet Impact Explosion 32x32_27: 1668665392
-      Yellow Effect Bullet Impact Explosion 32x32_28: -1215977392
-      Yellow Effect Bullet Impact Explosion 32x32_29: 1480384266
-      Yellow Effect Bullet Impact Explosion 32x32_3: 715793156
-      Yellow Effect Bullet Impact Explosion 32x32_30: 430185741
-      Yellow Effect Bullet Impact Explosion 32x32_31: -814017163
-      Yellow Effect Bullet Impact Explosion 32x32_32: 1620229396
-      Yellow Effect Bullet Impact Explosion 32x32_33: -433181568
-      Yellow Effect Bullet Impact Explosion 32x32_34: 1789079766
-      Yellow Effect Bullet Impact Explosion 32x32_35: 1810997562
-      Yellow Effect Bullet Impact Explosion 32x32_36: 703722713
-      Yellow Effect Bullet Impact Explosion 32x32_37: 175284949
-      Yellow Effect Bullet Impact Explosion 32x32_38: 1706008784
-      Yellow Effect Bullet Impact Explosion 32x32_39: -643208141
-      Yellow Effect Bullet Impact Explosion 32x32_4: -971151332
-      Yellow Effect Bullet Impact Explosion 32x32_40: -1566093479
-      Yellow Effect Bullet Impact Explosion 32x32_41: 1129296348
-      Yellow Effect Bullet Impact Explosion 32x32_42: 1497814870
-      Yellow Effect Bullet Impact Explosion 32x32_43: 1333956673
-      Yellow Effect Bullet Impact Explosion 32x32_44: -1972960447
-      Yellow Effect Bullet Impact Explosion 32x32_45: 1883962910
-      Yellow Effect Bullet Impact Explosion 32x32_46: -2022783309
-      Yellow Effect Bullet Impact Explosion 32x32_47: 1511316636
-      Yellow Effect Bullet Impact Explosion 32x32_48: -1963769827
-      Yellow Effect Bullet Impact Explosion 32x32_49: -263976936
-      Yellow Effect Bullet Impact Explosion 32x32_5: -2056409626
-      Yellow Effect Bullet Impact Explosion 32x32_50: 1208071289
-      Yellow Effect Bullet Impact Explosion 32x32_51: -1351543381
-      Yellow Effect Bullet Impact Explosion 32x32_52: 1053585650
-      Yellow Effect Bullet Impact Explosion 32x32_53: 338676193
-      Yellow Effect Bullet Impact Explosion 32x32_54: -830652904
-      Yellow Effect Bullet Impact Explosion 32x32_55: 1491784384
-      Yellow Effect Bullet Impact Explosion 32x32_56: 1278339679
-      Yellow Effect Bullet Impact Explosion 32x32_57: -962975048
-      Yellow Effect Bullet Impact Explosion 32x32_58: 1515893706
-      Yellow Effect Bullet Impact Explosion 32x32_59: -747074581
-      Yellow Effect Bullet Impact Explosion 32x32_6: 507166017
-      Yellow Effect Bullet Impact Explosion 32x32_60: 1133622064
-      Yellow Effect Bullet Impact Explosion 32x32_61: -60172969
-      Yellow Effect Bullet Impact Explosion 32x32_62: -1015691557
-      Yellow Effect Bullet Impact Explosion 32x32_63: 669522898
-      Yellow Effect Bullet Impact Explosion 32x32_64: 749199914
-      Yellow Effect Bullet Impact Explosion 32x32_65: -481203954
-      Yellow Effect Bullet Impact Explosion 32x32_66: -379394480
-      Yellow Effect Bullet Impact Explosion 32x32_67: 1784893644
-      Yellow Effect Bullet Impact Explosion 32x32_68: 1387235016
-      Yellow Effect Bullet Impact Explosion 32x32_69: 1875910963
-      Yellow Effect Bullet Impact Explosion 32x32_7: 870104648
-      Yellow Effect Bullet Impact Explosion 32x32_70: -635029381
-      Yellow Effect Bullet Impact Explosion 32x32_71: 1442578092
-      Yellow Effect Bullet Impact Explosion 32x32_72: -224114921
-      Yellow Effect Bullet Impact Explosion 32x32_73: 1224193393
-      Yellow Effect Bullet Impact Explosion 32x32_74: -143253782
-      Yellow Effect Bullet Impact Explosion 32x32_75: -989697366
-      Yellow Effect Bullet Impact Explosion 32x32_76: -624173633
-      Yellow Effect Bullet Impact Explosion 32x32_77: -1893976655
-      Yellow Effect Bullet Impact Explosion 32x32_78: -2091350410
-      Yellow Effect Bullet Impact Explosion 32x32_79: 1657368494
-      Yellow Effect Bullet Impact Explosion 32x32_8: -363293243
-      Yellow Effect Bullet Impact Explosion 32x32_80: -258240483
-      Yellow Effect Bullet Impact Explosion 32x32_81: -1993873508
-      Yellow Effect Bullet Impact Explosion 32x32_82: 895800264
-      Yellow Effect Bullet Impact Explosion 32x32_83: -415157618
-      Yellow Effect Bullet Impact Explosion 32x32_84: 1981988150
-      Yellow Effect Bullet Impact Explosion 32x32_85: 171525643
-      Yellow Effect Bullet Impact Explosion 32x32_86: 449214887
-      Yellow Effect Bullet Impact Explosion 32x32_87: 687956396
-      Yellow Effect Bullet Impact Explosion 32x32_88: 593863287
-      Yellow Effect Bullet Impact Explosion 32x32_89: 1956001605
-      Yellow Effect Bullet Impact Explosion 32x32_9: 574480318
-      Yellow Effect Bullet Impact Explosion 32x32_90: 1701803150
-      Yellow Effect Bullet Impact Explosion 32x32_91: -776970884
-      Yellow Effect Bullet Impact Explosion 32x32_92: 449079834
-      Yellow Effect Bullet Impact Explosion 32x32_93: 1097840847
-      Yellow Effect Bullet Impact Explosion 32x32_94: 442529617
-      Yellow Effect Bullet Impact Explosion 32x32_95: -65754834
-      Yellow Effect Bullet Impact Explosion 32x32_96: 1787703471
-      Yellow Effect Bullet Impact Explosion 32x32_97: 637501269
-      Yellow Effect Bullet Impact Explosion 32x32_98: 2022010437
-      Yellow Effect Bullet Impact Explosion 32x32_99: -1954547905
+      Yellow Effect Bullet Impact Explosion 32x32_1: -1245853146
+      Yellow Effect Bullet Impact Explosion 32x32_10: 914972016
+      Yellow Effect Bullet Impact Explosion 32x32_100: -835978340
+      Yellow Effect Bullet Impact Explosion 32x32_101: -75391017
+      Yellow Effect Bullet Impact Explosion 32x32_102: 1975144470
+      Yellow Effect Bullet Impact Explosion 32x32_103: 156491869
+      Yellow Effect Bullet Impact Explosion 32x32_104: -1470702672
+      Yellow Effect Bullet Impact Explosion 32x32_105: -405764726
+      Yellow Effect Bullet Impact Explosion 32x32_106: 145067410
+      Yellow Effect Bullet Impact Explosion 32x32_107: 507518892
+      Yellow Effect Bullet Impact Explosion 32x32_108: 688936607
+      Yellow Effect Bullet Impact Explosion 32x32_109: -629879806
+      Yellow Effect Bullet Impact Explosion 32x32_11: -539087643
+      Yellow Effect Bullet Impact Explosion 32x32_110: -686570167
+      Yellow Effect Bullet Impact Explosion 32x32_111: -678031063
+      Yellow Effect Bullet Impact Explosion 32x32_112: 1823212261
+      Yellow Effect Bullet Impact Explosion 32x32_113: -264545446
+      Yellow Effect Bullet Impact Explosion 32x32_114: -1305815259
+      Yellow Effect Bullet Impact Explosion 32x32_115: -1334613960
+      Yellow Effect Bullet Impact Explosion 32x32_116: 919921077
+      Yellow Effect Bullet Impact Explosion 32x32_117: -1420388933
+      Yellow Effect Bullet Impact Explosion 32x32_118: 1874457359
+      Yellow Effect Bullet Impact Explosion 32x32_119: 931815020
+      Yellow Effect Bullet Impact Explosion 32x32_12: 1232444028
+      Yellow Effect Bullet Impact Explosion 32x32_120: -1759891864
+      Yellow Effect Bullet Impact Explosion 32x32_121: -1362634232
+      Yellow Effect Bullet Impact Explosion 32x32_122: 1589153628
+      Yellow Effect Bullet Impact Explosion 32x32_123: -30880925
+      Yellow Effect Bullet Impact Explosion 32x32_124: 2065759602
+      Yellow Effect Bullet Impact Explosion 32x32_125: -1913565932
+      Yellow Effect Bullet Impact Explosion 32x32_126: 395230433
+      Yellow Effect Bullet Impact Explosion 32x32_127: -213385551
+      Yellow Effect Bullet Impact Explosion 32x32_128: -1369860520
+      Yellow Effect Bullet Impact Explosion 32x32_129: 248738621
+      Yellow Effect Bullet Impact Explosion 32x32_13: -1092922547
+      Yellow Effect Bullet Impact Explosion 32x32_130: -1905384166
+      Yellow Effect Bullet Impact Explosion 32x32_131: 553032918
+      Yellow Effect Bullet Impact Explosion 32x32_132: -510628526
+      Yellow Effect Bullet Impact Explosion 32x32_133: -1427776203
+      Yellow Effect Bullet Impact Explosion 32x32_134: -930536751
+      Yellow Effect Bullet Impact Explosion 32x32_135: 162683247
+      Yellow Effect Bullet Impact Explosion 32x32_136: -1135504577
+      Yellow Effect Bullet Impact Explosion 32x32_137: 71496837
+      Yellow Effect Bullet Impact Explosion 32x32_138: 395210058
+      Yellow Effect Bullet Impact Explosion 32x32_139: -677895645
+      Yellow Effect Bullet Impact Explosion 32x32_14: -627555027
+      Yellow Effect Bullet Impact Explosion 32x32_140: -676843971
+      Yellow Effect Bullet Impact Explosion 32x32_141: -322732074
+      Yellow Effect Bullet Impact Explosion 32x32_142: 238262294
+      Yellow Effect Bullet Impact Explosion 32x32_143: 370324642
+      Yellow Effect Bullet Impact Explosion 32x32_144: 316491331
+      Yellow Effect Bullet Impact Explosion 32x32_145: -828578840
+      Yellow Effect Bullet Impact Explosion 32x32_146: -253271646
+      Yellow Effect Bullet Impact Explosion 32x32_147: -40087499
+      Yellow Effect Bullet Impact Explosion 32x32_148: 115698611
+      Yellow Effect Bullet Impact Explosion 32x32_149: -953382895
+      Yellow Effect Bullet Impact Explosion 32x32_15: -1119296078
+      Yellow Effect Bullet Impact Explosion 32x32_150: -415289159
+      Yellow Effect Bullet Impact Explosion 32x32_151: -1142406420
+      Yellow Effect Bullet Impact Explosion 32x32_152: -678432083
+      Yellow Effect Bullet Impact Explosion 32x32_153: -807820961
+      Yellow Effect Bullet Impact Explosion 32x32_154: -471814441
+      Yellow Effect Bullet Impact Explosion 32x32_155: -1184022694
+      Yellow Effect Bullet Impact Explosion 32x32_156: 111208322
+      Yellow Effect Bullet Impact Explosion 32x32_157: -913960197
+      Yellow Effect Bullet Impact Explosion 32x32_158: -851422751
+      Yellow Effect Bullet Impact Explosion 32x32_159: -1116897304
+      Yellow Effect Bullet Impact Explosion 32x32_16: -1986278896
+      Yellow Effect Bullet Impact Explosion 32x32_160: -1472639888
+      Yellow Effect Bullet Impact Explosion 32x32_161: 1270158835
+      Yellow Effect Bullet Impact Explosion 32x32_162: 456217275
+      Yellow Effect Bullet Impact Explosion 32x32_163: 1336595345
+      Yellow Effect Bullet Impact Explosion 32x32_164: 507943104
+      Yellow Effect Bullet Impact Explosion 32x32_165: -2007700220
+      Yellow Effect Bullet Impact Explosion 32x32_166: 1783440607
+      Yellow Effect Bullet Impact Explosion 32x32_167: -2092452821
+      Yellow Effect Bullet Impact Explosion 32x32_168: 498577813
+      Yellow Effect Bullet Impact Explosion 32x32_169: -280146932
+      Yellow Effect Bullet Impact Explosion 32x32_17: -1745335481
+      Yellow Effect Bullet Impact Explosion 32x32_170: 1054522018
+      Yellow Effect Bullet Impact Explosion 32x32_171: 2119246446
+      Yellow Effect Bullet Impact Explosion 32x32_172: 804830233
+      Yellow Effect Bullet Impact Explosion 32x32_173: -1162687741
+      Yellow Effect Bullet Impact Explosion 32x32_174: -1175767490
+      Yellow Effect Bullet Impact Explosion 32x32_175: -1792633677
+      Yellow Effect Bullet Impact Explosion 32x32_176: 1158203312
+      Yellow Effect Bullet Impact Explosion 32x32_177: 1787262985
+      Yellow Effect Bullet Impact Explosion 32x32_178: -722945665
+      Yellow Effect Bullet Impact Explosion 32x32_179: -1859566458
+      Yellow Effect Bullet Impact Explosion 32x32_18: -235121837
+      Yellow Effect Bullet Impact Explosion 32x32_180: 206211146
+      Yellow Effect Bullet Impact Explosion 32x32_181: -1647301931
+      Yellow Effect Bullet Impact Explosion 32x32_182: -80810062
+      Yellow Effect Bullet Impact Explosion 32x32_183: -1306163983
+      Yellow Effect Bullet Impact Explosion 32x32_184: 2022618032
+      Yellow Effect Bullet Impact Explosion 32x32_185: 1189469672
+      Yellow Effect Bullet Impact Explosion 32x32_186: 1214166511
+      Yellow Effect Bullet Impact Explosion 32x32_187: 1516102346
+      Yellow Effect Bullet Impact Explosion 32x32_188: -2101839215
+      Yellow Effect Bullet Impact Explosion 32x32_189: 1112944734
+      Yellow Effect Bullet Impact Explosion 32x32_19: 1891050000
+      Yellow Effect Bullet Impact Explosion 32x32_190: 914095076
+      Yellow Effect Bullet Impact Explosion 32x32_191: -1446752691
+      Yellow Effect Bullet Impact Explosion 32x32_192: -823503443
+      Yellow Effect Bullet Impact Explosion 32x32_193: 2102307478
+      Yellow Effect Bullet Impact Explosion 32x32_194: 1791771631
+      Yellow Effect Bullet Impact Explosion 32x32_195: -1301085730
+      Yellow Effect Bullet Impact Explosion 32x32_196: 1309551139
+      Yellow Effect Bullet Impact Explosion 32x32_197: 1261742692
+      Yellow Effect Bullet Impact Explosion 32x32_198: 1620242510
+      Yellow Effect Bullet Impact Explosion 32x32_199: -168780016
+      Yellow Effect Bullet Impact Explosion 32x32_2: -598856947
+      Yellow Effect Bullet Impact Explosion 32x32_20: 1278562248
+      Yellow Effect Bullet Impact Explosion 32x32_200: -2027090144
+      Yellow Effect Bullet Impact Explosion 32x32_201: -649566866
+      Yellow Effect Bullet Impact Explosion 32x32_202: 1927804332
+      Yellow Effect Bullet Impact Explosion 32x32_203: 1135835866
+      Yellow Effect Bullet Impact Explosion 32x32_204: 1124541829
+      Yellow Effect Bullet Impact Explosion 32x32_205: 351175883
+      Yellow Effect Bullet Impact Explosion 32x32_206: -1663851836
+      Yellow Effect Bullet Impact Explosion 32x32_207: 20527829
+      Yellow Effect Bullet Impact Explosion 32x32_208: 403357860
+      Yellow Effect Bullet Impact Explosion 32x32_209: 1448764442
+      Yellow Effect Bullet Impact Explosion 32x32_21: -1025557620
+      Yellow Effect Bullet Impact Explosion 32x32_210: 777806242
+      Yellow Effect Bullet Impact Explosion 32x32_211: -1513325494
+      Yellow Effect Bullet Impact Explosion 32x32_212: -1457057384
+      Yellow Effect Bullet Impact Explosion 32x32_213: 1011284227
+      Yellow Effect Bullet Impact Explosion 32x32_214: -801965284
+      Yellow Effect Bullet Impact Explosion 32x32_215: 1136888752
+      Yellow Effect Bullet Impact Explosion 32x32_216: -934654096
+      Yellow Effect Bullet Impact Explosion 32x32_217: 1022179280
+      Yellow Effect Bullet Impact Explosion 32x32_218: 739513618
+      Yellow Effect Bullet Impact Explosion 32x32_219: 592042975
+      Yellow Effect Bullet Impact Explosion 32x32_22: 1341521964
+      Yellow Effect Bullet Impact Explosion 32x32_220: -1753171281
+      Yellow Effect Bullet Impact Explosion 32x32_221: -1397616983
+      Yellow Effect Bullet Impact Explosion 32x32_222: 1700577307
+      Yellow Effect Bullet Impact Explosion 32x32_223: -308070074
+      Yellow Effect Bullet Impact Explosion 32x32_224: 127647716
+      Yellow Effect Bullet Impact Explosion 32x32_225: 1979789530
+      Yellow Effect Bullet Impact Explosion 32x32_226: -499484912
+      Yellow Effect Bullet Impact Explosion 32x32_227: -1795092814
+      Yellow Effect Bullet Impact Explosion 32x32_228: 136782176
+      Yellow Effect Bullet Impact Explosion 32x32_229: -1656358234
+      Yellow Effect Bullet Impact Explosion 32x32_23: -541358586
+      Yellow Effect Bullet Impact Explosion 32x32_230: -2075695674
+      Yellow Effect Bullet Impact Explosion 32x32_231: 485595400
+      Yellow Effect Bullet Impact Explosion 32x32_232: -727218801
+      Yellow Effect Bullet Impact Explosion 32x32_233: 1057859733
+      Yellow Effect Bullet Impact Explosion 32x32_234: 202063665
+      Yellow Effect Bullet Impact Explosion 32x32_235: 2015700659
+      Yellow Effect Bullet Impact Explosion 32x32_236: 585587727
+      Yellow Effect Bullet Impact Explosion 32x32_237: -755238555
+      Yellow Effect Bullet Impact Explosion 32x32_238: -1996455817
+      Yellow Effect Bullet Impact Explosion 32x32_239: -788784022
+      Yellow Effect Bullet Impact Explosion 32x32_24: 697004306
+      Yellow Effect Bullet Impact Explosion 32x32_240: 1614799895
+      Yellow Effect Bullet Impact Explosion 32x32_241: 888066113
+      Yellow Effect Bullet Impact Explosion 32x32_242: -424433133
+      Yellow Effect Bullet Impact Explosion 32x32_243: -254346881
+      Yellow Effect Bullet Impact Explosion 32x32_25: -1618589808
+      Yellow Effect Bullet Impact Explosion 32x32_26: 614947101
+      Yellow Effect Bullet Impact Explosion 32x32_27: 34062232
+      Yellow Effect Bullet Impact Explosion 32x32_28: 1782374857
+      Yellow Effect Bullet Impact Explosion 32x32_29: -1371743546
+      Yellow Effect Bullet Impact Explosion 32x32_3: -2025800838
+      Yellow Effect Bullet Impact Explosion 32x32_30: -1966466066
+      Yellow Effect Bullet Impact Explosion 32x32_31: 1138704608
+      Yellow Effect Bullet Impact Explosion 32x32_32: 81043516
+      Yellow Effect Bullet Impact Explosion 32x32_33: 1184239441
+      Yellow Effect Bullet Impact Explosion 32x32_34: 791270186
+      Yellow Effect Bullet Impact Explosion 32x32_35: -2110332054
+      Yellow Effect Bullet Impact Explosion 32x32_36: -712756912
+      Yellow Effect Bullet Impact Explosion 32x32_37: -1265889214
+      Yellow Effect Bullet Impact Explosion 32x32_38: -1951190873
+      Yellow Effect Bullet Impact Explosion 32x32_39: 875028182
+      Yellow Effect Bullet Impact Explosion 32x32_4: -665489907
+      Yellow Effect Bullet Impact Explosion 32x32_40: 1789309075
+      Yellow Effect Bullet Impact Explosion 32x32_41: -1121129186
+      Yellow Effect Bullet Impact Explosion 32x32_42: -721994742
+      Yellow Effect Bullet Impact Explosion 32x32_43: -1721863383
+      Yellow Effect Bullet Impact Explosion 32x32_44: 340260296
+      Yellow Effect Bullet Impact Explosion 32x32_45: -1541313507
+      Yellow Effect Bullet Impact Explosion 32x32_46: -1440209429
+      Yellow Effect Bullet Impact Explosion 32x32_47: -1525258706
+      Yellow Effect Bullet Impact Explosion 32x32_48: 404421726
+      Yellow Effect Bullet Impact Explosion 32x32_49: 559455353
+      Yellow Effect Bullet Impact Explosion 32x32_5: -548385165
+      Yellow Effect Bullet Impact Explosion 32x32_50: -1318233532
+      Yellow Effect Bullet Impact Explosion 32x32_51: -64214227
+      Yellow Effect Bullet Impact Explosion 32x32_52: -1857928432
+      Yellow Effect Bullet Impact Explosion 32x32_53: 1085243275
+      Yellow Effect Bullet Impact Explosion 32x32_54: 1110319915
+      Yellow Effect Bullet Impact Explosion 32x32_55: -1111199938
+      Yellow Effect Bullet Impact Explosion 32x32_56: 2021464662
+      Yellow Effect Bullet Impact Explosion 32x32_57: -637387792
+      Yellow Effect Bullet Impact Explosion 32x32_58: 1410907547
+      Yellow Effect Bullet Impact Explosion 32x32_59: -300068379
+      Yellow Effect Bullet Impact Explosion 32x32_6: -989862464
+      Yellow Effect Bullet Impact Explosion 32x32_60: -629342584
+      Yellow Effect Bullet Impact Explosion 32x32_61: -833985196
+      Yellow Effect Bullet Impact Explosion 32x32_62: 1405486406
+      Yellow Effect Bullet Impact Explosion 32x32_63: 1037082606
+      Yellow Effect Bullet Impact Explosion 32x32_64: 1182540635
+      Yellow Effect Bullet Impact Explosion 32x32_65: -1619069430
+      Yellow Effect Bullet Impact Explosion 32x32_66: -1207939564
+      Yellow Effect Bullet Impact Explosion 32x32_67: 2141564674
+      Yellow Effect Bullet Impact Explosion 32x32_68: -1982083623
+      Yellow Effect Bullet Impact Explosion 32x32_69: -460091489
+      Yellow Effect Bullet Impact Explosion 32x32_7: 706396114
+      Yellow Effect Bullet Impact Explosion 32x32_70: -431484296
+      Yellow Effect Bullet Impact Explosion 32x32_71: 1069165373
+      Yellow Effect Bullet Impact Explosion 32x32_72: 681557642
+      Yellow Effect Bullet Impact Explosion 32x32_73: -1151417655
+      Yellow Effect Bullet Impact Explosion 32x32_74: 2083519505
+      Yellow Effect Bullet Impact Explosion 32x32_75: -1287828358
+      Yellow Effect Bullet Impact Explosion 32x32_76: -1094049485
+      Yellow Effect Bullet Impact Explosion 32x32_77: 1632522904
+      Yellow Effect Bullet Impact Explosion 32x32_78: 645569525
+      Yellow Effect Bullet Impact Explosion 32x32_79: -810421921
+      Yellow Effect Bullet Impact Explosion 32x32_8: 458886056
+      Yellow Effect Bullet Impact Explosion 32x32_80: -1481325598
+      Yellow Effect Bullet Impact Explosion 32x32_81: 1427586780
+      Yellow Effect Bullet Impact Explosion 32x32_82: 1351316423
+      Yellow Effect Bullet Impact Explosion 32x32_83: -1360426039
+      Yellow Effect Bullet Impact Explosion 32x32_84: 2081354764
+      Yellow Effect Bullet Impact Explosion 32x32_85: -749750123
+      Yellow Effect Bullet Impact Explosion 32x32_86: -363209901
+      Yellow Effect Bullet Impact Explosion 32x32_87: 2127001312
+      Yellow Effect Bullet Impact Explosion 32x32_88: -1521622238
+      Yellow Effect Bullet Impact Explosion 32x32_89: 216282752
+      Yellow Effect Bullet Impact Explosion 32x32_9: 2032685911
+      Yellow Effect Bullet Impact Explosion 32x32_90: -1649183414
+      Yellow Effect Bullet Impact Explosion 32x32_91: -294514096
+      Yellow Effect Bullet Impact Explosion 32x32_92: -1776024185
+      Yellow Effect Bullet Impact Explosion 32x32_93: -1820191072
+      Yellow Effect Bullet Impact Explosion 32x32_94: 128227682
+      Yellow Effect Bullet Impact Explosion 32x32_95: 261355734
+      Yellow Effect Bullet Impact Explosion 32x32_96: 1485694540
+      Yellow Effect Bullet Impact Explosion 32x32_97: -556732788
+      Yellow Effect Bullet Impact Explosion 32x32_98: -1815871653
+      Yellow Effect Bullet Impact Explosion 32x32_99: -1840593454
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
