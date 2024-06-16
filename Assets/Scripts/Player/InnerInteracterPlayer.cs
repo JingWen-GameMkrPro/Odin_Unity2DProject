@@ -19,7 +19,7 @@ public class InnerInteracterPlayer : MonoBehaviour
         Causer = transform.root.gameObject;
     }
 
-    //½T»{SerializeFieldªÅ­È
+    //ç¢ºèªSerializeFieldç©ºå€¼
     private void checkSerializeField()
     {
         if (PlayerDatabase == null)
@@ -39,25 +39,36 @@ public class InnerInteracterPlayer : MonoBehaviour
 
     private void receiveInput()
     {
-        //²¾°Ê¿é¤J
+        //ç§»å‹•è¼¸å…¥
         tryHorizontalMove();
 
-        //¸õÅD¿é¤J¡A¦pªGisGrounded = 1¤~¦æ
+        //è·³èºè¼¸å…¥ï¼Œå¦‚æœisGrounded = 1æ‰è¡Œ
         if (Input.GetKeyDown(KeyCode.W))
         {
             tryJump();
         }
 
-        //§ğÀ»¿é¤J
+        //æ”»æ“Šè¼¸å…¥
         if (Input.GetKeyDown(KeyCode.J))
         {
             tryAttack();
         }
 
-        //¨¾¿m¿é¤J
+        //é˜²ç¦¦è¼¸å…¥
         if (Input.GetKeyDown(KeyCode.K))
         {
-            tryDefense();
+             Debug.Log(PlayerDatabase.DetecterManager.DetecterRecorderList["Detecter_Item"].Count);
+             if (PlayerDatabase.DetecterManager.DetecterRecorderList.ContainsKey("Detecter_Item"))
+                 {
+                     foreach (var item in PlayerDatabase.DetecterManager.DetecterRecorderList["Detecter_Item"])
+                         {
+                             OuterInteracterItem itemComponent = item.GetComponent<OuterInteracterItem>();
+                             if(item!= null)
+                             {
+                                itemComponent.Detecter_Item();
+                             }          
+                         }
+                 }
         }
 
     }
@@ -69,12 +80,12 @@ public class InnerInteracterPlayer : MonoBehaviour
             return;
         }
 
-        //±±¨î¦ì²¾
+        //æ§åˆ¶ä½ç§»
         var horizontalInput = Input.GetAxis("Horizontal");
         horizontalInput = Math.Clamp(horizontalInput * PlayerDatabase.PlayerAtt.HorizontalAcceleration, -1, 1);
         PlayerDatabase.RB.velocity = new Vector2(horizontalInput * PlayerDatabase.PlayerAtt.HorizontalSpeed, PlayerDatabase.RB.velocity.y);
 
-        //±±¨î¤è¦V
+        //æ§åˆ¶æ–¹å‘
         if (PlayerDatabase.RB.velocity.x > 0)
         {
             transform.localScale = new Vector3(1, 1, 1);
@@ -84,7 +95,7 @@ public class InnerInteracterPlayer : MonoBehaviour
             transform.localScale = new Vector3(-1, 1, 1);
         }
 
-        //±±¨î°Êµeª¬ºA
+        //æ§åˆ¶å‹•ç•«ç‹€æ…‹
         if (horizontalInput == 0)
         {
             PlayerDatabase.SetState(PlayerDatabase.PlayerState.Moving, false);
@@ -139,7 +150,7 @@ public class InnerInteracterPlayer : MonoBehaviour
     private void checkGrounded()
     {
         RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down, 0.1f, LayerMask.GetMask("Map"));
-        //¤@½ò¨ì¦aªO´N­nºò«æ·Ù¨®¡AÁ×§K¬ï³z
+        //ä¸€è¸©åˆ°åœ°æ¿å°±è¦ç·Šæ€¥ç…è»Šï¼Œé¿å…ç©¿é€
         if (!PlayerDatabase.IsInState(PlayerDatabase.PlayerState.Grounding) && hit.collider != null)
         {
             PlayerDatabase.RB.velocity = new Vector2(PlayerDatabase.RB.velocity.x, 0);
