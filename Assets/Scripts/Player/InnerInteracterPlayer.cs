@@ -57,18 +57,30 @@ public class InnerInteracterPlayer : MonoBehaviour
         //防禦輸入
         if (Input.GetKeyDown(KeyCode.K))
         {
-             Debug.Log(PlayerDatabase.DetecterManager.DetecterRecorderList["Detecter_Item"].Count);
-             if (PlayerDatabase.DetecterManager.DetecterRecorderList.ContainsKey("Detecter_Item"))
-                 {
-                     foreach (var item in PlayerDatabase.DetecterManager.DetecterRecorderList["Detecter_Item"])
-                         {
-                             OuterInteracterItem itemComponent = item.GetComponent<OuterInteracterItem>();
-                             if(item!= null)
-                             {
-                                itemComponent.Detecter_Item();
-                             }          
-                         }
-                 }
+            Debug.Log(PlayerDatabase.DetecterManager.DetecterRecorderList["Detecter_Item"].Count);
+            if (PlayerDatabase.DetecterManager.DetecterRecorderList.ContainsKey("Detecter_Item"))
+            {
+                foreach (var item in PlayerDatabase.DetecterManager.DetecterRecorderList["Detecter_Item"])
+                {
+                    var itemComponent = item.GetComponent<OuterInteracterItem>();
+                    if(item!= null)
+                    {
+                        //Variable
+                        var itemId = itemComponent.GetItemID();
+                        switch (itemId)
+                        {
+                            case 0:
+                                //對應操作
+                                break;
+                            case 1:
+                                GameMaster.Instance.PlayerDatabase.PlayerAtt.HP += 1;
+                                Debug.Log("我拿到紅藥水了");
+                                //對應操作
+                                break;
+                        }
+                    }           
+                }
+            }
         }
 
     }
