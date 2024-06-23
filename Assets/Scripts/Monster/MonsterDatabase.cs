@@ -7,6 +7,9 @@ public class MonsterDatabase : MonoBehaviour
     [HideInInspector]
     public SD_MonsterAtt.Data MonsterAtt;
 
+    [HideInInspector]
+    public int BeDamagedRecordValue = 0;
+
     //互動元件，需要調動的私人內部元件
     [SerializeField]
     public SD_MonsterAtt SDMonsterAtt; //警告：不要修改此變數，這會導致原始資料被更動

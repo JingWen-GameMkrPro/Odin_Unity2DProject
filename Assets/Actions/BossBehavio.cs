@@ -6,7 +6,7 @@ using UnityEditor;
 using System;
 using Unity.Mathematics;
 
-public class MoveTowardsPlayer : MonoBehaviour 
+public class InnerInteracterMonster : MonoBehaviour 
 {
     [SerializeField] float moveSpeed = 5f; // 移动速度
     [SerializeField] float attackDuration = 1f;
@@ -16,14 +16,41 @@ public class MoveTowardsPlayer : MonoBehaviour
     int HP = 100;
     int State = 0;
     bool isSkillCoolingDown = false;
+    bool isSkillOK = true;
 
     //怪物在每一次更新時，狀態一定只會有一個，不會同時施放技能一又放技能二，因此只需要有唯一的狀態變數
 
     void decideState()
     {
         State = 0;
+
     }
-    
+
+    void waitCoolTime(ref bool state, int time)
+    {
+        state = false;
+        //開始計時，call 計時器，如何確保Timer執行完了
+        //StartCoroutine(Timer(time));
+        state = true;
+
+    }
+
+    //傳值、傳址
+    IEnumerator Timer(int time)
+    {
+
+        yield return new WaitForSeconds(1);
+        time = time - 1;
+        if(time < 0)
+        {
+            Debug.Log("In Timer");
+        }
+    }
+    private void Start()
+    {
+        waitCoolTime(ref isSkillOK, 5);
+    }
+
     void Update()
     {
         if (isSkillCoolingDown)
@@ -94,9 +121,10 @@ public class MoveTowardsPlayer : MonoBehaviour
     void Attack()
     {
         GetComponent<Animator>().SetBool("BossAttack", true);
-        GameMaster.Instance.PlayerDatabase.PlayerAtt.HP -= damage;
+        GameMaster.Instance.OuterInteracterPlayer.ReduceHP(this.gameObject, damage);
+        //GameMaster.Instance.PlayerDatabase.PlayerAtt.HP -= damage;
         // 能夠造成傷害，但碰撞一次觸發過多次的扣血
-        Debug.Log("Attacking");
+        //Debug.Log("Attacking");
     }
 
     void Skill2() 
@@ -112,7 +140,7 @@ public class MoveTowardsPlayer : MonoBehaviour
         {
             isSkillCoolingDown = false;
             Skill2();
-            Debug.Log("Use Skill2");
+            //Debug.Log("Use Skill2");
             decideState();
         }
         else // 執行下一個技能，避免卡死
@@ -141,7 +169,7 @@ public class MoveTowardsPlayer : MonoBehaviour
         {
             isSkillCoolingDown = true;
             Skill3();
-            Debug.Log("Use Skill3");
+            //Debug.Log("Use Skill3");
             decideState();
         }   
         else 
@@ -167,7 +195,7 @@ public class MoveTowardsPlayer : MonoBehaviour
         {
             isSkillCoolingDown = true;
             Skill4();
-            Debug.Log("Use Skill4");
+            //Debug.Log("Use Skill4");
             decideState();
             skill3Miss = 0;
         }
@@ -192,7 +220,7 @@ public class MoveTowardsPlayer : MonoBehaviour
         {
             isSkillCoolingDown = true;
             Skill5();
-            Debug.Log("Use Skill5");
+            //Debug.Log("Use Skill5");
             decideState();
         }
         else
@@ -216,7 +244,7 @@ public class MoveTowardsPlayer : MonoBehaviour
         // 攻击动画播放完成后，将Attacking设置为false
         GetComponent<Animator>().SetBool("BossAttack", false);
         isPlayAroundYou = false;
-        Debug.Log("Attack finished");
+        //Debug.Log("Attack finished");
         isSkillCoolingDown = false;
     }
 
