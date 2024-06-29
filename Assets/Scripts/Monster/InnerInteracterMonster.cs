@@ -4,7 +4,7 @@ using UnityEngine;
 using TheKiwiCoder;
 using UnityEditor;
 
-public class MoveTowardsPlayer : MonoBehaviour 
+public class InnerInteracterMonster : MonoBehaviour 
 {
     [SerializeField] float moveSpeed = 5f; // 移动速度
     [SerializeField] float attackDuration = 1f;

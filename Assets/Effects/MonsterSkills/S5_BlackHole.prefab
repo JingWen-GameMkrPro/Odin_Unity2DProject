@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7306742766780735009}
   - component: {fileID: 6537773372615773287}
   m_Layer: 0
-  m_Name: Black hole effect
+  m_Name: S5_BlackHole
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

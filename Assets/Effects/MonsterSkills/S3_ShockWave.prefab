@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2287042033532754174}
   - component: {fileID: 9117724107938835031}
   m_Layer: 0
-  m_Name: Shock wave effect
+  m_Name: S3_ShockWave
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
