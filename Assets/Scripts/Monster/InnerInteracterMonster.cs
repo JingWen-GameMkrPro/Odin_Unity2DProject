@@ -24,12 +24,14 @@ public class InnerInteracterMonster : MonoBehaviour
         WalkTarget,
         WalkRandom,
         NormalAttack,
-        Skill1,
-        Skill2,
-        Skill3,
-        Skill4,
-        Skill5,
+        skFireBall,
+        skShockWave,
+        skAntiShield,
+        skBlackHole,
+        skSkyAngry
     }
+
+
 
     //怪物在每一次更新時，狀態一定只會有一個，不會同時施放技能一又放技能二，因此只需要有唯一的狀態變數
 
