@@ -4,6 +4,8 @@ using UnityEngine;
 using TheKiwiCoder;
 using UnityEditor;
 using System;
+using Unity.VisualScripting;
+using System.Threading.Tasks;
 
 public class InnerInteracterMonster : MonoBehaviour 
 {
@@ -13,12 +15,41 @@ public class InnerInteracterMonster : MonoBehaviour
     [SerializeField]
     MonsterDatabase monsterDatabase;
 
+    [SerializeField]
+    GameObject NormalAttack;
+
+    [SerializeField]
+    GameObject SkFireBall;
+
+    [SerializeField]
+    GameObject SkShockWave;
+
+    [SerializeField]
+    GameObject SkAntiShield;
+
+    [SerializeField]
+    GameObject SkBlackHole;
+
+    [SerializeField]
+    GameObject SkSkyAngry;
+
     bool isPlayAroundYou;
     int skill3Miss = 0;
     int HP = 100;
     int State = 0;
     bool isSkillCoolingDown = false;
     bool isSkillOK = true;
+
+    bool isAnySkill = false;
+
+    List<Vector3> randomWalkDirection = new()
+    {
+        new Vector3(1, 0, 0),
+        new Vector3(-1, 0, 0),
+        new Vector3(0, 1, 0),
+        new Vector3(1, 1, 0),
+        new Vector3(-1, 1, 0)
+    };
 
     public enum MonsterBehaviors
     {
@@ -35,13 +66,20 @@ public class InnerInteracterMonster : MonoBehaviour
     }
     MonsterBehaviors monsterBehavior = MonsterBehaviors.Think;
     //如果技能進入冷卻時間，則字典會新增該技能直到冷卻結束
-    private Dictionary<MonsterBehaviors, Coroutine> coolTimeSkills = new();
+    Dictionary<MonsterBehaviors, Coroutine> coolTimeSkills = new();
+    Coroutine walkRandomTimer;
+    Coroutine walkTargetTimer;
 
     bool isWalkTarget;
     bool isWalkRandom;
 
-    void decideBehavior()
+    async void decideBehavior()
     {
+        if(isAnySkill)
+        {
+            return;
+        }
+
         //攻擊後，一定會回到Idle，再重新根據冷卻狀況判斷其他行為
         switch (monsterBehavior)
         {
@@ -76,23 +114,18 @@ public class InnerInteracterMonster : MonoBehaviour
                 break;
         }
     }
+
     void doThink()
     {
         Debug.LogWarning("Think");
-        //如果範圍內有敵人、則一定會攻擊
-        //if (monsterDatabase.DetecterManager.DetecterRecorderList["Detecter_NormalAttack"].Count != 0)
-        //{
-        //    monsterBehavior = MonsterBehaviors.NormalAttack;
-        //    return;
-        //}
 
         //如果沒有，則機率性決定行為
-        var randomValue = UnityEngine.Random.Range(0, 10);
+        var randomValue = UnityEngine.Random.Range(1, 11);
         if (randomValue <= 3)
         {
             monsterBehavior = MonsterBehaviors.WalkTarget;
         }
-        else if (randomValue <= 6)
+        else if (randomValue <= 5)
         {
             monsterBehavior = MonsterBehaviors.WalkRandom;
         }
@@ -102,13 +135,20 @@ public class InnerInteracterMonster : MonoBehaviour
         }
     }
 
-
-
     void doWalkTarget()
     {
-        if(monsterDatabase.DetecterManager.DetecterRecorderList["Detecter_NormalAttack"].Count != 0)
+
+        if (monsterDatabase.DetecterManager.DetecterRecorderList["Detecter_NormalAttack"].Count != 0)
         {
-            monsterBehavior = MonsterBehaviors.Think;
+            monsterBehavior = randomDecider((MonsterBehaviors.WalkTarget, 4), (decideSkill(), 6));
+            if (monsterBehavior != MonsterBehaviors.WalkTarget)
+            {
+                if (walkTargetTimer != null)
+                {
+                    isWalkTarget = false;
+                    StopCoroutine(walkTargetTimer);
+                }
+            }
             return;
         }
 
@@ -117,68 +157,148 @@ public class InnerInteracterMonster : MonoBehaviour
             isWalkTarget = true;
             StartCoroutine(countDownWalk(MonsterBehaviors.WalkTarget, 3));
         }
+
+        var monsterX = transform.position;
+        var playerX = GameMaster.Instance.Player.transform.position;
+        var value = playerX- monsterX;
+        var force = value.normalized * 10;
+        monsterDatabase.RB.AddForce(force, ForceMode2D.Impulse);
         Debug.Log("doWalkTarget...");
     }
 
     void doWalkRandom()
     {
+
+        if (monsterDatabase.DetecterManager.DetecterRecorderList["Detecter_NormalAttack"].Count != 0)
+        {
+            monsterBehavior = randomDecider((MonsterBehaviors.WalkRandom, 4), (decideSkill(), 6));
+            if(monsterBehavior != MonsterBehaviors.WalkRandom)
+            {
+                if(walkRandomTimer != null)
+                {
+                    isWalkRandom = false;
+                    StopCoroutine(walkRandomTimer);
+                }
+            }
+            return;
+        }
+
         if (!isWalkRandom)
         {
             isWalkRandom = true;
-            StartCoroutine(countDownWalk(MonsterBehaviors.WalkRandom, 3));
+            walkRandomTimer =  StartCoroutine(countDownWalk(MonsterBehaviors.WalkRandom, 1));
         }
+
+        if(monsterDatabase.RB.velocity.magnitude == 0)
+        {
+            int randomIndex = UnityEngine.Random.Range(0, randomWalkDirection.Count);
+            var force = randomWalkDirection[randomIndex].normalized * 5000;
+            monsterDatabase.RB.AddForce(force, ForceMode2D.Impulse);
+        }
+
         Debug.Log("doWalkRandom...");
     }
 
-    void doNormalAttack()
+    async Task doNormalAttack()
     {
-        Debug.Log("NormalAttack");
+        isAnySkill = true;
         coolDownSkill(MonsterBehaviors.NormalAttack, 3);
-        monsterBehavior = randomDecider((MonsterBehaviors.WalkRandom, 7), (decideSkill(), 3));
+        await createEffect(1, 3, Vector3.zero, NormalAttack);
+        isAnySkill = false;
+        monsterBehavior = randomDecider((MonsterBehaviors.WalkRandom, 9), (decideSkill(), 1));
     }
 
-    void doSkFireBall()
+    async Task doSkFireBall()
     {
-        Debug.Log("SkFireBall");
+        isAnySkill = true;
+
         coolDownSkill(MonsterBehaviors.SkFireBall, 3);
+
+        await createEffect(1, 3, Vector3.zero, SkFireBall);
+
         monsterBehavior = randomDecider((MonsterBehaviors.WalkRandom, 9), (decideSkill(), 1));
 
-
+        isAnySkill = false;
     }
 
-    void doSkShockWave()
+    async Task doSkShockWave()
     {
-        Debug.Log("SkShockWave");
+        isAnySkill = true;
+
         coolDownSkill(MonsterBehaviors.SkShockWave, 3);
+
+        await createEffect(1, 3, Vector3.zero, SkShockWave);
+
         monsterBehavior = randomDecider((MonsterBehaviors.WalkRandom, 9), (decideSkill(), 1));
+
+        isAnySkill = false;
+
     }
 
-    void doSkAntiShield()
+    async Task doSkAntiShield()
     {
-        Debug.Log("SkAntiShield");
+        isAnySkill = true;
+
         coolDownSkill(MonsterBehaviors.SkAntiShield, 3);
+
+        await createEffect(1, 3, new Vector3(0, 0.7f, 0), SkAntiShield, parent: transform);
+
         monsterBehavior = randomDecider((MonsterBehaviors.WalkRandom, 9), (decideSkill(), 1));
+
+        isAnySkill = false;
+
     }
 
-    void doSkBlackHole()
+    async Task doSkBlackHole()
     {
-        Debug.Log("SkBlackHole");
+        isAnySkill = true;
+
         coolDownSkill(MonsterBehaviors.SkBlackHole, 3);
+
+        await createEffect(1, 3, Vector3.zero, SkBlackHole);
+
         monsterBehavior = randomDecider((MonsterBehaviors.WalkRandom, 9), (decideSkill(), 1));
 
-
-
+        isAnySkill = false;
 
     }
 
-    void doSkSkyAngry()
+    async Task createEffect(int createSeconds, float existSeconds, Vector3 position, GameObject targetEffect, Quaternion angle = default, Transform parent = null)
     {
-        Debug.Log("SkSkyAngry");
+        //提示訊息
+        await countDown(createSeconds);
+        var effect = Instantiate(targetEffect);
+ 
+        if (angle != default)
+        {
+            effect.transform.rotation = angle;
+        }
+
+        if(parent != null)
+        {
+            effect.transform.SetParent(parent);
+        }
+        effect.transform.position = position;
+        await countDown(existSeconds);
+        DestroyImmediate(effect);
+    }
+    
+    async Task countDown(float time)
+    {
+        await Task.Delay((int)(time * 1000));
+    }
+
+    async Task doSkSkyAngry()
+    {
+        isAnySkill = true;
+
         coolDownSkill(MonsterBehaviors.SkSkyAngry, 3);
+
+        await createEffect(1, 3, Vector3.zero, SkSkyAngry);
+
         monsterBehavior = randomDecider((MonsterBehaviors.WalkRandom, 9), (decideSkill(), 1));
 
-
-
+        isAnySkill = false;
     }
 
     MonsterBehaviors randomDecider(params (MonsterBehaviors, int)[] possibleBehavior)
@@ -188,7 +308,7 @@ public class InnerInteracterMonster : MonoBehaviour
         {
             sum += behavior.Item2;
         }
-        var randomValue = UnityEngine.Random.Range(0, sum);
+        var randomValue = UnityEngine.Random.Range(1, sum+1);
         int value = 0;
         foreach (var behavior in possibleBehavior)
         {
@@ -212,21 +332,27 @@ public class InnerInteracterMonster : MonoBehaviour
 
         //隨機決定一個技能
         MonsterBehaviors chooseSkill;
-        do
+        //do
+        //{
+        //    randomChooseSkill(out chooseSkill);
+        //}
+        //while (coolTimeSkills.ContainsKey(chooseSkill));
+        randomChooseSkill(out chooseSkill);
+        if(coolTimeSkills.ContainsKey(chooseSkill))
         {
-            randomChooseSkill(out chooseSkill);
+            return MonsterBehaviors.Think;
         }
-        while (coolTimeSkills.ContainsKey(chooseSkill));
         return chooseSkill;
     }
 
     void randomChooseSkill(out MonsterBehaviors chooseSkill)
     {
-        chooseSkill = (MonsterBehaviors)UnityEngine.Random.Range((float)MonsterBehaviors.NormalAttack - 1, (float)MonsterBehaviors.SkSkyAngry);
+        chooseSkill = (MonsterBehaviors)UnityEngine.Random.Range((float)MonsterBehaviors.NormalAttack, (float)MonsterBehaviors.SkSkyAngry+1);
     }
 
     void coolDownSkill(MonsterBehaviors targetSkill, int continueSeconds)
     {
+        Debug.Log(targetSkill + "       "+continueSeconds);
         //如果還沒被封鎖
         if (!coolTimeSkills.ContainsKey(targetSkill))
         {
@@ -272,7 +398,59 @@ public class InnerInteracterMonster : MonoBehaviour
         Debug.Log("WalkEnd");
     }
 
-    //怪物在每一次更新時，狀態一定只會有一個，不會同時施放技能一又放技能二，因此只需要有唯一的狀態變數
+    void Update()
+    {
+        autoTurnDirection();
+        decideBehavior();
+    }
+
+    void lookAtPlayerDirection()
+    {
+        var monsterX = transform.position.x;
+        var playerX = GameMaster.Instance.Player.transform.position.x;
+        var monsterLocalScale = transform.localScale;
+        
+
+        if (monsterX - playerX > 0)
+        {
+            transform.localScale = new Vector3(-Mathf.Abs(monsterLocalScale.x), monsterLocalScale.y, monsterLocalScale.z);
+        }
+        else
+        {
+            transform.localScale = new Vector3(Mathf.Abs(monsterLocalScale.x), monsterLocalScale.y, monsterLocalScale.z);
+        }
+    }
+
+
+    void autoTurnDirection()
+    {
+        var monsterLocalScale = transform.localScale;
+
+        if (monsterDatabase.RB.velocity.x > 0)
+        {
+            transform.localScale = new Vector3(Mathf.Abs(monsterLocalScale.x), monsterLocalScale.y, monsterLocalScale.z);
+        }
+        else if (monsterDatabase.RB.velocity.x < 0)
+        {
+            transform.localScale = new Vector3(-Mathf.Abs(monsterLocalScale.x), monsterLocalScale.y, monsterLocalScale.z);
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        //怪物在每一次更新時，狀態一定只會有一個，不會同時施放技能一又放技能二，因此只需要有唯一的狀態變數
 
     void decideState()
     {
@@ -305,9 +483,9 @@ public class InnerInteracterMonster : MonoBehaviour
         //waitCoolTime(ref isSkillOK, 5);
     }
 
-    void Update()
-    {
-        decideBehavior();
+    //void Update()
+    //{
+    //    decideBehavior();
 
         //if (isSkillCoolingDown)
         //{
@@ -352,7 +530,7 @@ public class InnerInteracterMonster : MonoBehaviour
         //        decideState();
         //        break;
         //}
-    }
+    //}
 
     void MoveToPlayer()
     {

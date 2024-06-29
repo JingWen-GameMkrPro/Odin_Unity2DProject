@@ -19,10 +19,10 @@ TagManager:
   - MapMargin
   - MonsterMargin
   - MapBase
-  - 
-  - 
-  - 
-  - 
+  - MapCollider
+  - MapColliderPlayer
+  - MapColliderMonster
+  - Platform
   - 
   - 
   - 

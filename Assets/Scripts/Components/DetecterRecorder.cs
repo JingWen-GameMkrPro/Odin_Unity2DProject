@@ -31,7 +31,6 @@ public class DetecterRecorder : MonoBehaviour
     {
         if (collision.CompareTag(DetectTargetTag))
         {
-            Debug.Log(collision.gameObject.name);
             RangeObjects.Add(getParentObjectOuterInteracter(collision));
         }
     }
