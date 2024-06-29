@@ -1,4 +1,4 @@
-using System.Collections;
+ï»¿using System.Collections;
 using TMPro;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,44 +7,51 @@ using UnityEngine.UI;
 public class GameTipSystemController : MonoBehaviour
 {
     /// <summary>
-    /// ¥H¤U¬°¥~¬É¥i¥H©I¥sªºAPI
+    /// ä»¥ä¸‹ç‚ºå¤–ç•Œå¯ä»¥å‘¼å«çš„API
     /// </summary>
-    /// <param name="text">´£¥Ü°T®§</param>
-    /// <param name="continueSecond">«ùÄòªº¬í¼Æ</param>
-    /// <param name="canBeOverride">·í«ùÄò®É¶¡¥¼µ²§ô¡A·|¤£·|³Q·sªº°T®§ÂĞ»\</param>
+    /// <param name="text">æç¤ºè¨Šæ¯</param>
+    /// <param name="continueSecond">æŒçºŒçš„ç§’æ•¸</param>
+    /// <param name="canBeOverride">ç•¶æŒçºŒæ™‚é–“æœªçµæŸï¼Œæœƒä¸æœƒè¢«æ–°çš„è¨Šæ¯è¦†è“‹</param>
 
     public TMP_Text tiptext;
+    public Image background;
+    public Color backgroundColor = Color.black;
     private float continueSecond = 3.0f;
     private float timer;
     private bool canBeOverride = false;
+    private Vector2 textPosition = new Vector2(0, 200);
 
     private void Start()
     {
-
-       
-
+        ShowTip("Hello World!", continueSecond, true);
+        
     }
 
 
 
     public void ShowTip(string text, float duration, bool canBeOverride)
     {
-        // ·í©I¥s¦¹¨ç¦¡®É¡A±N·|Åã¥Ü´£¥Ü°T®§®Øª«¥ó (À³¸Ó³]©wvisible¡A¤£­n³]©wactive¡A³o·|¨Ï¸}¥»µLªk¹B§@)
-        // ¦¹®É±N·|¶i¤J­Ë¼Æ­p®É¡A®É¶¡µ²§ô«á±N·|­«·sÁôÂÃ´£¥Ü°T®§®Ø¡Aunity­p®É¥\¯à½Ğ°Ñ¾\ coroutine
-        // ±z¥i¥HÂ²³æ¦Û¦æ¦b³oÃäªº Start() ©I¥s¦¹¨ç¦¡¡A¬İ¬İ¬O§_¥i¥H¥X²{¤å¦r¨Ã¦b®É¶¡«áÁôÂÃ
+        // ç•¶å‘¼å«æ­¤å‡½å¼æ™‚ï¼Œå°‡æœƒé¡¯ç¤ºæç¤ºè¨Šæ¯æ¡†ç‰©ä»¶ (æ‡‰è©²è¨­å®švisibleï¼Œä¸è¦è¨­å®šactiveï¼Œé€™æœƒä½¿è…³æœ¬ç„¡æ³•é‹ä½œ)
+        // æ­¤æ™‚å°‡æœƒé€²å…¥å€’æ•¸è¨ˆæ™‚ï¼Œæ™‚é–“çµæŸå¾Œå°‡æœƒé‡æ–°éš±è—æç¤ºè¨Šæ¯æ¡†ï¼Œunityè¨ˆæ™‚åŠŸèƒ½è«‹åƒé–± coroutine
+        // æ‚¨å¯ä»¥ç°¡å–®è‡ªè¡Œåœ¨é€™é‚Šçš„ Start() å‘¼å«æ­¤å‡½å¼ï¼Œçœ‹çœ‹æ˜¯å¦å¯ä»¥å‡ºç¾æ–‡å­—ä¸¦åœ¨æ™‚é–“å¾Œéš±è—
 
+        //æ–‡æœ¬
         tiptext.text = text;
         tiptext.gameObject.SetActive(true);
+        tiptext.rectTransform.anchoredPosition = textPosition;
+        //èƒŒæ™¯
+        background.color = backgroundColor;
+        background.rectTransform.anchoredPosition = textPosition; 
+        background.transform.SetAsFirstSibling();
+        background.rectTransform.sizeDelta = tiptext.rectTransform.sizeDelta + new Vector2(20, 10);
 
         this.continueSecond = duration;
         this.canBeOverride = canBeOverride;
-
         if (canBeOverride)
         {
             StopAllCoroutines();
             timer = 0;
         }
-
     }
 
     private void Update()
@@ -55,6 +62,7 @@ public class GameTipSystemController : MonoBehaviour
             if (timer >= continueSecond)
             {
                 tiptext.gameObject.SetActive(false);
+                background.gameObject.SetActive(false);
                 timer = 0;
             }
         }
