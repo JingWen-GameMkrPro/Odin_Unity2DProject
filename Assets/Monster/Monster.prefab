@@ -127,10 +127,10 @@ GameObject:
   - component: {fileID: 7226056016315856070}
   - component: {fileID: 842712634322700773}
   - component: {fileID: 3798800640716877275}
-  - component: {fileID: 5662364735900544108}
   - component: {fileID: 7253120998346399781}
   - component: {fileID: 7148517617608445280}
   - component: {fileID: 3655317921036770866}
+  - component: {fileID: 5195892917140725841}
   m_Layer: 0
   m_Name: Monster
   m_TagString: Monster
@@ -233,60 +233,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &5662364735900544108
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6030435048802412975}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 58c6f9b140a52a14881ec09eaebb66eb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  behaviourTree: {fileID: 11400000, guid: b01334b0d5861a940a51cfaddd6cc8fd, type: 2}
-  validate: 1
-  blackboardOverrides:
-  - key:
-      rid: 8135257531756052487
-    value:
-      rid: 8135257531756052488
-  - key:
-      rid: 8135257531756052495
-    value:
-      rid: 8135257531756052496
-  references:
-    version: 2
-    RefIds:
-    - rid: 8135257531756052487
-      type: {class: GameObjectKey, ns: TheKiwiCoder, asm: thekiwicoder.behaviourtreeeditor}
-      data:
-        name: Owner
-        typeName: UnityEngine.GameObject, UnityEngine.CoreModule, Version=0.0.0.0,
-          Culture=neutral, PublicKeyToken=null
-        value: {fileID: 0}
-    - rid: 8135257531756052488
-      type: {class: GameObjectKey, ns: TheKiwiCoder, asm: thekiwicoder.behaviourtreeeditor}
-      data:
-        name: 
-        typeName: UnityEngine.GameObject, UnityEngine.CoreModule, Version=0.0.0.0,
-          Culture=neutral, PublicKeyToken=null
-        value: {fileID: 6030435048802412975}
-    - rid: 8135257531756052495
-      type: {class: BK_MonsterDataBase, ns: , asm: Assembly-CSharp}
-      data:
-        name: Database
-        typeName: MonsterDatabase, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-          PublicKeyToken=null
-        value: {fileID: 0}
-    - rid: 8135257531756052496
-      type: {class: BK_MonsterDataBase, ns: , asm: Assembly-CSharp}
-      data:
-        name: 
-        typeName: MonsterDatabase, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-          PublicKeyToken=null
-        value: {fileID: 7148517617608445280}
 --- !u!114 &7253120998346399781
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -339,6 +285,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DetecterRecorderOriginList: []
+--- !u!114 &5195892917140725841
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6030435048802412975}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c68d3672cd421748aac552d981938f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 5
+  attackDuration: 1
+  damage: 10
 --- !u!1 &7763605452396788675
 GameObject:
   m_ObjectHideFlags: 0
