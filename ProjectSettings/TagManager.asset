@@ -7,6 +7,8 @@ TagManager:
   - Monster
   - HitBoxMonster
   - HitBoxPlayer
+  - Platform
+  - Border
   layers:
   - Default
   - TransparentFX

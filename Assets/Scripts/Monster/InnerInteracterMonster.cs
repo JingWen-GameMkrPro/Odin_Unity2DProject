@@ -4,13 +4,15 @@ using UnityEngine;
 using TheKiwiCoder;
 using UnityEditor;
 using System;
-using Unity.Mathematics;
 
 public class InnerInteracterMonster : MonoBehaviour 
 {
     [SerializeField] float moveSpeed = 5f; // 移动速度
     [SerializeField] float attackDuration = 1f;
     [SerializeField] float damage = 10f;
+    [SerializeField]
+    MonsterDatabase monsterDatabase;
+
     bool isPlayAroundYou;
     int skill3Miss = 0;
     int HP = 100;
@@ -18,20 +20,257 @@ public class InnerInteracterMonster : MonoBehaviour
     bool isSkillCoolingDown = false;
     bool isSkillOK = true;
 
-    enum monsterBehavior
+    public enum MonsterBehaviors
     {
-        Idle,
-        WalkTarget,
-        WalkRandom,
-        NormalAttack,
-        skFireBall,
-        skShockWave,
-        skAntiShield,
-        skBlackHole,
-        skSkyAngry
+        Think = -1,
+        Idle = 0,
+        WalkTarget = 1,
+        WalkRandom = 2,
+        NormalAttack = 3,
+        SkFireBall = 4,
+        SkShockWave = 5,
+        SkAntiShield = 6,
+        SkBlackHole = 7,
+        SkSkyAngry = 8
+    }
+    MonsterBehaviors monsterBehavior = MonsterBehaviors.Think;
+    //如果技能進入冷卻時間，則字典會新增該技能直到冷卻結束
+    private Dictionary<MonsterBehaviors, Coroutine> coolTimeSkills = new();
+
+    bool isWalkTarget;
+    bool isWalkRandom;
+
+    void decideBehavior()
+    {
+        //攻擊後，一定會回到Idle，再重新根據冷卻狀況判斷其他行為
+        switch (monsterBehavior)
+        {
+            case MonsterBehaviors.Idle:
+                break;
+            case MonsterBehaviors.Think:
+                doThink();
+                break;
+            case MonsterBehaviors.WalkTarget:
+                doWalkTarget();
+                break;
+            case MonsterBehaviors.WalkRandom:
+                doWalkRandom();
+                break;
+            case MonsterBehaviors.NormalAttack:
+                doNormalAttack();
+                break;
+            case MonsterBehaviors.SkFireBall:
+                doSkFireBall();
+                break;
+            case MonsterBehaviors.SkShockWave:
+                doSkShockWave();
+                break;
+            case MonsterBehaviors.SkAntiShield:
+                doSkAntiShield();
+                break;
+            case MonsterBehaviors.SkBlackHole:
+                doSkBlackHole();
+                break;
+            case MonsterBehaviors.SkSkyAngry:
+                doSkSkyAngry();
+                break;
+        }
+    }
+    void doThink()
+    {
+        Debug.LogWarning("Think");
+        //如果範圍內有敵人、則一定會攻擊
+        //if (monsterDatabase.DetecterManager.DetecterRecorderList["Detecter_NormalAttack"].Count != 0)
+        //{
+        //    monsterBehavior = MonsterBehaviors.NormalAttack;
+        //    return;
+        //}
+
+        //如果沒有，則機率性決定行為
+        var randomValue = UnityEngine.Random.Range(0, 10);
+        if (randomValue <= 3)
+        {
+            monsterBehavior = MonsterBehaviors.WalkTarget;
+        }
+        else if (randomValue <= 6)
+        {
+            monsterBehavior = MonsterBehaviors.WalkRandom;
+        }
+        else if (randomValue <= 10)
+        {
+            monsterBehavior = decideSkill();
+        }
     }
 
 
+
+    void doWalkTarget()
+    {
+        if(monsterDatabase.DetecterManager.DetecterRecorderList["Detecter_NormalAttack"].Count != 0)
+        {
+            monsterBehavior = MonsterBehaviors.Think;
+            return;
+        }
+
+        if (!isWalkTarget)
+        {
+            isWalkTarget = true;
+            StartCoroutine(countDownWalk(MonsterBehaviors.WalkTarget, 3));
+        }
+        Debug.Log("doWalkTarget...");
+    }
+
+    void doWalkRandom()
+    {
+        if (!isWalkRandom)
+        {
+            isWalkRandom = true;
+            StartCoroutine(countDownWalk(MonsterBehaviors.WalkRandom, 3));
+        }
+        Debug.Log("doWalkRandom...");
+    }
+
+    void doNormalAttack()
+    {
+        Debug.Log("NormalAttack");
+        coolDownSkill(MonsterBehaviors.NormalAttack, 3);
+        monsterBehavior = randomDecider((MonsterBehaviors.WalkRandom, 7), (decideSkill(), 3));
+    }
+
+    void doSkFireBall()
+    {
+        Debug.Log("SkFireBall");
+        coolDownSkill(MonsterBehaviors.SkFireBall, 3);
+        monsterBehavior = randomDecider((MonsterBehaviors.WalkRandom, 9), (decideSkill(), 1));
+
+
+    }
+
+    void doSkShockWave()
+    {
+        Debug.Log("SkShockWave");
+        coolDownSkill(MonsterBehaviors.SkShockWave, 3);
+        monsterBehavior = randomDecider((MonsterBehaviors.WalkRandom, 9), (decideSkill(), 1));
+    }
+
+    void doSkAntiShield()
+    {
+        Debug.Log("SkAntiShield");
+        coolDownSkill(MonsterBehaviors.SkAntiShield, 3);
+        monsterBehavior = randomDecider((MonsterBehaviors.WalkRandom, 9), (decideSkill(), 1));
+    }
+
+    void doSkBlackHole()
+    {
+        Debug.Log("SkBlackHole");
+        coolDownSkill(MonsterBehaviors.SkBlackHole, 3);
+        monsterBehavior = randomDecider((MonsterBehaviors.WalkRandom, 9), (decideSkill(), 1));
+
+
+
+
+    }
+
+    void doSkSkyAngry()
+    {
+        Debug.Log("SkSkyAngry");
+        coolDownSkill(MonsterBehaviors.SkSkyAngry, 3);
+        monsterBehavior = randomDecider((MonsterBehaviors.WalkRandom, 9), (decideSkill(), 1));
+
+
+
+    }
+
+    MonsterBehaviors randomDecider(params (MonsterBehaviors, int)[] possibleBehavior)
+    {
+        var sum = 0;
+        foreach(var behavior in possibleBehavior)
+        {
+            sum += behavior.Item2;
+        }
+        var randomValue = UnityEngine.Random.Range(0, sum);
+        int value = 0;
+        foreach (var behavior in possibleBehavior)
+        {
+            value += behavior.Item2;
+            if(randomValue <= value)
+            {
+                return behavior.Item1;
+            }
+        }
+        return MonsterBehaviors.Think;
+
+    }
+
+    MonsterBehaviors decideSkill()
+    {
+        //目前全部技能滿了，則回到idle狀態'
+        if(coolTimeSkills.Count == 6)
+        {
+            return MonsterBehaviors.Think;
+        }
+
+        //隨機決定一個技能
+        MonsterBehaviors chooseSkill;
+        do
+        {
+            randomChooseSkill(out chooseSkill);
+        }
+        while (coolTimeSkills.ContainsKey(chooseSkill));
+        return chooseSkill;
+    }
+
+    void randomChooseSkill(out MonsterBehaviors chooseSkill)
+    {
+        chooseSkill = (MonsterBehaviors)UnityEngine.Random.Range((float)MonsterBehaviors.NormalAttack - 1, (float)MonsterBehaviors.SkSkyAngry);
+    }
+
+    void coolDownSkill(MonsterBehaviors targetSkill, int continueSeconds)
+    {
+        //如果還沒被封鎖
+        if (!coolTimeSkills.ContainsKey(targetSkill))
+        {
+            //新增倒數
+            coolTimeSkills.Add(targetSkill, StartCoroutine(countDownCoolTime(targetSkill, continueSeconds)));
+        }
+        //如果正在被封鎖
+        else
+        {
+            //刷新倒數
+            StopCoroutine(coolTimeSkills[targetSkill]);
+            coolTimeSkills[targetSkill] = StartCoroutine(countDownCoolTime(targetSkill, continueSeconds));
+        }
+    }
+
+    IEnumerator countDownCoolTime(MonsterBehaviors coolDownSkill, int inputSeconds = 1)
+    {
+        int currentSeconds = inputSeconds;
+        while (currentSeconds > 0)
+        {
+            yield return new WaitForSeconds(1);
+            currentSeconds--;
+        }
+
+        //協程結束，刪除KEY值
+        if (coolTimeSkills.ContainsKey(coolDownSkill)) coolTimeSkills.Remove(coolDownSkill);
+        yield return null;
+    }
+
+    IEnumerator countDownWalk(MonsterBehaviors type, int inputSeconds = 1)
+    {
+        Debug.Log(type);
+        yield return new WaitForSeconds(inputSeconds);
+        monsterBehavior = MonsterBehaviors.Think;
+        if(type == MonsterBehaviors.WalkTarget)
+        {
+            isWalkTarget = false;
+        }
+        else if ((type == MonsterBehaviors.WalkRandom))
+        {
+            isWalkRandom = false;
+        }
+        Debug.Log("WalkEnd");
+    }
 
     //怪物在每一次更新時，狀態一定只會有一個，不會同時施放技能一又放技能二，因此只需要有唯一的狀態變數
 
@@ -63,54 +302,56 @@ public class InnerInteracterMonster : MonoBehaviour
     }
     private void Start()
     {
-        waitCoolTime(ref isSkillOK, 5);
+        //waitCoolTime(ref isSkillOK, 5);
     }
 
     void Update()
     {
-        if (isSkillCoolingDown)
-        {
-            return;
-        }
-        
-        if (isPlayAroundYou) 
-        {
-            StartCoroutine(AttackWithDelay());
-        }
-        else 
-        {
-            MoveToPlayer();
-        }
+        decideBehavior();
 
-        if (Input.GetKeyDown(KeyCode.N)) // 檢查用程式碼
-        {
-            HP = 30;
-            Debug.Log(HP);
-        }
-        if (Input.GetKeyDown(KeyCode.M)) // 檢查用程式碼
-        {
-            HP = 100;
-            Debug.Log(HP);
-        }
+        //if (isSkillCoolingDown)
+        //{
+        //    return;
+        //}
 
-        switch(State) // 技能選擇器，順序依觸發難度選擇
-        {
-            case 0:
-                StartCoroutine(WaitForSkillet5Ask());
-                break;
-            case 1:
-                StartCoroutine(WaitForSkillet4Ask());
-                break;   
-            case 2:
-                StartCoroutine(WaitForSkillet3Ask());
-                break;
-            case 3:
-                StartCoroutine(WaitForSkillet2Ask());
-                break;
-            case 4:
-                decideState();
-                break;
-        }
+        //if (isPlayAroundYou) 
+        //{
+        //    StartCoroutine(AttackWithDelay());
+        //}
+        //else 
+        //{
+        //    MoveToPlayer();
+        //}
+
+        //if (Input.GetKeyDown(KeyCode.N)) // 檢查用程式碼
+        //{
+        //    HP = 30;
+        //    Debug.Log(HP);
+        //}
+        //if (Input.GetKeyDown(KeyCode.M)) // 檢查用程式碼
+        //{
+        //    HP = 100;
+        //    Debug.Log(HP);
+        //}
+
+        //switch(State) // 技能選擇器，順序依觸發難度選擇
+        //{
+        //    case 0:
+        //        StartCoroutine(WaitForSkillet5Ask());
+        //        break;
+        //    case 1:
+        //        StartCoroutine(WaitForSkillet4Ask());
+        //        break;   
+        //    case 2:
+        //        StartCoroutine(WaitForSkillet3Ask());
+        //        break;
+        //    case 3:
+        //        StartCoroutine(WaitForSkillet2Ask());
+        //        break;
+        //    case 4:
+        //        decideState();
+        //        break;
+        //}
     }
 
     void MoveToPlayer()
