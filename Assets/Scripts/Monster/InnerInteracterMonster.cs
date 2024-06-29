@@ -226,8 +226,17 @@ public class InnerInteracterMonster : MonoBehaviour
         isAnySkill = true;
 
         coolDownSkill(MonsterBehaviors.SkShockWave, 3);
+        //var LookAtQuaternion = Quaternion.LookRotation(GameMaster.Instance.Player.transform.position - transform.position);
+        float eulerZ = Quaternion.Angle(transform.rotation, GameMaster.Instance.Player.transform.rotation);
+        Debug.Log(GameMaster.Instance.Player.transform.position);
+        Debug.Log(transform.gameObject.transform.position);
+        Debug.Log(GameMaster.Instance.Player.transform.position - transform.position);
 
-        await createEffect(1, 3, Vector3.zero, SkShockWave);
+        var angle = Quaternion.Euler(0, 0, eulerZ);
+
+
+
+        await createEffect(1, 3, Vector3.zero, SkShockWave, targetAngle: angle, parent: transform);
 
         monsterBehavior = randomDecider((MonsterBehaviors.WalkRandom, 9), (decideSkill(), 1));
 
@@ -263,15 +272,15 @@ public class InnerInteracterMonster : MonoBehaviour
 
     }
 
-    async Task createEffect(int createSeconds, float existSeconds, Vector3 position, GameObject targetEffect, Quaternion angle = default, Transform parent = null)
+    async Task createEffect(int createSeconds, float existSeconds, Vector3 position, GameObject targetEffect, Quaternion targetAngle = default, Transform parent = null)
     {
         //提示訊息
         await countDown(createSeconds);
         var effect = Instantiate(targetEffect);
  
-        if (angle != default)
+        if (targetAngle != default)
         {
-            effect.transform.rotation = angle;
+            effect.transform.rotation = targetAngle;
         }
 
         if(parent != null)
@@ -342,7 +351,7 @@ public class InnerInteracterMonster : MonoBehaviour
         {
             return MonsterBehaviors.Think;
         }
-        return chooseSkill;
+        return MonsterBehaviors.SkShockWave;
     }
 
     void randomChooseSkill(out MonsterBehaviors chooseSkill)
