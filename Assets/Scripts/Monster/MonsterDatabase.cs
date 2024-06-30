@@ -16,6 +16,8 @@ public class MonsterDatabase : MonoBehaviour
     public Rigidbody2D RB;
     public DetecterManager DetecterManager;
 
+
+    public bool isAntiMode = false;
     void Start()
     {
         checkSerializeField();

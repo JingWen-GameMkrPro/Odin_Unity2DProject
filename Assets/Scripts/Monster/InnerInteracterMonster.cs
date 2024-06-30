@@ -63,6 +63,7 @@ public class InnerInteracterMonster : MonoBehaviour
         SkBlackHole = 7,
         SkSkyAngry = 8
     }
+
     MonsterBehaviors monsterBehavior = MonsterBehaviors.Think;
     //如果技能進入冷卻時間，則字典會新增該技能直到冷卻結束
     Dictionary<MonsterBehaviors, Coroutine> coolTimeSkills = new();
@@ -78,7 +79,7 @@ public class InnerInteracterMonster : MonoBehaviour
         {
             return;
         }
-
+        
         //攻擊後，一定會回到Idle，再重新根據冷卻狀況判斷其他行為
         switch (monsterBehavior)
         {
@@ -120,7 +121,7 @@ public class InnerInteracterMonster : MonoBehaviour
 
         //如果沒有，則機率性決定行為
         var randomValue = UnityEngine.Random.Range(1, 11);
-        if (randomValue <= 3)
+        if (randomValue <= 2)
         {
             monsterBehavior = MonsterBehaviors.WalkTarget;
         }
@@ -136,6 +137,7 @@ public class InnerInteracterMonster : MonoBehaviour
 
     void doWalkTarget()
     {
+        Debug.LogWarning("doWalkTarget");
 
         if (monsterDatabase.DetecterManager.DetecterRecorderList["Detecter_NormalAttack"].Count != 0)
         {
@@ -166,6 +168,7 @@ public class InnerInteracterMonster : MonoBehaviour
 
     async void doWalkRandom()
     {
+        Debug.LogWarning("doWalkRandom");
 
         if (monsterDatabase.DetecterManager.DetecterRecorderList["Detecter_NormalAttack"].Count != 0)
         {
@@ -199,6 +202,8 @@ public class InnerInteracterMonster : MonoBehaviour
 
     async Task doNormalAttack()
     {
+        Debug.LogWarning("doNormalAttack");
+
         isAnySkill = true;
         isEnableAutoTurnDirection = false;
         coolDownSkill(MonsterBehaviors.NormalAttack, 3);
@@ -214,6 +219,8 @@ public class InnerInteracterMonster : MonoBehaviour
 
     async Task doSkFireBall()
     {
+        Debug.LogWarning("doSkFireBall");
+
         isAnySkill = true;
         isEnableAutoTurnDirection = false;
         coolDownSkill(MonsterBehaviors.SkFireBall, 3);
@@ -229,6 +236,8 @@ public class InnerInteracterMonster : MonoBehaviour
 
     async Task doSkShockWave()
     {
+        Debug.LogWarning("doSkShockWave");
+
         isAnySkill = true;
         isEnableAutoTurnDirection = false;
 
@@ -249,6 +258,8 @@ public class InnerInteracterMonster : MonoBehaviour
 
     async Task doSkAntiShield()
     {
+        Debug.LogWarning("doSkAntiShield");
+
         isAnySkill = true;
         isEnableAutoTurnDirection = false;
 
@@ -268,11 +279,12 @@ public class InnerInteracterMonster : MonoBehaviour
 
     async Task doSkBlackHole()
     {
+        Debug.LogWarning("doSkBlackHole");
+
         isAnySkill = true;
         isEnableAutoTurnDirection = false;
 
         coolDownSkill(MonsterBehaviors.SkBlackHole, 3);
-        lookAtPlayerDirection();
 
         await createEffect(1, 3, Vector3.zero, SkBlackHole);
 
@@ -283,6 +295,24 @@ public class InnerInteracterMonster : MonoBehaviour
 
         isAnySkill = false;
 
+    }
+
+    async Task doSkSkyAngry()
+    {
+        Debug.LogWarning("doSkSkyAngry");
+
+        isAnySkill = true;
+        isEnableAutoTurnDirection = false;
+
+        coolDownSkill(MonsterBehaviors.SkSkyAngry, 3);
+        lookAtPlayerDirection();
+
+        await createEffect(1, 3, Vector3.zero, SkSkyAngry);
+
+        monsterBehavior = randomDecider((MonsterBehaviors.WalkRandom, 9), (decideSkill(), 1));
+        isEnableAutoTurnDirection = true;
+
+        isAnySkill = false;
     }
 
     async Task createEffect(int createSeconds, float existSeconds, Vector3 position, GameObject targetEffect, Quaternion targetAngle = default, Transform parent = null)
@@ -325,21 +355,6 @@ public class InnerInteracterMonster : MonoBehaviour
         await Task.Delay((int)(time * 1000));
     }
 
-    async Task doSkSkyAngry()
-    {
-        isAnySkill = true;
-        isEnableAutoTurnDirection = false;
-
-        coolDownSkill(MonsterBehaviors.SkSkyAngry, 3);
-        lookAtPlayerDirection();
-
-        await createEffect(1, 3, Vector3.zero, SkSkyAngry);
-
-        monsterBehavior = randomDecider((MonsterBehaviors.WalkRandom, 9), (decideSkill(), 1));
-        isEnableAutoTurnDirection = true;
-
-        isAnySkill = false;
-    }
 
     MonsterBehaviors randomDecider(params (MonsterBehaviors, int)[] possibleBehavior)
     {
@@ -424,7 +439,7 @@ public class InnerInteracterMonster : MonoBehaviour
         }
     }
 
-    void Update()
+    async void Update()
     {
         autoTurnDirection();
         decideBehavior();

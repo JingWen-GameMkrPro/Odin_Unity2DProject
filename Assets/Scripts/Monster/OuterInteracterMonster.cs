@@ -23,10 +23,15 @@ public class OuterInteracterMonster : OuterInteracterBase
 
     public override void ReduceHP(GameObject causer, float value)
     {
-        MonsterDatabase.MonsterAtt.HP = Mathf.Clamp(MonsterDatabase.MonsterAtt.HP - value, 0, MonsterDatabase.MonsterAtt.MaxHP);
-        MonsterDatabase.BeDamagedRecordValue = MonsterDatabase.BeDamagedRecordValue + (int)value;
+        if(!MonsterDatabase.isAntiMode)
+        {
+            MonsterDatabase.MonsterAtt.HP = Mathf.Clamp(MonsterDatabase.MonsterAtt.HP - value, 0, MonsterDatabase.MonsterAtt.MaxHP);
+            MonsterDatabase.BeDamagedRecordValue = MonsterDatabase.BeDamagedRecordValue + (int)value;
+        }
+        else
+        {
 
-        Debug.Log(MonsterDatabase.MonsterAtt.HP);
+        }
     }
 
     public int GetBeDamagedRecordValue()
