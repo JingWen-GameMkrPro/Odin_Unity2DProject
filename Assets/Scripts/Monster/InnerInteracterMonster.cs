@@ -33,6 +33,7 @@ public class InnerInteracterMonster : MonoBehaviour
     [SerializeField]
     GameObject SkSkyAngry;
 
+    bool isEnableAutoTurnDirection = true;
     bool isPlayAroundYou;
     int skill3Miss = 0;
     int HP = 100;
@@ -44,9 +45,7 @@ public class InnerInteracterMonster : MonoBehaviour
 
     List<Vector3> randomWalkDirection = new()
     {
-        new Vector3(1, 0, 0),
         new Vector3(-1, 0, 0),
-        new Vector3(0, 1, 0),
         new Vector3(1, 1, 0),
         new Vector3(-1, 1, 0)
     };
@@ -161,12 +160,11 @@ public class InnerInteracterMonster : MonoBehaviour
         var monsterX = transform.position;
         var playerX = GameMaster.Instance.Player.transform.position;
         var value = playerX- monsterX;
-        var force = value.normalized * 10;
+        var force = value.normalized * 3;
         monsterDatabase.RB.AddForce(force, ForceMode2D.Impulse);
-        Debug.Log("doWalkTarget...");
     }
 
-    void doWalkRandom()
+    async void doWalkRandom()
     {
 
         if (monsterDatabase.DetecterManager.DetecterRecorderList["Detecter_NormalAttack"].Count != 0)
@@ -188,35 +186,43 @@ public class InnerInteracterMonster : MonoBehaviour
             isWalkRandom = true;
             walkRandomTimer =  StartCoroutine(countDownWalk(MonsterBehaviors.WalkRandom, 1));
         }
-
-        if(monsterDatabase.RB.velocity.magnitude == 0)
+        if(monsterDatabase.RB.velocity==Vector2.zero)
         {
             int randomIndex = UnityEngine.Random.Range(0, randomWalkDirection.Count);
-            var force = randomWalkDirection[randomIndex].normalized * 5000;
+            var force = randomWalkDirection[randomIndex].normalized * 500;
             monsterDatabase.RB.AddForce(force, ForceMode2D.Impulse);
+            await countDown(0.5f);
+            monsterBehavior = randomDecider((MonsterBehaviors.WalkRandom, 5), (decideSkill(), 5));
         }
-
-        Debug.Log("doWalkRandom...");
+        
     }
 
     async Task doNormalAttack()
     {
         isAnySkill = true;
+        isEnableAutoTurnDirection = false;
         coolDownSkill(MonsterBehaviors.NormalAttack, 3);
+        lookAtPlayerDirection();
+
         await createEffect(1, 3, Vector3.zero, NormalAttack);
+        await countDown(0.5f);
+
         isAnySkill = false;
+        isEnableAutoTurnDirection = true;
         monsterBehavior = randomDecider((MonsterBehaviors.WalkRandom, 9), (decideSkill(), 1));
     }
 
     async Task doSkFireBall()
     {
         isAnySkill = true;
-
+        isEnableAutoTurnDirection = false;
         coolDownSkill(MonsterBehaviors.SkFireBall, 3);
-
+        lookAtPlayerDirection();
         await createEffect(1, 3, Vector3.zero, SkFireBall);
+        await countDown(0.5f);
 
         monsterBehavior = randomDecider((MonsterBehaviors.WalkRandom, 9), (decideSkill(), 1));
+        isEnableAutoTurnDirection = true;
 
         isAnySkill = false;
     }
@@ -224,35 +230,37 @@ public class InnerInteracterMonster : MonoBehaviour
     async Task doSkShockWave()
     {
         isAnySkill = true;
+        isEnableAutoTurnDirection = false;
 
         coolDownSkill(MonsterBehaviors.SkShockWave, 3);
-        //var LookAtQuaternion = Quaternion.LookRotation(GameMaster.Instance.Player.transform.position - transform.position);
-        float eulerZ = Quaternion.Angle(transform.rotation, GameMaster.Instance.Player.transform.rotation);
-        Debug.Log(GameMaster.Instance.Player.transform.position);
-        Debug.Log(transform.gameObject.transform.position);
-        Debug.Log(GameMaster.Instance.Player.transform.position - transform.position);
 
-        var angle = Quaternion.Euler(0, 0, eulerZ);
-
-
-
-        await createEffect(1, 3, Vector3.zero, SkShockWave, targetAngle: angle, parent: transform);
+        lookAtPlayerDirection();
+        var vector = GameMaster.Instance.Player.transform.position-SkShockWave.transform.position;
+        var euler = Mathf.Atan2(vector.y, vector.x) * Mathf.Rad2Deg;
+        var angle = Quaternion.Euler(0, 0, euler);
+        await visibleEffect(1, 3, SkShockWave, targetAngle: angle);
+        await countDown(0.5f);
 
         monsterBehavior = randomDecider((MonsterBehaviors.WalkRandom, 9), (decideSkill(), 1));
-
         isAnySkill = false;
+        isEnableAutoTurnDirection = true;
 
     }
 
     async Task doSkAntiShield()
     {
         isAnySkill = true;
+        isEnableAutoTurnDirection = false;
 
         coolDownSkill(MonsterBehaviors.SkAntiShield, 3);
+        lookAtPlayerDirection();
 
-        await createEffect(1, 3, new Vector3(0, 0.7f, 0), SkAntiShield, parent: transform);
+        await visibleEffect(1, 3, SkAntiShield);
+
+        await countDown(0.5f);
 
         monsterBehavior = randomDecider((MonsterBehaviors.WalkRandom, 9), (decideSkill(), 1));
+        isEnableAutoTurnDirection = true;
 
         isAnySkill = false;
 
@@ -261,12 +269,17 @@ public class InnerInteracterMonster : MonoBehaviour
     async Task doSkBlackHole()
     {
         isAnySkill = true;
+        isEnableAutoTurnDirection = false;
 
         coolDownSkill(MonsterBehaviors.SkBlackHole, 3);
+        lookAtPlayerDirection();
 
         await createEffect(1, 3, Vector3.zero, SkBlackHole);
 
+        await countDown(0.5f);
+
         monsterBehavior = randomDecider((MonsterBehaviors.WalkRandom, 9), (decideSkill(), 1));
+        isEnableAutoTurnDirection = true;
 
         isAnySkill = false;
 
@@ -280,6 +293,7 @@ public class InnerInteracterMonster : MonoBehaviour
  
         if (targetAngle != default)
         {
+            
             effect.transform.rotation = targetAngle;
         }
 
@@ -287,11 +301,25 @@ public class InnerInteracterMonster : MonoBehaviour
         {
             effect.transform.SetParent(parent);
         }
-        effect.transform.position = position;
+
+        effect.transform.localPosition = position;
         await countDown(existSeconds);
         DestroyImmediate(effect);
     }
-    
+
+    async Task visibleEffect(int createSeconds, float existSeconds, GameObject targetEffect, Quaternion targetAngle = default)
+    {
+        await countDown(createSeconds);
+        targetEffect.SetActive(true);
+        if (targetAngle != default)
+        {
+            targetEffect.transform.rotation = targetAngle;
+        }
+        await countDown(existSeconds);
+        targetEffect.SetActive(false);
+
+    }
+
     async Task countDown(float time)
     {
         await Task.Delay((int)(time * 1000));
@@ -300,12 +328,15 @@ public class InnerInteracterMonster : MonoBehaviour
     async Task doSkSkyAngry()
     {
         isAnySkill = true;
+        isEnableAutoTurnDirection = false;
 
         coolDownSkill(MonsterBehaviors.SkSkyAngry, 3);
+        lookAtPlayerDirection();
 
         await createEffect(1, 3, Vector3.zero, SkSkyAngry);
 
         monsterBehavior = randomDecider((MonsterBehaviors.WalkRandom, 9), (decideSkill(), 1));
+        isEnableAutoTurnDirection = true;
 
         isAnySkill = false;
     }
@@ -333,25 +364,14 @@ public class InnerInteracterMonster : MonoBehaviour
 
     MonsterBehaviors decideSkill()
     {
-        //目前全部技能滿了，則回到idle狀態'
-        if(coolTimeSkills.Count == 6)
-        {
-            return MonsterBehaviors.Think;
-        }
-
         //隨機決定一個技能
         MonsterBehaviors chooseSkill;
-        //do
-        //{
-        //    randomChooseSkill(out chooseSkill);
-        //}
-        //while (coolTimeSkills.ContainsKey(chooseSkill));
         randomChooseSkill(out chooseSkill);
         if(coolTimeSkills.ContainsKey(chooseSkill))
         {
             return MonsterBehaviors.Think;
         }
-        return MonsterBehaviors.SkShockWave;
+        return chooseSkill;
     }
 
     void randomChooseSkill(out MonsterBehaviors chooseSkill)
@@ -361,7 +381,6 @@ public class InnerInteracterMonster : MonoBehaviour
 
     void coolDownSkill(MonsterBehaviors targetSkill, int continueSeconds)
     {
-        Debug.Log(targetSkill + "       "+continueSeconds);
         //如果還沒被封鎖
         if (!coolTimeSkills.ContainsKey(targetSkill))
         {
@@ -393,7 +412,6 @@ public class InnerInteracterMonster : MonoBehaviour
 
     IEnumerator countDownWalk(MonsterBehaviors type, int inputSeconds = 1)
     {
-        Debug.Log(type);
         yield return new WaitForSeconds(inputSeconds);
         monsterBehavior = MonsterBehaviors.Think;
         if(type == MonsterBehaviors.WalkTarget)
@@ -404,7 +422,6 @@ public class InnerInteracterMonster : MonoBehaviour
         {
             isWalkRandom = false;
         }
-        Debug.Log("WalkEnd");
     }
 
     void Update()
@@ -433,15 +450,18 @@ public class InnerInteracterMonster : MonoBehaviour
 
     void autoTurnDirection()
     {
-        var monsterLocalScale = transform.localScale;
+        if(isEnableAutoTurnDirection)
+        {
+            var monsterLocalScale = transform.localScale;
 
-        if (monsterDatabase.RB.velocity.x > 0)
-        {
-            transform.localScale = new Vector3(Mathf.Abs(monsterLocalScale.x), monsterLocalScale.y, monsterLocalScale.z);
-        }
-        else if (monsterDatabase.RB.velocity.x < 0)
-        {
-            transform.localScale = new Vector3(-Mathf.Abs(monsterLocalScale.x), monsterLocalScale.y, monsterLocalScale.z);
+            if (monsterDatabase.RB.velocity.x > 0)
+            {
+                transform.localScale = new Vector3(Mathf.Abs(monsterLocalScale.x), monsterLocalScale.y, monsterLocalScale.z);
+            }
+            else if (monsterDatabase.RB.velocity.x < 0)
+            {
+                transform.localScale = new Vector3(-Mathf.Abs(monsterLocalScale.x), monsterLocalScale.y, monsterLocalScale.z);
+            }
         }
     }
 

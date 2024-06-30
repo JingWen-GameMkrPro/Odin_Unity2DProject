@@ -30,7 +30,7 @@ public class InnerInteracterPlayer : MonoBehaviour
 
     private void Update()
     {
-        checkGrounded();
+        //checkGrounded();
 
         updateaAnimatorState();
 
@@ -99,7 +99,12 @@ public class InnerInteracterPlayer : MonoBehaviour
 
     private void tryJump()
     {
-        if(!PlayerDatabase.IsInState(PlayerDatabase.PlayerState.Grounding) || !PlayerDatabase.HasPermission(PlayerDatabase.PlayerPermission.CanJump))
+        //if(!PlayerDatabase.IsInState(PlayerDatabase.PlayerState.Grounding) || !PlayerDatabase.HasPermission(PlayerDatabase.PlayerPermission.CanJump))
+        //{
+        //    return;
+        //}
+
+        if(PlayerDatabase.RB.velocity.y!=0)
         {
             return;
         }
@@ -136,20 +141,33 @@ public class InnerInteracterPlayer : MonoBehaviour
 
     }
 
-    private void checkGrounded()
-    {
-        RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down, 0.1f, LayerMask.GetMask("Map"));
-        //一踩到地板就要緊急煞車，避免穿透
-        if (!PlayerDatabase.IsInState(PlayerDatabase.PlayerState.Grounding) && hit.collider != null)
-        {
-            PlayerDatabase.RB.velocity = new Vector2(PlayerDatabase.RB.velocity.x, 0);
-        }
-        PlayerDatabase.SetState(PlayerDatabase.PlayerState.Grounding, hit.collider != null);
-    }
+    //private void checkGrounded()
+    //{
+    //    bool result = false;
+
+    //    RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down, 0.2f, LayerMask.GetMask("Platform"));
+    //    //一踩到地板就要緊急煞車，避免穿透
+    //    if (!PlayerDatabase.IsInState(PlayerDatabase.PlayerState.Grounding) && hit.collider != null)
+    //    {
+    //        PlayerDatabase.RB.velocity = new Vector2(PlayerDatabase.RB.velocity.x, 0);
+    //        result = true;
+    //    }
+
+    //    //RaycastHit2D hit2 = Physics2D.Raycast(transform.position, Vector2.down, 0.1f, LayerMask.GetMask("MapBase"));
+    //    ////一踩到地板就要緊急煞車，避免穿透
+    //    //if (!PlayerDatabase.IsInState(PlayerDatabase.PlayerState.Grounding) && hit2.collider != null)
+    //    //{
+    //    //    PlayerDatabase.RB.velocity = new Vector2(PlayerDatabase.RB.velocity.x, 0);
+    //    //    result = true;
+    //    //}
+
+
+    //    PlayerDatabase.SetState(PlayerDatabase.PlayerState.Grounding, result);
+    //}
 
     private void updateaAnimatorState()
     {
-        PlayerDatabase.Animator.SetBool("isJumping", !PlayerDatabase.IsInState(PlayerDatabase.PlayerState.Grounding));
+        //PlayerDatabase.Animator.SetBool("isJumping", !PlayerDatabase.IsInState(PlayerDatabase.PlayerState.Grounding));
         PlayerDatabase.Animator.SetFloat("xSpeed", Math.Abs(PlayerDatabase.RB.velocity.x));
         PlayerDatabase.Animator.SetBool("isAttacking", PlayerDatabase.IsInState(PlayerDatabase.PlayerState.Attacking));
         PlayerDatabase.Animator.SetBool("isDefensing", PlayerDatabase.IsInState(PlayerDatabase.PlayerState.Defensing));
